@@ -52,8 +52,8 @@ INCLUDEPATH += \
     ./include \
     ./3rdparty/cppzmq \
     $(QTDIR)/include \
-    /opt/local/include \
-    /home/tylnesh/affdex-sdk/include
+    /opt/local/include
+
 
 FORMS += \
         mainwindow.ui \
