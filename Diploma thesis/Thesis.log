@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.14)  14 APR 2018 15:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  16 APR 2018 01:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Thesis.tex
 (./Thesis.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -33,18 +33,16 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 File: cp1250.def 2015/03/17 v1.2c Input encoding file
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/02/24 3.9q The Babel package
+Package: babel 2016/04/23 3.9r The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2016/02/24 3.9q Babel common definitions
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -62,7 +60,7 @@ LaTeX Font Info:    Try loading font information for IL2+cmr on input line 105.
 File: il2cmr.fd 1997/02/06 CSLaTeX font definitions
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -79,7 +77,7 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen105
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count89
 LaTeX Info: Redefining \frac on input line 199.
@@ -94,8 +92,8 @@ LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count94
 \c@MaxMatrixCols=\count95
 \dotsspace@=\muskip10
@@ -116,8 +114,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -140,24 +138,24 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count101
 ))
@@ -199,110 +197,489 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
-\Gm@cnth=\count102
-\Gm@cntv=\count103
-\c@Gm@tempcnt=\count104
-\Gm@bindingoffset=\dimen115
-\Gm@wd@mp=\dimen116
-\Gm@odd@mp=\dimen117
-\Gm@even@mp=\dimen118
-\Gm@layoutwidth=\dimen119
-\Gm@layoutheight=\dimen120
-\Gm@layouthoffset=\dimen121
-\Gm@layoutvoffset=\dimen122
-\Gm@dimlist=\toks22
-) (./Thesis.aux)
-\openout1 = `Thesis.aux'.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Try loading font information for IL2+lmr on input line 15.
-(/usr/share/texmf/tex/latex/lm/il2lmr.fd
-File: il2lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen115
+\captionmargin@=\dimen116
+\captionwidth=\dimen117
+\caption@tempdima=\dimen118
+\caption@indent=\dimen119
+\caption@parindent=\dimen120
+\caption@hangindent=\dimen121
 )
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen123
-\scratchbox=\box28
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen124
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks24
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+\c@ContinuedFloat=\count102
+)
+\c@KVtest=\count103
+\sf@farskip=\skip46
+\sf@captopadj=\dimen122
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count104
+\c@subfigure@save=\count105
+\c@lofdepth=\count106
+\c@subtable=\count107
+\c@subtable@save=\count108
+\c@lotdepth=\count109
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2016/01/31 v5.1g context-sensitive quotations (JAW)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count110
+)
+\csq@reset=\count111
+\csq@gtype=\count112
+\csq@glevel=\count113
+\csq@qlevel=\count114
+\csq@maxlvl=\count115
+\csq@tshold=\count116
+\csq@ltx@everypar=\toks22
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2016/01/31 v5.1g csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2016/05/14 v3.4 programmable bibliographies (PK/JW/AB)
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2013/04/04 v0.2 Provides if(tex) conditional for PDFTeX, XeTeX, 
+and LuaTeX
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count117
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write3
+\integerpart=\count118
+\decimalpart=\count119
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\c@tabx@nest=\count120
+\c@listtotal=\count121
+\c@listcount=\count122
+\c@liststart=\count123
+\c@liststop=\count124
+\c@citecount=\count125
+\c@citetotal=\count126
+\c@multicitecount=\count127
+\c@multicitetotal=\count128
+\c@instcount=\count129
+\c@maxnames=\count130
+\c@minnames=\count131
+\c@maxitems=\count132
+\c@minitems=\count133
+\c@citecounter=\count134
+\c@savedcitecounter=\count135
+\c@uniquelist=\count136
+\c@uniquename=\count137
+\c@refsection=\count138
+\c@refsegment=\count139
+\c@maxextratitle=\count140
+\c@maxextratitleyear=\count141
+\c@maxextrayear=\count142
+\c@maxextraalpha=\count143
+\c@abbrvpenalty=\count144
+\c@highnamepenalty=\count145
+\c@lownamepenalty=\count146
+\c@maxparens=\count147
+\c@parenlevel=\count148
+\blx@tempcnta=\count149
+\blx@tempcntb=\count150
+\blx@tempcntc=\count151
+\blx@maxsection=\count152
+\blx@maxsegment@0=\count153
+\blx@notetype=\count154
+\blx@parenlevel@text=\count155
+\blx@parenlevel@foot=\count156
+\blx@sectionciteorder@0=\count157
+\labelnumberwidth=\skip51
+\labelalphawidth=\skip52
+\biblabelsep=\skip53
+\bibitemsep=\skip54
+\bibnamesep=\skip55
+\bibinitsep=\skip56
+\bibparsep=\skip57
+\bibhang=\skip58
+\blx@bcfin=\read1
+\blx@bcfout=\write4
+\c@mincomprange=\count158
+\c@maxcomprange=\count159
+\c@mincompwidth=\count160
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'iso-authoryear.dbx' found.
+
+(/home/tylnesh/texmf/tex/latex/biblatex/iso-authoryear.dbx
+File: iso-authoryear.dbx 2017/04/25 v0.3.2 biblatex data model extension
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count161
+\c@savedafterword=\count162
+\c@annotator=\count163
+\c@savedannotator=\count164
+\c@author=\count165
+\c@savedauthor=\count166
+\c@bookauthor=\count167
+\c@savedbookauthor=\count168
+\c@commentator=\count169
+\c@savedcommentator=\count170
+\c@editor=\count171
+\c@savededitor=\count172
+\c@editora=\count173
+\c@savededitora=\count174
+\c@editorb=\count175
+\c@savededitorb=\count176
+\c@editorc=\count177
+\c@savededitorc=\count178
+\c@foreword=\count179
+\c@savedforeword=\count180
+\c@holder=\count181
+\c@savedholder=\count182
+\c@introduction=\count183
+\c@savedintroduction=\count184
+\c@namea=\count185
+\c@savednamea=\count186
+\c@nameb=\count187
+\c@savednameb=\count188
+\c@namec=\count189
+\c@savednamec=\count190
+\c@translator=\count191
+\c@savedtranslator=\count192
+\c@shortauthor=\count193
+\c@savedshortauthor=\count194
+\c@shorteditor=\count195
+\c@savedshorteditor=\count196
+\c@supervisor=\count197
+\c@savedsupervisor=\count198
+\c@labelname=\count199
+\c@savedlabelname=\count266
+\c@institution=\count267
+\c@savedinstitution=\count268
+\c@lista=\count269
+\c@savedlista=\count270
+\c@listb=\count271
+\c@savedlistb=\count272
+\c@listc=\count273
+\c@savedlistc=\count274
+\c@listd=\count275
+\c@savedlistd=\count276
+\c@liste=\count277
+\c@savedliste=\count278
+\c@listf=\count279
+\c@savedlistf=\count280
+\c@location=\count281
+\c@savedlocation=\count282
+\c@organization=\count283
+\c@savedorganization=\count284
+\c@origlocation=\count285
+\c@savedoriglocation=\count286
+\c@origpublisher=\count287
+\c@savedorigpublisher=\count288
+\c@publisher=\count289
+\c@savedpublisher=\count290
+\c@language=\count291
+\c@savedlanguage=\count292
+\c@pageref=\count293
+\c@savedpageref=\count294
+\shorthandwidth=\skip59
+\shortjournalwidth=\skip60
+\shortserieswidth=\skip61
+\shorttitlewidth=\skip62
+\shortauthorwidth=\skip63
+\shorteditorwidth=\skip64
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
+)
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
+
+
+Package biblatex Warning: Using fall-back BibTeX(8) backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2016/05/14 v3.4 biblatex compatibility (PK/JW/AB)
+\c@textcitecount=\count295
+\c@textcitetotal=\count296
+\c@textcitemaxnames=\count297
+\c@biburlnumpenalty=\count298
+\c@biburlucpenalty=\count299
+\c@biburllcpenalty=\count300
+\c@smartand=\count301
+)
+Package biblatex Info: Trying to load bibliography style 'iso-authoryear'...
+Package biblatex Info: ... file 'iso-authoryear.bbx' found.
+
+(/home/tylnesh/texmf/tex/latex/biblatex/iso-authoryear.bbx
+File: iso-authoryear.bbx 2017/04/25 v0.3.2 biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'iso'...
+Package biblatex Info: ... file 'iso.bbx' found.
+
+(/home/tylnesh/texmf/tex/latex/biblatex/iso.bbx
+File: iso.bbx 2017/04/25 v0.3.2 biblatex bibliography style
+
+Space colon enabled: false
+Showing total pages enabled: false
+Short numeration enabled: false
+Printing thesis info at the end enabled: true
+))
+Package biblatex Info: Trying to load citation style 'iso-authoryear'...
+Package biblatex Info: ... file 'iso-authoryear.cbx' found.
+ (/home/tylnesh/texmf/tex/latex/biblatex/iso-authoryear.cbx
+File: iso-authoryear.cbx 2017/04/25 v0.3.2 biblatex citation style
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2016/05/14 v3.4 biblatex citation style (PK/JW/AB)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load citation style 'iso-fullcite'...
+Package biblatex Info: ... file 'iso-fullcite.cbx' found.
+
+(/home/tylnesh/texmf/tex/latex/biblatex/iso-fullcite.cbx
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\footfullcite'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box28
+\beforetitleunit=\skip65
+\aftertitleunit=\skip66
+\ttl@plus=\dimen123
+\ttl@minus=\dimen124
+\ttl@toksa=\toks23
+\titlewidth=\dimen125
+\titlewidthlast=\dimen126
+\titlewidthfirst=\dimen127
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/block.tss
+File: block.tss 2016/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrpage2.sty
+Package: scrpage2 2016/05/10 v3.20 KOMA-Script package (page head and foot)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count302
+\Gm@cntv=\count303
+\c@Gm@tempcnt=\count304
+\Gm@bindingoffset=\dimen128
+\Gm@wd@mp=\dimen129
+\Gm@odd@mp=\dimen130
+\Gm@even@mp=\dimen131
+\Gm@layoutwidth=\dimen132
+\Gm@layoutheight=\dimen133
+\Gm@layouthoffset=\dimen134
+\Gm@layoutvoffset=\dimen135
+\Gm@dimlist=\toks24
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package biblatex Info: Trying to load language 'english' -> 'english-iso'...
+Package biblatex Info: ... file 'english-iso.lbx' found.
+
+(/home/tylnesh/texmf/tex/latex/biblatex/english-iso.lbx
+File: english-iso.lbx 2017/04/25 v0.3.2 biblatex localization
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2016/05/14 v3.4 biblatex localization (PK/JW/AB)
+))
+(./Thesis.aux
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+)
+\openout1 = `Thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for IL2+lmr on input line 65.
+ (/usr/share/texmf/tex/latex/lm/il2lmr.fd
+File: il2lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count305
+\scratchdimen=\dimen136
+\scratchbox=\box29
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen137
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
+(grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package biblatex Info: Input encoding 'cp1250' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'cp1250'.
+Package biblatex Info: Input encoding 'cp1250' specified.
+Package biblatex Info: Data encoding 'cp1250' specified.
+(biblatex)             No need to reencode data.
+\openout4 = `Thesis-blx.bib'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Thesis.bbl' found.
+
+(./Thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 65.
+Package biblatex Info: Reference segment=0 on input line 65.
+
+
+Package scrpage2 Warning: seems you are using a constant headheight.
+(scrpage2)                If you get overfull \vbox warnings at almost every
+(scrpage2)                page, you should increase headheight e.g. writing
+(scrpage2)                 \setlength{\headheight}{1.1\baselineskip}
+(scrpage2)                into the preamble of your document.
+(scrpage2)                A better solution would be to use typearea package.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -339,50 +716,348 @@ e
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Chapter 1.
-[1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1
 
-] [2]
+] [2
+
+] [3
+
+] [4
+
+]
+(./Thesis.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 17.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 17.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 17.
+
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 17.
+
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 17.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 17.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write5
+\openout5 = `Thesis.toc'.
+
+ [5
+
+]
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 143.
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[8
+
+]
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 173.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 174.
+
+<images/Primary_Emotions.jpg, id=29, 416.55624pt x 249.93375pt>
+File: images/Primary_Emotions.jpg Graphic file (type jpg)
+
+<use images/Primary_Emotions.jpg>
+Package pdftex.def Info: images/Primary_Emotions.jpg used on input line 177.
+(pdftex.def)             Requested size: 416.55522pt x 249.93314pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[9 <./images/Primary_Emotions.jpg>]
+Chapter 1.
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 205.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 205.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 210.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 215.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 223.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 233.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 237.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 239.
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[10
+
+]
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 244.
+
+<images/russel_model.png, id=36, 673.51625pt x 472.76625pt>
+File: images/russel_model.png Graphic file (type png)
+
+<use images/russel_model.png>
+Package pdftex.def Info: images/russel_model.png used on input line 248.
+(pdftex.def)             Requested size: 269.40172pt x 189.10315pt.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 259.
+
+<images/vector0.jpg, id=37, 903.375pt x 900.36375pt>
+File: images/vector0.jpg Graphic file (type jpg)
+ <use images/vector0.jpg>
+Package pdftex.def Info: images/vector0.jpg used on input line 267.
+(pdftex.def)             Requested size: 88.2022pt x 87.89845pt.
+
+<images/vector1.jpg, id=38, 1204.5pt x 1158.3275pt>
+File: images/vector1.jpg Graphic file (type jpg)
+ <use images/vector1.jpg>
+Package pdftex.def Info: images/vector1.jpg used on input line 269.
+(pdftex.def)             Requested size: 88.2022pt x 84.82056pt.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 281.
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[11 <./images/russel_model.png (PNG copy)> <./images/vector0.jpg> <./images/vec
+tor1.jpg>] <images/consensual.jpeg, id=43, 523.9575pt x 492.84125pt>
+File: images/consensual.jpeg Graphic file (type jpg)
+
+<use images/consensual.jpeg>
+Package pdftex.def Info: images/consensual.jpeg used on input line 285.
+(pdftex.def)             Requested size: 209.57928pt x 197.133pt.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 299.
+
+<images/Plutchik_wheel.png, id=44, 593.21625pt x 601.24625pt>
+File: images/Plutchik_wheel.png Graphic file (type png)
+
+<use images/Plutchik_wheel.png>
+Package pdftex.def Info: images/Plutchik_wheel.png used on input line 303.
+(pdftex.def)             Requested size: 177.96625pt x 180.37526pt.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 312.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 314.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 316.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 317.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 326.
+
+<images/pad_model.png, id=46, 663.47874pt x 477.785pt>
+File: images/pad_model.png Graphic file (type png)
+
+<use images/pad_model.png>
+Package pdftex.def Info: images/pad_model.png used on input line 329.
+(pdftex.def)             Requested size: 265.3868pt x 191.11061pt.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 337.
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[12 <./images/consensual.jpeg> <./images/Plutchik_wheel.png>]
+<images/lovheimcube.png, id=51, 803.0pt x 544.0325pt>
+File: images/lovheimcube.png Graphic file (type png)
+
+<use images/lovheimcube.png>
+Package pdftex.def Info: images/lovheimcube.png used on input line 345.
+(pdftex.def)             Requested size: 321.1943pt x 217.60915pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 353.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 353.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 355.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 360.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 373.
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[13 <./images/pad_model.png (PNG copy)>]
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 377.
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[14 <./images/lovheimcube.png>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[15]
 Chapter 2.
-[3
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[16
 
 ]
 Chapter 3.
-[4
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[17
 
 ]
-Chapter 4.
-[5
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 413.
+
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 413
+.
+(/usr/share/texmf/tex/latex/lm/il2lmtt.fd
+File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (24.5903pt too wide) in paragraph at lines 414--414
+\IL2/lmr/m/n/10.95 words. \IL2/lmr/m/it/10.95 Mem-ory\IL2/lmr/m/n/10.95 . Vol. 
+17, no. 8, pp. 802{808. Avail-able from DOI: $\IL2/lmtt/m/n/10.95 10 . 1080 / 0
+9658210903130764$\IL2/lmr/m/n/10.95 .
+ []
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[18
 
 ]
-Chapter 5.
-[6
+Overfull \hbox (6.53412pt too wide) in paragraph at lines 414--414
+[]\IL2/lmr/m/n/10.95 RUSSELL, J. A.; BAR-RETT, Lisa Feld-man, 1999. Core af-fec
+t, pro-to-typ-i-cal emo-tional episodes,
+ []
 
-]
-Chapter 6.
-[7
 
-]
-Chapter 7.
-[8
+Overfull \hbox (2.31282pt too wide) in paragraph at lines 414--414
+[]\IL2/lmr/m/n/10.95 TOMKINS, S., 1963. \IL2/lmr/m/it/10.95 Af-fect Im-agery Co
+n-scious-ness: Vol-ume II: The Neg-a-tive Af-fects\IL2/lmr/m/n/10.95 . Springer
 
-] (./Thesis.aux) ) 
+ []
+
+
+Overfull \hbox (38.46854pt too wide) in paragraph at lines 414--414
+[]\IL2/lmr/m/n/10.95 WUNDT, W.M., 2017. \IL2/lmr/m/it/10.95 Out-lines of Psy-ch
+ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
+.
+ []
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[19] (./Thesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package logreq Info: Writing requests to 'Thesis.run.xml'.
+\openout1 = `Thesis.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3673 strings out of 494919
- 48249 string characters out of 6179680
- 118986 words of memory out of 5000000
- 6906 multiletter control sequences out of 15000+600000
- 22877 words of font info for 24 fonts, out of 8000000 for 9000
- 24 hyphenation exceptions out of 8191
- 38i,4n,24p,2432b,161s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-cs.enc}</usr/share/te
-xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-r10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb>
-Output written on Thesis.pdf (9 pages, 95315 bytes).
+ 12238 strings out of 493014
+ 200384 string characters out of 6135690
+ 457108 words of memory out of 5000000
+ 15544 multiletter control sequences out of 15000+600000
+ 53450 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,10n,49p,816b,2346s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-cstt.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-cs.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Thesis.pdf (18 pages, 778762 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

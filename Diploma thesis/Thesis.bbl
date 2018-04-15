@@ -1,0 +1,807 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nyt/global/}
+  \entry{abbrpad}{article}{}
+    \name{author}{2}{}{%
+      {{hash=AN}{%
+         family={Ashkanasy},
+         family_i={A\bibinitperiod},
+         given={Neal},
+         given_i={N\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Cooper},
+         family_i={C\bibinitperiod},
+         given={Cary},
+         given_i={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AN+1}
+    \strng{fullhash}{ANCC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Research companion to emotion in organizations}
+    \field{month}{01}
+    \field{year}{2008}
+  \endentry
+
+  \entry{barrett}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BLF}{%
+         family={Barrett},
+         family_i={B\bibinitperiod},
+         given={L.\bibnamedelima F.},
+         given_i={L\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BLF1}
+    \strng{fullhash}{BLF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{issn}{1364-6613}
+    \field{number}{8}
+    \field{title}{Language as context for the perception of emotion.}
+    \field{volume}{11}
+    \field{langid}{english}
+    \field{journaltitle}{Trends in Cognitive Sciences}
+    \field{year}{2007}
+  \endentry
+
+  \entry{Izard}{incollection}{}
+    \name{author}{4}{}{%
+      {{hash=BGJ}{%
+         family={Boyle},
+         family_i={B\bibinitperiod},
+         given={Gregory\bibnamedelima J.},
+         given_i={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=HE}{%
+         family={Helmes},
+         family_i={H\bibinitperiod},
+         given={Edward},
+         given_i={E\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={Matthews},
+         family_i={M\bibinitperiod},
+         given={Gerald},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=ICE}{%
+         family={Izard},
+         family_i={I\bibinitperiod},
+         given={Carroll\bibnamedelima E.},
+         given_i={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \name{editor}{3}{}{%
+      {{hash=BGJ}{%
+         family={Boyle},
+         family_i={B\bibinitperiod},
+         given={Gregory\bibnamedelima J.},
+         given_i={G\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SDH}{%
+         family={Saklofske},
+         family_i={S\bibinitperiod},
+         given={Donald\bibnamedelima H.},
+         given_i={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=MG}{%
+         family={Matthews},
+         family_i={M\bibinitperiod},
+         given={Gerald},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press}%
+    }
+    \strng{namehash}{BGJ+1}
+    \strng{fullhash}{BGJHEMGICE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{booktitle}{Measures of Personality and Social Psychological
+  Constructs}
+    \verb{doi}
+    \verb https://doi.org/10.1016/B978-0-12-386915-9.00008-5
+    \endverb
+    \field{isbn}{978-0-12-386915-9}
+    \field{pages}{190 \bibrangedash  224}
+    \field{title}{Chapter 8 - Measures of Affect Dimensions}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/B978012386915900008
+    \verb 5
+    \endverb
+    \list{location}{1}{%
+      {San Diego}%
+    }
+    \field{year}{2015}
+  \endentry
+
+  \entry{Cowen201702247}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CAS}{%
+         family={Cowen},
+         family_i={C\bibinitperiod},
+         given={Alan\bibnamedelima S.},
+         given_i={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Keltner},
+         family_i={K\bibinitperiod},
+         given={Dacher},
+         given_i={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {National Academy of Sciences}%
+    }
+    \strng{namehash}{CAS+1}
+    \strng{fullhash}{CASKD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1073/pnas.1702247114
+    \endverb
+    \verb{eprint}
+    \verb http://www.pnas.org/content/early/2017/08/30/1702247114.full.pdf
+    \endverb
+    \field{issn}{0027-8424}
+    \field{title}{Self-report captures 27 distinct categories of emotion
+  bridged by continuous gradients}
+    \verb{url}
+    \verb http://www.pnas.org/content/early/2017/08/30/1702247114
+    \endverb
+    \field{journaltitle}{Proceedings of the National Academy of Sciences}
+    \field{year}{2017}
+  \endentry
+
+  \entry{darwin1998expression}{book}{}
+    \name{author}{3}{}{%
+      {{hash=DC}{%
+         family={Darwin},
+         family_i={D\bibinitperiod},
+         given={C.},
+         given_i={C\bibinitperiod},
+      }}%
+      {{hash=EP}{%
+         family={Ekman},
+         family_i={E\bibinitperiod},
+         given={P.},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Prodger},
+         family_i={P\bibinitperiod},
+         given={P.},
+         given_i={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{DC+1}
+    \strng{fullhash}{DCEPPP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1998}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \field{isbn}{9780195158069}
+    \field{title}{The Expression of the Emotions in Man and Animals}
+    \verb{url}
+    \verb https://books.google.sk/books?id=TFRtLZSHMcYC
+    \endverb
+    \field{year}{1998}
+  \endentry
+
+  \entry{Ekman}{article}{}
+    \name{author}{1}{}{%
+      {{hash=EP}{%
+         family={Ekman},
+         family_i={E\bibinitperiod},
+         given={P.},
+         given_i={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EP1}
+    \strng{fullhash}{EP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1992}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \verb{doi}
+    \verb 10.1080/02699939208411068
+    \endverb
+    \field{note}{cited By 2387}
+    \field{number}{3-4}
+    \field{pages}{169\bibrangedash 200}
+    \field{title}{An Argument for Basic Emotions}
+    \verb{url}
+    \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-84889960454&doi=1
+    \verb 0.1080%2f02699939208411068&partnerID=40&md5=d520ddb89001c8c29dc70533a
+    \verb f4b7554
+    \endverb
+    \field{volume}{6}
+    \field{journaltitle}{Cognition and Emotion}
+    \field{year}{1992}
+  \endentry
+
+  \entry{ekmanguinea}{article}{}
+    \name{author}{2}{}{%
+      {{hash=EP}{%
+         family={Ekman},
+         family_i={E\bibinitperiod},
+         given={Paul},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=VFW}{%
+         family={V.\bibnamedelima Friesen},
+         family_i={V\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Wallace},
+         given_i={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EP+1}
+    \strng{fullhash}{EPVFW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1971}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{booktitle}{Journal of personality and social psychology}
+    \field{pages}{124\bibrangedash 9}
+    \field{title}{Constants across cultures in the face and emotion}
+    \field{volume}{17}
+    \field{month}{03}
+    \field{year}{1971}
+  \endentry
+
+  \entry{lang}{article}{}
+    \name{author}{3}{}{%
+      {{hash=JLP}{%
+         family={J.\bibnamedelima Lang},
+         family_i={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+         given={Peter},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=MBM}{%
+         family={M.\bibnamedelima Bradley},
+         family_i={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={Margaret},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=NCB}{%
+         family={N.\bibnamedelima Cuthbert},
+         family_i={N\bibinitperiod\bibinitdelim C\bibinitperiod},
+         given={Bruce},
+         given_i={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JLP+1}
+    \strng{fullhash}{JLPMBMNCB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1990}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{booktitle}{Psychological review}
+    \field{pages}{377\bibrangedash 95}
+    \field{title}{Emotion, Attention, and the Startle Reflex}
+    \field{volume}{97}
+    \field{month}{08}
+    \field{year}{1990}
+  \endentry
+
+  \entry{Lvheim2012ANT}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LH}{%
+         family={L{\"o}vheim},
+         family_i={L\bibinitperiod},
+         given={Hugo},
+         given_i={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LH1}
+    \strng{fullhash}{LH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{pages}{341\bibrangedash 8}
+    \field{title}{A new three-dimensional model for emotions and monoamine
+  neurotransmitters.}
+    \field{volume}{78 2}
+    \field{journaltitle}{Medical hypotheses}
+    \field{year}{2012}
+  \endentry
+
+  \entry{mehrabian1980basic}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MA}{%
+         family={Mehrabian},
+         family_i={M\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oelgeschlager, Gunn \& Hain}%
+    }
+    \strng{namehash}{MA1}
+    \strng{fullhash}{MA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1980}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{isbn}{9780899460048}
+    \field{series}{Social Environmental and Developmental Studies}
+    \field{title}{Basic Dimensions for a General Psychological Theory:
+  Implications for Personality, Social, Environmental, and Developmental
+  Studies}
+    \verb{url}
+    \verb https://books.google.sk/books?id=1RR9AAAAMAAJ
+    \endverb
+    \field{year}{1980}
+  \endentry
+
+  \entry{mehrabian1974approach}{book}{}
+    \name{author}{2}{}{%
+      {{hash=MA}{%
+         family={Mehrabian},
+         family_i={M\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Russell},
+         family_i={R\bibinitperiod},
+         given={J.A.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {M.I.T. Press}%
+    }
+    \strng{namehash}{MA+1}
+    \strng{fullhash}{MARJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1974}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{isbn}{9780262130905}
+    \field{title}{An approach to environmental psychology}
+    \verb{url}
+    \verb https://books.google.sk/books?id=EthOAAAAMAAJ
+    \endverb
+    \field{year}{1974}
+  \endentry
+
+  \entry{Plutchik1988}{inbook}{}
+    \name{author}{1}{}{%
+      {{hash=PR}{%
+         family={Plutchik},
+         family_i={P\bibinitperiod},
+         given={Robert},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \name{editor}{2}{}{%
+      {{hash=CM}{%
+         family={Clynes},
+         family_i={C\bibinitperiod},
+         given={Manfred},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Panksepp},
+         family_i={P\bibinitperiod},
+         given={Jaak},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer US}%
+    }
+    \strng{namehash}{PR1}
+    \strng{fullhash}{PR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1988}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Emotions and Psychopathology}
+    \verb{doi}
+    \verb 10.1007/978-1-4757-1987-1_1
+    \endverb
+    \field{isbn}{978-1-4757-1987-1}
+    \field{pages}{1\bibrangedash 20}
+    \field{title}{The Nature of Emotions: Clinical Implications}
+    \verb{url}
+    \verb https://doi.org/10.1007/978-1-4757-1987-1_1
+    \endverb
+    \list{location}{1}{%
+      {Boston, MA}%
+    }
+    \field{year}{1988}
+  \endentry
+
+  \entry{posner}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PJ}{%
+         family={Posner},
+         family_i={P\bibinitperiod},
+         given={Jonathan},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=RJA}{%
+         family={Russel},
+         family_i={R\bibinitperiod},
+         given={James\bibnamedelima A.},
+         given_i={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=PBS}{%
+         family={Peterson},
+         family_i={P\bibinitperiod},
+         given={Bradley\bibnamedelima S.},
+         given_i={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{PJ+1}
+    \strng{fullhash}{PJRJAPBS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2005}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{number}{3}
+    \field{pages}{715\bibrangedash 734}
+    \field{title}{The circumplex model of affect: An integrative approach to
+  affective neuroscience, cognitive development, and psychopathology}
+    \field{volume}{17}
+    \field{journaltitle}{Development and Psychopathology}
+    \field{year}{2005}
+  \endentry
+
+  \entry{comparison}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RDC}{%
+         family={Rubin},
+         family_i={R\bibinitperiod},
+         given={David\bibnamedelima C.},
+         given_i={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=TJM}{%
+         family={Talarico},
+         family_i={T\bibinitperiod},
+         given={Jennifer\bibnamedelima M.},
+         given_i={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Routledge}%
+    }
+    \strng{namehash}{RDC+1}
+    \strng{fullhash}{RDCTJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \verb{doi}
+    \verb 10.1080/09658210903130764
+    \endverb
+    \verb{eprint}
+    \verb https://doi.org/10.1080/09658210903130764
+    \endverb
+    \field{note}{PMID: 19691001}
+    \field{number}{8}
+    \field{pages}{802\bibrangedash 808}
+    \field{title}{A comparison of dimensional models of emotion: Evidence from
+  emotions, prototypical events, autobiographical memories, and words}
+    \verb{url}
+    \verb https://doi.org/10.1080/09658210903130764
+    \endverb
+    \field{volume}{17}
+    \field{journaltitle}{Memory}
+    \field{year}{2009}
+  \endentry
+
+  \entry{Russell1999CoreAP}{article}{}
+    \name{author}{2}{}{%
+      {{hash=RJA}{%
+         family={Russell},
+         family_i={R\bibinitperiod},
+         given={J.\bibnamedelima A.},
+         given_i={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=BLF}{%
+         family={Barrett},
+         family_i={B\bibinitperiod},
+         given={Lisa\bibnamedelima Feldman},
+         given_i={L\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJA+1}
+    \strng{fullhash}{RJABLF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1999}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{805\bibrangedash 19}
+    \field{title}{Core affect, prototypical emotional episodes, and other
+  things called emotion: dissecting the elephant.}
+    \field{volume}{76 5}
+    \field{journaltitle}{Journal of personality and social psychology}
+    \field{year}{1999}
+  \endentry
+
+  \entry{coreaffect}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RJ}{%
+         family={Russell},
+         family_i={R\bibinitperiod},
+         given={J.A.},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJ1}
+    \strng{fullhash}{RJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2003}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{booktitle}{Psychological review}
+    \field{pages}{145\bibrangedash 72}
+    \field{title}{Core Affect and the Psychological Construction of Emotion}
+    \field{volume}{110}
+    \field{month}{02}
+    \field{year}{2003}
+  \endentry
+
+  \entry{circumplex}{article}{}
+    \name{author}{1}{}{%
+      {{hash=RJ}{%
+         family={Russell},
+         family_i={R\bibinitperiod},
+         given={James},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJ2}
+    \strng{fullhash}{RJ2}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1980}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{booktitle}{Journal of Personality and Social Psychology}
+    \field{pages}{1161\bibrangedash 1178}
+    \field{title}{A Circumplex Model of Affect}
+    \field{volume}{39}
+    \field{month}{12}
+    \field{year}{1980}
+  \endentry
+
+  \entry{schlosberg1954three}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SH}{%
+         family={Schlosberg},
+         family_i={S\bibinitperiod},
+         given={Harold},
+         given_i={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {American Psychological Association}%
+    }
+    \strng{namehash}{SH1}
+    \strng{fullhash}{SH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1954}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{2}
+    \field{pages}{81}
+    \field{title}{Three dimensions of emotion.}
+    \field{volume}{61}
+    \field{journaltitle}{Psychological review}
+    \field{year}{1954}
+  \endentry
+
+  \entry{tomkins1962affect}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TS}{%
+         family={Tomkins},
+         family_i={T\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Publishing Company}%
+    }
+    \strng{namehash}{TS1}
+    \strng{fullhash}{TS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1962}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{isbn}{9780826104427}
+    \field{series}{Springer Series}
+    \field{title}{Affect Imagery Consciousness: Volume I: The Positive Affects}
+    \verb{url}
+    \verb https://books.google.sk/books?id=WIpgNerqaIkC
+    \endverb
+    \field{year}{1962}
+  \endentry
+
+  \entry{tomkins1963affect}{book}{}
+    \name{author}{1}{}{%
+      {{hash=TS}{%
+         family={Tomkins},
+         family_i={T\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Publishing Company}%
+    }
+    \strng{namehash}{TS1}
+    \strng{fullhash}{TS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1963}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{isbn}{9780826104434}
+    \field{series}{Springer Series}
+    \field{title}{Affect Imagery Consciousness: Volume II: The Negative
+  Affects}
+    \verb{url}
+    \verb https://books.google.sk/books?id=1xL\_TT04OxsC
+    \endverb
+    \field{year}{1963}
+  \endentry
+
+  \entry{watson}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WD}{%
+         family={Watson},
+         family_i={W\bibinitperiod},
+         given={David},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=TA}{%
+         family={Tellegen},
+         family_i={T\bibinitperiod},
+         given={Auke},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WD+1}
+    \strng{fullhash}{WDTA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1985}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{booktitle}{Psychological bulletin}
+    \field{pages}{219\bibrangedash 35}
+    \field{title}{Toward a Consensual Structure of Mood}
+    \field{volume}{98}
+    \field{month}{10}
+    \field{year}{1985}
+  \endentry
+
+  \entry{wundt2017outlines}{book}{}
+    \name{author}{1}{}{%
+      {{hash=WW}{%
+         family={Wundt},
+         family_i={W\bibinitperiod},
+         given={W.M.},
+         given_i={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Fb\&c Limited}%
+    }
+    \strng{namehash}{WW1}
+    \strng{fullhash}{WW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{isbn}{9780331795738}
+    \field{title}{Outlines of Psychology (Classic Reprint)}
+    \verb{url}
+    \verb https://books.google.sk/books?id=zj6atAEACAAJ
+    \endverb
+    \field{year}{2017}
+  \endentry
+
+  \entry{Russel}{article}{}
+    \name{author}{3}{}{%
+      {{hash=YM}{%
+         family={Yik},
+         family_i={Y\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=RJA}{%
+         family={Russell},
+         family_i={R\bibinitperiod},
+         given={J.\bibnamedelima A.},
+         given_i={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=SJH}{%
+         family={Steiger},
+         family_i={S\bibinitperiod},
+         given={J.\bibnamedelima H.},
+         given_i={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {English}%
+    }
+    \strng{namehash}{YM+1}
+    \strng{fullhash}{YMRJASJH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2011}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{number}{4}
+    \field{pages}{705\bibrangedash 731}
+    \field{title}{A 12-Point Circumplex Structure of Core Affect}
+    \verb{url}
+    \verb www.scopus.com
+    \endverb
+    \field{volume}{11}
+    \field{journaltitle}{Emotion}
+    \field{year}{2011}
+  \endentry
+\endsortlist
+\endinput
