@@ -61,7 +61,8 @@ backend=bibtex        % if we want unicode
 
 \usepackage[left=3.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \author{Bc. Michal Kohútek}
-\title{Recognizing the user's emotional state using intelligent control systems}
+\title{Rozpoznávanie emocionálneho stavu používate¾a pomocou inteligentných 
+riadiacich systémov}
 \begin{document}
 	
 \begin{titlepage}
@@ -70,17 +71,18 @@ backend=bibtex        % if we want unicode
 {\bfseries\LARGE UNIVERZITA KONŠTANTÍNA FILOZOFA V NITRE \par}
 {\bfseries\LARGE FAKULTA PRÍRODNÝCH VIED \par}
 \vfill
-{\bfseries\LARGE RECOGNIZING THE USER'S EMOTIONAL STATE USING INTELLIGENT 
-CONTROL SYSTEMS\par}
+{\bfseries\LARGE ROZPOZNÁVANIE EMOCIONÁLNEHO STAVU POUŽÍVATE¼A POMOCOU 
+INTELIGENTNÝCH RIADIACICH SYSTÉMOV\par}
 \vspace{1cm}
-{\bfseries\Large Diploma thesis\par}
+{\bfseries\Large Diplomová práca\par}
 \par}
 \vfill
 \Large{
-Study programme:\par
-Field of Study:\par
-Department:\par
-Supervisor: Mgr. Martin Magdin, PhD\par}
+Študijný program: Aplikovaná informatika (magisterský II. St., denná  
+forma)\par
+Študijný odbor:  AI15m - Aplikovaná informatika\par
+Školiace pracovisko: Katedra Matematiky\par
+Školite¾: Mgr. Martin Magdin, PhD\par}
 \vfill
 \textbf{Nitra 2018}\hfill\textbf{Bc. Michal Kohútek}
 \end{titlepage}
@@ -264,9 +266,11 @@ assumes that there is always an underlying arousal dimension and that valence
 determines the direction in which a particular emotion lies.
 \begin{figure}
 		\centering
-		\subfloat[label1]{\includegraphics[width=0.2\linewidth]{images/vector0}}%
+		\subfloat[2D
+		representation]{\includegraphics[width=0.2\linewidth]{images/vector0}}%
 		\qquad
-		\subfloat[label1]{\includegraphics[width=0.2\linewidth]{images/vector1}}%
+		\subfloat[3D 
+		representation]{\includegraphics[width=0.2\linewidth]{images/vector1}}%
 		\caption{Vector model of emotions}
 		\label{fig:}
 \end{figure}
@@ -390,9 +394,40 @@ influenced emotions and focus on the more primal, basic emotions, that may be
 more quantifiable by studying the physiological markers and responses in 
 subjects.
 \section{Physiological responses of emotions}
+%\paragraph{}When dealing with physiological effects of emotion, we come across 
+%a few prevalent theories. The James-Lange theory is one of the earliest 
+%theories of emotion within modern psychology. It was developed independently 
+%by 
+%William James and Carl Lange in 19th century. The basic premise 
+%\footnote{Which 
+%is also the point of most criticism} is that physiological arousal instigates 
+%the experience of emotion, i.e., the arousal precedes and causes the emotion 
+%(\cite{walter}). According to the Cannon-Bard theory of emotions, the emotion 
+%is accompanied by physiological arousal.
 
 
-\section{Progress in techniques used in research of emotions}
+\paragraph{} In order for us to be able to detect and recognize emotions from 
+the data samples, we need to asses which physiological effects of emotions we 
+want to capture. Therefore, we need to divide our standard basic emotions 
+depending on the combination of kinds and intensity of effects they have on 
+human body. There is a difficulty with dealing with physiological markers of 
+emotions in that not all emotions do perceivably alter the physiology of the 
+subjects. That is the reason, why we need to supplement this data with the 
+facial expressions or, as we have tried to confirm, ocular movements. 
+
+\paragraph{} Anger is one of the emotions with more pronounced physiological 
+signs. It comes along with faster and deeper breathing 
+(\cite{respiratoryfeedback}), increased heart rate, blood pressure, 
+perspiration and tensing of muscles. Fear, on the other hand, shares most of 
+the surface physiological marks with anger, such as the accelerating breathing 
+rate, heart rate and muscle tension, but facial expression and body language 
+are vastly different. Even deeper markers, like the cortisol levels differ 
+after subjecting a person to these stressors (\cite{Moons2010AngerAF}). Joy, 
+sadness, disgust and surprise are similar to each other in their difficulty to 
+asses using pure physiological markers and therefore requiring additional 
+information, usually in form of facial expression.
+
+\section{Current approaches in detecting and classifying emotions}
 \paragraph{}As we've described motion recognition is an important object of 
 studies in today's 
 psychology, with many potential uses and applications. Correctly assessing and 
@@ -407,8 +442,135 @@ prolonged durations of time and still maintains a degree of reliability in
 captured data. We can do so by using an array of data resources, that 
 complement each other, diminishing their disadvantages and reinforcing 
 confidence.
-\chapter{Hardware sensors}
-\chapter{Software technologies}
 
+\paragraph{}One particularly rich resource for data on human emotions is the 
+brain. In 2015 a group of researchers in India published a paper on a system 
+using EEG signals as input, Independent Component Analysis \footnote{A 
+statistical procedure used for splitting up a set of mixed signals into its 
+sources}, Kernel Destiny Estimation \footnote{A method used for feature 
+extraction of signals by computing density estimate using kernel-smoothing 
+method} and an Artificial Neural Network to  transform the inputs into 
+meaningful outputs. They observed better results for clustering of EEG and ECG 
+data stream (\cite{LAHANE2015574}). Similar approach was taken by researchers 
+in China. Main difference in their approach is that they first applied EMD 
+\footnote{Empirical Mode Decomposition} strategy to split EEG signals into a 
+series of intrinsic mode functions, which were then fed as sample entropies and 
+as feature vectors into SVN\footnote{Support Vector Machine} classifier for 
+testing and training. With this approach, they claim to have reached accuracy 
+levels of 94.98\% for binary-class tasks and  93.20\% for the multi-class task 
+on DEAP database (\cite{zhang}).  Also in 2016, researchers from the Duke 
+University, North Carolina demonstrated an emotional recognition technique 
+using functional MRI with results, that brain-based models may, in future, 
+allow us deeper understanding and assessing emotional status in clinical 
+settings, particularly in individuals incapable of providing self-report of 
+their own emotional experience (\cite{kragel}). These techniques are, however, 
+impossible to replicate on greater scale and in the context of a classroom, or 
+other commonplace environment.
+
+\paragraph{}Another indicator of the subject's emotional state is heartbeat. 
+Research published in May 2013 in International Journal of Engineering Trends 
+and Technology shown compelling data gathering by means of 
+ECG\footnote{Electrocardiography} and shown 
+differences in ECG signal in subjects in chosen emotional states. 
+\footnote{This study was limited to joy, sadness, fear and anger} 
+(\cite{shalini2013emotion}). More complex approach was taken by researchers at 
+University of Calabria in collaboration with Washington State University. 
+Instead of applying a single or a few sensors to study physiological states, 
+they used a whole BSN\footnote{Body Sensor Network, specialized Wireless Sensor 
+Network applied to the whole human body.} Such networks can include 
+accelerometers, gyroscopes, pressure sensors for body movements
+and applied forces, skin/chest electrodes (for electrocardiogram
+(ECG), electromyogram (EMG), galvanic skin response (GSR), and
+electrical impedance plethysmography (EIP)), (PPG) sensors, microphones (for 
+voice, ambient, and heart sounds), scalp-placed electrodes for 
+electroencephalogram (EEG) (\cite{gravina}). Albeit they were not focusing 
+primarily on emotion recognition, this survey shows consequential advancement 
+in the state-of-the-art body data collection, especially in the data fusion 
+techniques. Similar approach using a variety of sensors and data sources was 
+also taken by \cite{MOSCIANO201748} to reasonably accurately classify the two 
+dimensions of affect both normal and simulated critical working conditions.
+
+\paragraph{}An interesting approach to emotion detection and classification is 
+based upon speech patterns and variations and are better suited for emotions, 
+which are otherwise hard to physiologically measure, such as sadness and joy. 
+One study shows, that speech signal and feature distances of letters and words 
+vary depending on the mood and emotional state of the subject. The study was 
+done upon the sample size of 30 people, however, researchers point out, that 
+for getting better accuracy, one should consider the data collected from one 
+person rather than considering the data from a group of people 
+(\cite{DAVLETCHAROVA201591}).
+
+\paragraph{}In terms of evaluating arousal, respiration-based emotion 
+recognition shows promise. A study in China showed, that using respiration data 
+to evaluate valence and arousal levels of Russel theory, they reached 
+classification accuracy of valence and arousal at 73.06\% and 80.78\%, 
+respectively (\cite{zhang2}). When compared to other studies using ECG or 
+EEG data, the accuracy of valence levels are not exceptional, however the 
+classification accuracy of arousal better than most other approaches.
+
+\paragraph{}A study on thermal behavior of anger, disgust, fear, joy and 
+sadness was carried out in 2016. When an emotion occurs a change in facial 
+temperature appears due to the blood flow that the body emits through blood
+vessels in the subcutaneous area (\cite{stephanos}). For example, research 
+focused on the emotion of joy, in other words, when a subject is smiling, it has
+been found that the temperature of the nose and forehead
+decreases during this event (\cite{SALAZARLOPEZ2015149}). Biomedical thermal 
+images of the facial
+expressions of 44 subjects were captured experiencing the five studied 
+emotions, with results of this test at 89.9\% success rate (\cite{Albarran}).
+
+\paragraph{}Another novel approach was experimented with by researchers from 
+American University of Sharjah, United Arab Emirates. They have created a 
+software touch keyboard, that was installed on Android smartphones, which then 
+have been collecting sensor data while users were typing on the keyboard. As 
+they have been typing, he or she were prompted to indicate their current 
+emotional state, which then tagged the sensor data collected for the particular 
+user. Afterwards the data was classified by multiple machine learning 
+algorithms to find the best classification method. Based on 
+ROC\footnote{Receiver Operating Characteristic} and Precision-Recall curves, it 
+was concluded that both J48 and Multi-response linear regression performed
+well. This system demonstrates that it is possible to enable emotion 
+recognition on mobile phones using built-in sensors (\cite{ZUALKERNAN20171}). 
+More research is, nevertheless, needed to precisely ascertain the accuracy and 
+applicability of such solution in common practice.
+
+\paragraph{}One approach seems to be very promising, especially due to it's 
+implementation in commercial solutions and services. That approach is based on 
+facial expression evaluation and it is used by a wide variety of software 
+vendors and research institutions. One such research has used Microsoft Kinect 
+for 3D face modeling with a goal to computationally recognize facial 
+expressions of seven basic emotional states: neutral, joy, surprise, anger, 
+sadness, fear and disgust. The subjects of the experiment were six men aged 
+26-50 years, told to mimic expressions shown on the screen. Researchers  used 
+nearest neighbor classifier (3-NN) and two-layer neural network classifier (MLP)
+with 7 neurons in the hidden layer with output accuracy rate of 96\% for 
+random division of data and 73\% for "natural" division of data 
+(\cite{TARNOWSKI20171175}).
+%mention affectiva and other commercial sdk and api
+\subsection{Emotion recognition APIs and SDKs used in commercial environment}
+
+\paragraph{}There are two questions, that remains unanswered. Is our current 
+method of selecting impulses the correct one? Are we rating approaches the 
+right way? In research mentioned above, there are mainly two types of 
+referential data. One is based on self-identifying emotions, the other on using 
+previously assorted categories of pictures or impulses. As we've mentioned 
+before, self-identifying emotions is a hard task for most people and it is the 
+task, that we aim to solve. Also, is the methodology we use, to personally 
+evaluate emotions the correct one? We usually refer to the previous 
+evaluations, that trace back to psychologist and we take their emotion 
+assessments at face value. It might be wise, that we should ignore previous 
+results and rather try to classify and categorize emotions from ground up and 
+later compare them with historical data. Finally, most of the researches 
+delving into face expression-based emotion recognition declare their statistics 
+based upon the success rate of recognizing simple expressions, not emotions 
+themselves.
+
+\chapter{Data gathering methodology}
+\section{Hardware}
+\section{Software}
+
+\chapter{Data evaluation}
+
+\chapter{Results}
 \printbibliography
 \end{document}

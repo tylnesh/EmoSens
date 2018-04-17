@@ -185,6 +185,49 @@
     \field{year}{2017}
   \endentry
 
+  \entry{Albarran}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CAIA}{%
+         family={Cruz-Albarran},
+         family_i={C\bibinitperiod-A\bibinitperiod},
+         given={Irving\bibnamedelima A.},
+         given_i={I\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=PBRJ}{%
+         family={P.\bibnamedelima Benítez-Rangel},
+         family_i={P\bibinitperiod\bibinitdelim
+  B\bibinitperiod-R\bibinitperiod},
+         given={Juan},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=ORR}{%
+         family={Osornio-Rios},
+         family_i={O\bibinitperiod-R\bibinitperiod},
+         given={Roque},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=MHL}{%
+         family={Morales-Hernández},
+         family_i={M\bibinitperiod-H\bibinitperiod},
+         given={Luis},
+         given_i={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CAIA+1}
+    \strng{fullhash}{CAIAPBRJORRMHL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Infrared Physics \& Technology}
+    \field{title}{Human emotions detection based on a smart-thermal system of
+  thermographic images}
+    \field{volume}{81}
+    \field{month}{01}
+    \field{year}{2017}
+  \endentry
+
   \entry{darwin1998expression}{book}{}
     \name{author}{3}{}{%
       {{hash=DC}{%
@@ -222,6 +265,54 @@
     \verb https://books.google.sk/books?id=TFRtLZSHMcYC
     \endverb
     \field{year}{1998}
+  \endentry
+
+  \entry{DAVLETCHAROVA201591}{article}{}
+    \name{author}{4}{}{%
+      {{hash=DA}{%
+         family={Davletcharova},
+         family_i={D\bibinitperiod},
+         given={Assel},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sugathan},
+         family_i={S\bibinitperiod},
+         given={Sherin},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=AB}{%
+         family={Abraham},
+         family_i={A\bibinitperiod},
+         given={Bibia},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=JAP}{%
+         family={James},
+         family_i={J\bibinitperiod},
+         given={Alex\bibnamedelima Pappachen},
+         given_i={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{DA+1}
+    \strng{fullhash}{DASSABJAP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.procs.2015.08.032
+    \endverb
+    \field{issn}{1877-0509}
+    \field{pages}{91\bibrangedash 96}
+    \field{title}{Detection and Analysis of Emotion from Speech Signals}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S1877050915021432
+    \endverb
+    \field{volume}{58}
+    \field{journaltitle}{Procedia Computer Science}
+    \field{year}{2015}
   \endentry
 
   \entry{Ekman}{article}{}
@@ -287,6 +378,82 @@
     \field{year}{1971}
   \endentry
 
+  \entry{gravina}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GR}{%
+         family={Gravina},
+         family_i={G\bibinitperiod},
+         given={Raffaele},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=AP}{%
+         family={Alinia},
+         family_i={A\bibinitperiod},
+         given={Parastoo},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Ghasemzadeh},
+         family_i={G\bibinitperiod},
+         given={Hassan},
+         given_i={H\bibinitperiod},
+      }}%
+      {{hash=FG}{%
+         family={Fortino},
+         family_i={F\bibinitperiod},
+         given={Giancarlo},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GR+1}
+    \strng{fullhash}{GRAPGHFG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{booktitle}{Information Fusion}
+    \field{title}{Multi-Sensor Fusion in Body Sensor Networks: State-of-the-art
+  and research challenges}
+    \field{volume}{35}
+    \field{month}{09}
+    \field{year}{2016}
+  \endentry
+
+  \entry{stephanos}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=IS}{%
+         family={Ioannou},
+         family_i={I\bibinitperiod},
+         given={Stephanos},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=GV}{%
+         family={Gallese},
+         family_i={G\bibinitperiod},
+         given={Vittorio},
+         given_i={V\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Merla},
+         family_i={M\bibinitperiod},
+         given={Arcangelo},
+         given_i={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{IS+1}
+    \strng{fullhash}{ISGVMA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{booktitle}{Psychophysiology}
+    \field{title}{Thermal infrared imaging in psychophysiology: Potentialities
+  and limits}
+    \field{year}{2014}
+  \endentry
+
   \entry{lang}{article}{}
     \name{author}{3}{}{%
       {{hash=JLP}{%
@@ -321,6 +488,99 @@
     \field{volume}{97}
     \field{month}{08}
     \field{year}{1990}
+  \endentry
+
+  \entry{kragel}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KPA}{%
+         family={Kragel},
+         family_i={K\bibinitperiod},
+         given={Philip\bibnamedelima A.},
+         given_i={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=KAR}{%
+         family={Knodt},
+         family_i={K\bibinitperiod},
+         given={Annchen\bibnamedelima R.},
+         given_i={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=HAR}{%
+         family={Hariri},
+         family_i={H\bibinitperiod},
+         given={Ahmad\bibnamedelima R.},
+         given_i={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=LKS}{%
+         family={LaBar},
+         family_i={L\bibinitperiod},
+         given={Kevin\bibnamedelima S.},
+         given_i={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Public Library of Science}%
+    }
+    \strng{namehash}{KPA+1}
+    \strng{fullhash}{KPAKARHARLKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.1371/journal.pbio.2000106
+    \endverb
+    \field{number}{9}
+    \field{pages}{1\bibrangedash 19}
+    \field{title}{Decoding Spontaneous Emotional States in the Human Brain}
+    \verb{url}
+    \verb https://doi.org/10.1371/journal.pbio.2000106
+    \endverb
+    \field{volume}{14}
+    \field{journaltitle}{PLOS Biology}
+    \field{month}{09}
+    \field{year}{2016}
+  \endentry
+
+  \entry{LAHANE2015574}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LP}{%
+         family={Lahane},
+         family_i={L\bibinitperiod},
+         given={Prashant},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=SAK}{%
+         family={Sangaiah},
+         family_i={S\bibinitperiod},
+         given={Arun\bibnamedelima Kumar},
+         given_i={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \keyw{Electroencephalography (EEG) Signals, Independent Component Analysis
+  (ICA), Kernel Density Estimation (KDE), Artificial Neural Network (ANN)}
+    \strng{namehash}{LP+1}
+    \strng{fullhash}{LPSAK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.procs.2015.04.138
+    \endverb
+    \field{issn}{1877-0509}
+    \field{note}{International Conference on Computer, Communication and
+  Convergence (ICCC 2015)}
+    \field{pages}{574 \bibrangedash  581}
+    \field{title}{An Approach to EEG Based Emotion Recognition and
+  Classification Using Kernel Density Estimation}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S187705091500647X
+    \endverb
+    \field{volume}{48}
+    \field{journaltitle}{Procedia Computer Science}
+    \field{year}{2015}
   \endentry
 
   \entry{Lvheim2012ANT}{article}{}
@@ -408,6 +668,140 @@
     \verb https://books.google.sk/books?id=EthOAAAAMAAJ
     \endverb
     \field{year}{1974}
+  \endentry
+
+  \entry{Moons2010AngerAF}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MWG}{%
+         family={Moons},
+         family_i={M\bibinitperiod},
+         given={Wesley\bibnamedelima G.},
+         given_i={W\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=ENI}{%
+         family={Eisenberger},
+         family_i={E\bibinitperiod},
+         given={Naomi\bibnamedelima I.},
+         given_i={N\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=TSE}{%
+         family={Taylor},
+         family_i={T\bibinitperiod},
+         given={Shelley\bibnamedelima E.},
+         given_i={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MWG+1}
+    \strng{fullhash}{MWGENITSE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{215\bibrangedash 9}
+    \field{title}{Anger and fear responses to stress have different biological
+  profiles.}
+    \field{volume}{24 2}
+    \field{journaltitle}{Brain, behavior, and immunity}
+    \field{year}{2010}
+  \endentry
+
+  \entry{MOSCIANO201748}{article}{}
+    \name{author}{6}{}{%
+      {{hash=MF}{%
+         family={Mosciano},
+         family_i={M\bibinitperiod},
+         given={Francesco},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mencattini},
+         family_i={M\bibinitperiod},
+         given={Arianna},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=RF}{%
+         family={Ringeval},
+         family_i={R\bibinitperiod},
+         given={Fabien},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Schuller},
+         family_i={S\bibinitperiod},
+         given={Björn},
+         given_i={B\bibinitperiod},
+      }}%
+      {{hash=ME}{%
+         family={Martinelli},
+         family_i={M\bibinitperiod},
+         given={Eugenio},
+         given_i={E\bibinitperiod},
+      }}%
+      {{hash=NCD}{%
+         family={Natale},
+         family_i={N\bibinitperiod},
+         given={Corrado\bibnamedelima Di},
+         given_i={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \keyw{Sensor array, Adaptive regression strategy, Emotion recognition}
+    \strng{namehash}{MF+1}
+    \strng{fullhash}{MFMARFSBMENCD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.sna.2017.09.056
+    \endverb
+    \field{issn}{0924-4247}
+    \field{pages}{48 \bibrangedash  59}
+    \field{title}{An array of physical sensors and an adaptive regression
+  strategy for emotion recognition in a noisy scenario}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0924424717305812
+    \endverb
+    \field{volume}{267}
+    \field{journaltitle}{Sensors and Actuators A: Physical}
+    \field{year}{2017}
+  \endentry
+
+  \entry{respiratoryfeedback}{article}{}
+    \name{author}{3}{}{%
+      {{hash=PP}{%
+         family={Philippot},
+         family_i={P\bibinitperiod},
+         given={Pierre},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=CG}{%
+         family={Chapelle},
+         family_i={C\bibinitperiod},
+         given={Gaëtane},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Blairy},
+         family_i={B\bibinitperiod},
+         given={Sylvie},
+         given_i={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PP+1}
+    \strng{fullhash}{PPCGBS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{booktitle}{Cognition \& Emotion}
+    \field{pages}{605\bibrangedash 627}
+    \field{title}{Respiratory feedback in the generation of emotion}
+    \field{volume}{August 01}
+    \field{month}{09}
+    \field{year}{2010}
   \endentry
 
   \entry{Plutchik1988}{inbook}{}
@@ -621,6 +1015,89 @@
     \field{year}{1980}
   \endentry
 
+  \entry{SALAZARLOPEZ2015149}{article}{}
+    \name{author}{9}{}{%
+      {{hash=SLE}{%
+         family={Salazar-Lopez},
+         family_i={S\bibinitperiod-L\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+      {{hash=DE}{%
+         family={Domínguez},
+         family_i={D\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+      {{hash=RVJ}{%
+         family={Ramos},
+         family_i={R\bibinitperiod},
+         given={V.\bibnamedelima Juárez},
+         given_i={V\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=dlFJ}{%
+         prefix={de\bibnamedelima la},
+         prefix_i={d\bibinitperiod\bibinitdelim l\bibinitperiod},
+         family={Fuente},
+         family_i={F\bibinitperiod},
+         given={J.},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Meins},
+         family_i={M\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=IO}{%
+         family={Iborra},
+         family_i={I\bibinitperiod},
+         given={O.},
+         given_i={O\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Gálvez},
+         family_i={G\bibinitperiod},
+         given={G.},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=RAM}{%
+         family={Rodríguez-Artacho},
+         family_i={R\bibinitperiod-A\bibinitperiod},
+         given={M.A.},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=GME}{%
+         family={Gómez-Milán},
+         family_i={G\bibinitperiod-M\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \keyw{Thermography, Facial temperature, Empathy, Arousal, Emotional
+  valence, Subjective experience}
+    \strng{namehash}{SLE+1}
+    \strng{fullhash}{SLEDERVJFJdlMAIOGGRAMGME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.concog.2015.04.003
+    \endverb
+    \field{issn}{1053-8100}
+    \field{pages}{149 \bibrangedash  162}
+    \field{title}{The mental and subjective skin: Emotion, empathy, feelings
+  and thermography}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S105381001500080X
+    \endverb
+    \field{volume}{34}
+    \field{journaltitle}{Consciousness and Cognition}
+    \field{year}{2015}
+  \endentry
+
   \entry{schlosberg1954three}{article}{}
     \name{author}{1}{}{%
       {{hash=SH}{%
@@ -646,6 +1123,89 @@
     \field{volume}{61}
     \field{journaltitle}{Psychological review}
     \field{year}{1954}
+  \endentry
+
+  \entry{shalini2013emotion}{article}{}
+    \name{author}{2}{}{%
+      {{hash=STB}{%
+         family={Shalini},
+         family_i={S\bibinitperiod},
+         given={T\bibnamedelima Baby},
+         given_i={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=VL}{%
+         family={Vanitha},
+         family_i={V\bibinitperiod},
+         given={L},
+         given_i={L},
+      }}%
+    }
+    \strng{namehash}{STB+1}
+    \strng{fullhash}{STBVL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{number}{5}
+    \field{pages}{1337\bibrangedash 1342}
+    \field{title}{Emotion detection in human beings using ECG signals}
+    \field{volume}{4}
+    \field{journaltitle}{International Journal of Engineering Trends and
+  Technology (IJETT)}
+    \field{year}{2013}
+  \endentry
+
+  \entry{TARNOWSKI20171175}{article}{}
+    \name{author}{4}{}{%
+      {{hash=TP}{%
+         family={Tarnowski},
+         family_i={T\bibinitperiod},
+         given={Paweł},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kołodziej},
+         family_i={K\bibinitperiod},
+         given={Marcin},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Majkowski},
+         family_i={M\bibinitperiod},
+         given={Andrzej},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=RRJ}{%
+         family={Rak},
+         family_i={R\bibinitperiod},
+         given={Remigiusz\bibnamedelima J.},
+         given_i={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{facial expression, emotion recognition, action units, computer
+  vision, k-NN, MLP}
+    \strng{namehash}{TP+1}
+    \strng{fullhash}{TPKMMARRJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.procs.2017.05.025
+    \endverb
+    \field{issn}{1877-0509}
+    \field{note}{International Conference on Computational Science, ICCS 2017,
+  12-14 June 2017, Zurich, Switzerland}
+    \field{pages}{1175 \bibrangedash  1184}
+    \field{title}{Emotion recognition using facial expressions}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S1877050917305264
+    \endverb
+    \field{volume}{108}
+    \field{journaltitle}{Procedia Computer Science}
+    \field{year}{2017}
   \endentry
 
   \entry{tomkins1962affect}{book}{}
@@ -802,6 +1362,150 @@
     \field{volume}{11}
     \field{journaltitle}{Emotion}
     \field{year}{2011}
+  \endentry
+
+  \entry{zhang2}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZQ}{%
+         family={Zhang},
+         family_i={Z\bibinitperiod},
+         given={Qiang},
+         given_i={Q\bibinitperiod},
+      }}%
+      {{hash=CX}{%
+         family={Chen},
+         family_i={C\bibinitperiod},
+         given={Xianxiang},
+         given_i={X\bibinitperiod},
+      }}%
+      {{hash=ZQ}{%
+         family={Zhan},
+         family_i={Z\bibinitperiod},
+         given={Qingyuan},
+         given_i={Q\bibinitperiod},
+      }}%
+      {{hash=YT}{%
+         family={Yang},
+         family_i={Y\bibinitperiod},
+         given={Ting},
+         given_i={T\bibinitperiod},
+      }}%
+      {{hash=XS}{%
+         family={Xia},
+         family_i={X\bibinitperiod},
+         given={Shanhong},
+         given_i={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZQ+1}
+    \strng{fullhash}{ZQCXZQYTXS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.compind.2017.04.005
+    \endverb
+    \field{issn}{0166-3615}
+    \field{pages}{84\bibrangedash 90}
+    \field{title}{Respiration-based emotion recognition with deep learning}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0166361516303104
+    \endverb
+    \field{volume}{92-93}
+    \field{journaltitle}{Computers in Industry}
+    \field{year}{2017}
+  \endentry
+
+  \entry{zhang}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZY}{%
+         family={Zhang},
+         family_i={Z\bibinitperiod},
+         given={Yong},
+         given_i={Y\bibinitperiod},
+      }}%
+      {{hash=JX}{%
+         family={Ji},
+         family_i={J\bibinitperiod},
+         given={Xiaomin},
+         given_i={X\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhang},
+         family_i={Z\bibinitperiod},
+         given={Suhua},
+         given_i={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZY+1}
+    \strng{fullhash}{ZYJXZS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{booktitle}{Neuroscience Letters}
+    \field{title}{An approach to EEG-based emotion recognition using combined
+  feature extraction method}
+    \field{volume}{633}
+    \field{month}{09}
+    \field{year}{2016}
+  \endentry
+
+  \entry{ZUALKERNAN20171}{article}{}
+    \name{author}{5}{}{%
+      {{hash=ZI}{%
+         family={Zualkernan},
+         family_i={Z\bibinitperiod},
+         given={I.},
+         given_i={I\bibinitperiod},
+      }}%
+      {{hash=AF}{%
+         family={Aloul},
+         family_i={A\bibinitperiod},
+         given={F.},
+         given_i={F\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Shapsough},
+         family_i={S\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Hesham},
+         family_i={H\bibinitperiod},
+         given={A.},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=EKY}{%
+         family={El-Khorzaty},
+         family_i={E\bibinitperiod-K\bibinitperiod},
+         given={Y.},
+         given_i={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZI+1}
+    \strng{fullhash}{ZIAFSSHAEKY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \verb{doi}
+    \verb https://doi.org/10.1016/j.compeleceng.2017.05.004
+    \endverb
+    \field{issn}{0045-7906}
+    \field{pages}{1\bibrangedash 13}
+    \field{title}{Emotion recognition using mobile phones}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0045790617312752
+    \endverb
+    \field{volume}{60}
+    \field{journaltitle}{Computers \& Electrical Engineering}
+    \field{year}{2017}
   \endentry
 \endsortlist
 \endinput
