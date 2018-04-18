@@ -17,6 +17,16 @@
 \endgroup
 
 \sortlist[entry]{nyt/global/}
+  \entry{affectiva}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Affectiva Automotive AI}
+    \verb{url}
+    \verb https://www.affectiva.com/product/affectiva-automotive-ai/
+    \endverb
+  \endentry
+
   \entry{Akgul}{book}{}
     \name{author}{1}{}{%
       {{hash=AF}{%
@@ -65,6 +75,48 @@
     \field{sortinithash}{A}
     \field{title}{Research companion to emotion in organizations}
     \field{month}{01}
+    \field{year}{2008}
+  \endentry
+
+  \entry{Asteriadis2008EstimationOB}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AS}{%
+         family={Asteriadis},
+         family_i={A\bibinitperiod},
+         given={Stylianos},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=TPK}{%
+         family={Tzouveli},
+         family_i={T\bibinitperiod},
+         given={Paraskevi\bibnamedelima K.},
+         given_i={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Karpouzis},
+         family_i={K\bibinitperiod},
+         given={Kostas},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=KSD}{%
+         family={Kollias},
+         family_i={K\bibinitperiod},
+         given={Stefanos\bibnamedelima D.},
+         given_i={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AS+1}
+    \strng{fullhash}{ASTPKKKKSD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{pages}{469\bibrangedash 493}
+    \field{title}{Estimation of behavioral user state based on eye gaze and
+  head pose - application in an e-learning environment}
+    \field{volume}{41}
+    \field{journaltitle}{Multimedia Tools and Applications}
     \field{year}{2008}
   \endentry
 
@@ -1638,6 +1690,34 @@
     \field{volume}{11}
     \field{journaltitle}{Emotion}
     \field{year}{2011}
+  \endentry
+
+  \entry{yonck2017heart}{book}{}
+    \name{author}{1}{}{%
+      {{hash=YR}{%
+         family={Yonck},
+         family_i={Y\bibinitperiod},
+         given={R.},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Arcade Publishing}%
+    }
+    \strng{namehash}{YR1}
+    \strng{fullhash}{YR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{isbn}{9781628727340}
+    \field{title}{Heart of the Machine: Our Future in a World of Artificial
+  Emotional Intelligence}
+    \verb{url}
+    \verb https://books.google.sk/books?id=HquvDQAAQBAJ
+    \endverb
+    \field{year}{2017}
   \endentry
 
   \entry{zhang2}{article}{}

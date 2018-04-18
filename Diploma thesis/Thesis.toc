@@ -10,6 +10,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{9}
 \defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{9}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Emotion classification}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{10}
