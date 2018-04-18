@@ -48,6 +48,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{15}
 \defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{15}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Current approaches in detecting and classifying emotions}{15}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{15}
@@ -58,27 +60,79 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{16}
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{17}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{17}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Emotion recognition APIs and SDKs used in commercial environment}{17}
+\contentsline {paragraph}{}{17}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Data gathering methodology}{19}
+\contentsline {paragraph}{}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Hardware}{19}
+\contentsline {subsection}{\numberline {1.4.1}Emotion recognition used in commercial environment}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Software}{19}
+\contentsline {paragraph}{}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Data evaluation}{20}
+\contentsline {paragraph}{}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{21}
+\contentsline {paragraph}{}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Data gathering methodology}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Hardware}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Software}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}EmoSens application}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}The experiments}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Data evaluation}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Results}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{29}
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 

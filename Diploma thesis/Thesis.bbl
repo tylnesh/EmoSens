@@ -17,6 +17,30 @@
 \endgroup
 
 \sortlist[entry]{nyt/global/}
+  \entry{Akgul}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AF}{%
+         family={Akgul},
+         family_i={A\bibinitperiod},
+         given={Faruk},
+         given_i={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Packt Publishing}%
+    }
+    \strng{namehash}{AF1}
+    \strng{fullhash}{AF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{isbn}{178216104X, 9781782161042}
+    \field{title}{ZeroMQ}
+    \field{year}{2013}
+  \endentry
+
   \entry{abbrpad}{article}{}
     \name{author}{2}{}{%
       {{hash=AN}{%
@@ -67,6 +91,33 @@
     \field{langid}{english}
     \field{journaltitle}{Trends in Cognitive Sciences}
     \field{year}{2007}
+  \endentry
+
+  \entry{beatty}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BJ}{%
+         family={Beatty},
+         family_i={B\bibinitperiod},
+         given={Jackson},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=LWB}{%
+         family={Lucero-Wagoner},
+         family_i={L\bibinitperiod-W\bibinitperiod},
+         given={Brennis},
+         given_i={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJ+1}
+    \strng{fullhash}{BJLWB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{The pupillary system}
+    \field{month}{10}
+    \field{year}{2012}
   \endentry
 
   \entry{Izard}{incollection}{}
@@ -142,6 +193,57 @@
       {San Diego}%
     }
     \field{year}{2015}
+  \endentry
+
+  \entry{kairos}{online}{}
+    \name{author}{1}{}{%
+      {{hash=BB}{%
+         family={Brackeen},
+         family_i={B\bibinitperiod},
+         given={Brian},
+         given_i={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BB1}
+    \strng{fullhash}{BB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Face Off: Confronting Bias in Face Recognition AI}
+    \verb{url}
+    \verb https://www.kairos.com/blog/face-off-confronting-bias-in-face-recogni
+    \verb tion-ai
+    \endverb
+    \warn{\item Invalid format of field 'date' \item Invalid format of field
+  'date'}
+  \endentry
+
+  \entry{walter}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CW}{%
+         family={Cannon},
+         family_i={C\bibinitperiod},
+         given={W.B.},
+         given_i={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {University of Illinois Press}%
+    }
+    \strng{namehash}{CW1}
+    \strng{fullhash}{CW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1927}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{The James-Lange Theory of Emotions: A Critical Examination
+  and an Alternative Theory}
+    \verb{url}
+    \verb https://books.google.sk/books?id=DE3BnQEACAAJ
+    \endverb
+    \field{year}{1927}
   \endentry
 
   \entry{Cowen201702247}{article}{}
@@ -348,6 +450,41 @@
     \field{year}{1992}
   \endentry
 
+  \entry{ekman1997face}{book}{}
+    \name{author}{2}{}{%
+      {{hash=EP}{%
+         family={Ekman},
+         family_i={E\bibinitperiod},
+         given={P.},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=RE}{%
+         family={Rosenberg},
+         family_i={R\bibinitperiod},
+         given={E.L.},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{EP+1}
+    \strng{fullhash}{EPRE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1997}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{isbn}{9780195104462}
+    \field{series}{Series in affective science}
+    \field{title}{What the Face Reveals: Basic and Applied Studies of
+  Spontaneous Expression Using the Facial Action Coding System (FACS)}
+    \verb{url}
+    \verb https://books.google.sk/books?id=fFGYs079-7YC
+    \endverb
+    \field{year}{1997}
+  \endentry
+
   \entry{ekmanguinea}{article}{}
     \name{author}{2}{}{%
       {{hash=EP}{%
@@ -363,7 +500,7 @@
          given_i={W\bibinitperiod},
       }}%
     }
-    \strng{namehash}{EP+1}
+    \strng{namehash}{EP+2}
     \strng{fullhash}{EPVFW1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -418,6 +555,56 @@
     \field{volume}{35}
     \field{month}{09}
     \field{year}{2016}
+  \endentry
+
+  \entry{hess}{article}{}
+    \name{author}{1}{}{%
+      {{hash=HHE}{%
+         family={H.\bibnamedelima Hess},
+         family_i={H\bibinitperiod\bibinitdelim H\bibinitperiod},
+         given={Eckhard},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HHE1}
+    \strng{fullhash}{HHE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1975}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{The tell-tale eye: How your eyes reveal hidden thoughts and
+  emotions.}
+    \field{month}{01}
+    \field{year}{1975}
+  \endentry
+
+  \entry{hintjens2013zeromq}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HP}{%
+         family={Hintjens},
+         family_i={H\bibinitperiod},
+         given={P.},
+         given_i={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {O'Reilly Media, Incorporated}%
+    }
+    \strng{namehash}{HP1}
+    \strng{fullhash}{HP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{isbn}{9781449334062}
+    \field{series}{Oreilly and Associate Series}
+    \field{title}{ZeroMQ: Messaging for Many Applications}
+    \verb{url}
+    \verb https://books.google.sk/books?id=KWtT5CJc6FYC
+    \endverb
+    \field{year}{2013}
   \endentry
 
   \entry{stephanos}{inproceedings}{}
@@ -605,6 +792,95 @@
     \field{volume}{78 2}
     \field{journaltitle}{Medical hypotheses}
     \field{year}{2012}
+  \endentry
+
+  \entry{maskeliunas}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MR}{%
+         family={Maskeliunas},
+         family_i={M\bibinitperiod},
+         given={Rytis},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=RV}{%
+         family={Raudonis},
+         family_i={R\bibinitperiod},
+         given={Vidas},
+         given_i={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MR+1}
+    \strng{fullhash}{MRRV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{PeerJ Computer Science}
+    \field{pages}{e75}
+    \field{title}{Are you ashamed? Can a gaze tracker tell?}
+    \field{volume}{2}
+    \field{month}{08}
+    \field{year}{2016}
+  \endentry
+
+  \entry{affdex}{article}{}
+    \name{author}{6}{}{%
+      {{hash=MD}{%
+         family={McDuff},
+         family_i={M\bibinitperiod},
+         given={Daniel},
+         given_i={D\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mahmoud},
+         family_i={M\bibinitperiod},
+         given={Abdelrahman},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mavadati},
+         family_i={M\bibinitperiod},
+         given={Mohammad},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Amr},
+         family_i={A\bibinitperiod},
+         given={May},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=TJ}{%
+         family={Turcot},
+         family_i={T\bibinitperiod},
+         given={Jay},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=eKR}{%
+         prefix={el},
+         prefix_i={e\bibinitperiod},
+         family={Kaliouby},
+         family_i={K\bibinitperiod},
+         given={Rana},
+         given_i={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MD+1}
+    \strng{fullhash}{MDMAMMAMTJKRe1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{pages}{3723\bibrangedash 3726}
+    \field{title}{AFFDEX SDK: A Cross-Platform Real-Time Multi-Face Expression
+  Recognition Toolkit}
+    \verb{url}
+    \verb https://www.affectiva.com/wp-content/uploads/2017/03/McDuff_2016_Affd
+    \verb ex.pdf
+    \endverb
+    \field{month}{05}
+    \field{year}{2016}
   \endentry
 
   \entry{mehrabian1980basic}{book}{}

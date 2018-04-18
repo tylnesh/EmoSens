@@ -16,7 +16,7 @@ backend=bibtex        % if we want unicode
 ,style=iso-authoryear % or iso-numeric for numeric citation method
 ,autolang=other       % to support multiple languages in bibliography      
 ]{biblatex}
-
+\usepackage{multicol}
 \usepackage{titlesec}    
 \titleformat{\chapter}[block]
 {\normalfont\Large\bfseries}{\thechapter.}{1em}{\Large}
@@ -394,16 +394,16 @@ influenced emotions and focus on the more primal, basic emotions, that may be
 more quantifiable by studying the physiological markers and responses in 
 subjects.
 \section{Physiological responses of emotions}
-%\paragraph{}When dealing with physiological effects of emotion, we come across 
-%a few prevalent theories. The James-Lange theory is one of the earliest 
-%theories of emotion within modern psychology. It was developed independently 
-%by 
-%William James and Carl Lange in 19th century. The basic premise 
-%\footnote{Which 
-%is also the point of most criticism} is that physiological arousal instigates 
-%the experience of emotion, i.e., the arousal precedes and causes the emotion 
-%(\cite{walter}). According to the Cannon-Bard theory of emotions, the emotion 
-%is accompanied by physiological arousal.
+\paragraph{}When dealing with physiological effects of emotion, we come across 
+a few prevalent theories. The James-Lange theory is one of the earliest 
+theories of emotion within modern psychology. It was developed independently 
+by 
+William James and Carl Lange in 19th century. The basic premise 
+\footnote{Which 
+is also the point of most criticism} is that physiological arousal instigates 
+the experience of emotion, i.e., the arousal precedes and causes the emotion 
+(\cite{walter}). According to the Cannon-Bard theory of emotions, the emotion 
+is accompanied by physiological arousal.
 
 
 \paragraph{} In order for us to be able to detect and recognize emotions from 
@@ -547,7 +547,14 @@ with 7 neurons in the hidden layer with output accuracy rate of 96\% for
 random division of data and 73\% for "natural" division of data 
 (\cite{TARNOWSKI20171175}).
 %mention affectiva and other commercial sdk and api
-\subsection{Emotion recognition APIs and SDKs used in commercial environment}
+
+\paragraph{}Last but not least, one of the more recent\footnote{And less 
+explored.} approaches taken in affective computing is gaze and pupil tracking. 
+This builds on classic theories (\cite{hess} ; \cite{beatty}) and tries to 
+implement eye-tracking techniques to investigate emotional state and behavior 
+of subjects. They were successful in distinguishing between emotions, albeit 
+having to limit them from the core seven to four. Accuracy of their recognition 
+ranged in the interval from 80 to 90\% (\cite{maskeliunas})
 
 \paragraph{}There are two questions, that remains unanswered. Is our current 
 method of selecting impulses the correct one? Are we rating approaches the 
@@ -565,12 +572,401 @@ delving into face expression-based emotion recognition declare their statistics
 based upon the success rate of recognizing simple expressions, not emotions 
 themselves.
 
+\subsection{Emotion recognition used in commercial environment}
+\paragraph{}With plethora of possible applications and use-cases, from 
+marketing, automotive industry, health care, education and psychology research, 
+it is no wonder that a lot of industries are pushing towards better and faster 
+classification of emotions. Consequently the number of dependable 
+SDK\footnote{Software development kit -  A set of software development tools 
+that allows the creation of application for a certain software package, 
+framework, hardware platform, etc.} and API\footnote{Application programming 
+interface - A set of functions and procedures that allow the creation of 
+applications which access the features or data of an operating system, 
+application, or other service.} grows rapidly. A few of them also merge and/or 
+work together towards better integration.
+
+\paragraph{}Emotient was one such company. Their FACET SDK allows application  
+to track and analyze the emotional responses of users in real-time, detecting 
+and tracking expressions of primary emotion, as well as overall positive, 
+negative and neutral sentiments and blended composites of two or more emotions. 
+In 2013 they partnered with iMotions to provide a facial expression 
+recognition, EEG and GSR analysis platform to Procter and Gamble, the United 
+States Air Force and Yale University. As part of the agreement between the two 
+companies, Emotient's industry-leading emotion recognition solution was fully 
+integrated into iMotions Attention Tool, an eye tracking and biosensor software 
+platform for research and usability. In 2016 Emotient got acquired by Apple and 
+their website is no longer online.
+
+\paragraph{}Next in consideration was Eyeris EmoVu. It's a closed-source, 
+multi-platform SDK and API, that supports all three major desktop operating 
+systems: Microsoft Windows, macOS and GNU/Linux. It has language hooks for C++, 
+Java, VB.NET, Python, Objective-C, Node.js and more. Their pricing starts with 
+a free license, that covers the analysis of 500 frames per month. It's declared 
+features are \begin{multicols}{2}
+	\begin{itemize}
+		\item Emotion Recognition
+		\item Gender Recognition,
+		\item Age Recognition\footnote{Although not in numerical values, but in 
+		labels such as Child, Young Adult, Adult and Senior},
+		\item Face Recognition,
+		\item Facial Tracker,
+		\item Engagement and Mood metrics.
+	\end{itemize}
+\end{multicols}
+
+EmoVu's main drawback is lack of clear information about the SDK availability, 
+since they only mention it on their website in unclear terms and the pricing 
+only mentions API.
+
+\paragraph{}An interesting approach to confronting racial bias in face 
+recognition algorithms is shown by Kairos. As several studies shown, there is a 
+great difference between the error rates in human races.  The extent of these 
+biases are reflected in an error rate of 0.8 percent for light-skinned men, and 
+as high as 34.7\% for dark-skinned women. Since this problem can have very far 
+reaching implications, it's important to try to mitigate it. The solution 
+advocated by Kairos is to: \begin{enumerate}
+	\item Trust the process - as it's a new technology with room to grow,
+	\item Improve the data sets - gathering, training, and testing data from a 
+	population that is truly representative of global diversity
+	\item Seek constant feedback - trying to see what the users and communities 
+	see.
+\end{enumerate} (\cite{kairos})
+
+\paragraph{}Microsoft, the epitome of a immense corporation, has entered this 
+technological race with the launch of their Project Oxford. It's a collection 
+of artificial intelligence APIs with focus on computer vision, speech and 
+language analysis. It got it's own fair share of controversy with it's mediocre 
+launch, but continued to improve steadily. Project Oxford's tools enable face 
+detection and emotion detection \footnote{It uses a model of core seven 
+emotions plus neutral.} Unfortunately, the API works only with photos. The 
+pricing start with a free plan, that covers 30,000 transactions per month.
+
+\paragraph{}InSight SDK is facial recognition C++ toolbox developed by 
+Sightcorp in collaboration with the University of Amsterdam. It boasts a large 
+set of features, apart from face detection and emotion recognition, it uncovers 
+gaze estimation, head pose estimation and motion tracking features. InSight 
+does not provide academic trials, therefore we could not evaluate their 
+performance.
+
+
+
+\paragraph{}Another company that partnered with iMotions is Affectiva. The deal 
+came with Affectiva making their Affdex facial coding and emotion analytics 
+software available on the iMotions Biometric Research Platform. With this joint 
+solution human behavior researchers can combine facial coding and emotion 
+analytics with eye tracking, brainwave measurement (EEG), as well as 
+physiological sensors (GSR, ECG, EMG) on top of traditional surveys and 
+questionnaires, which are also fully integrated. The main Affectiva's 
+achievement was the amassment of the world's largest emotion data repository. 
+By 2018, they analyzed over 6 million faces from 87 countries The offer both 
+API \footnote{Which can be used online on a thin client.} and SDK {Which allows 
+applications to run locally and without needing Internet connection.} for the 
+major platform like Android, iOS, GNU/Linux, Windows and macOS. They have built 
+their massive data set of facial expressions by analyzing millions of face 
+videos, of people engaged in various activities, such as watching media 
+content\footnote{i.e, ads, movie trailers, television shows and online viral 
+campaigns}, driving cars, people in conversational interactions and animated 
+gifs\footnote{Via the partnership with giphy}. To get this impressive amount of 
+data, Affectiva partnered with their market research partners such as Millward 
+Brown, Unruly, Lightspeed, Added Value, Voxpopme and LRW and also with partners 
+in the automotive industry, robotics and Human Resources space. Affectiva's 
+Affdex SDK was tested on 10 000 images to verify the generalizability of 
+algorithms. Those images cover different lightning conditions, both genders, 
+various poses of participants, etc. Via the SDK, application can access and 
+read multiple metrics. Those include 7 emotion metrics, 20 facial expression 
+metrics, 13 emojis and 4 appearance metrics. Apart from the 7 emotional states, 
+the SDK surfaces also the Engagement\footnote{A measure of facial muscle 
+activation that illustrates the subject’s expressiveness. The range of values 
+is from 0 to 100.} and Valence \footnote{A measure of the positive or negative 
+nature of the recorded person’s experience. The range of values is from -100 to 
+100.} metric. The SDK offers four main features. \begin{enumerate}
+	\item Face and facial landmark detection,
+	\item Face texture feature extraction,
+	\item Facial action classification,
+	\item Emotion expression modelling.
+\end{enumerate} (\cite{affdex}) The SDK are offered under various licensing 
+deals, with a free Commercial Evaluation License valid for 60 days, or Student 
+Evaluation License valid for 6 months. The API is paid by the processing time, 
+with pricing starting at \$1/minute of video processed. Affectiva's mapping of 
+expressions onto emotions builds on EMFACS mapping, developed by Friesen and 
+Ekman. EMFACS is a variant of FACS system, that considers only emotion-related 
+facial actions. (\cite{ekman1997face})
+The table \ref{table:1} shows the relationship between the facial expressions 
+and the emotions predictors as used in the Affdex SDK.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{||c | c | c||} 
+		\hline
+		\hline
+		Emotion & Increase Likelihood &  Decrease Likelihood \\ [0.5ex] 
+		\hline\hline
+		Joy & Smile & Brow Raise, Brow Furrow  \\ 
+		\hline
+		Anger & Brow furrow, Lid Tighten, & Inner Brow Raise,  \\ 
+		& Eye Widen, Chin Raise, & Brow Raise,  \\ 
+		&  Mouth Open, Lip Suck & Smile  \\
+		\hline
+		Disgust & Nose Wrinkle, Upper Lip Raise & Lip Suck, Smile  \\
+		\hline
+		Surprise & Inner Brow Raise, Brow Raise & Brow Furrow \\
+		 & Eye Widen, Jaw Drop & \\
+		 \hline
+		Fear & Inner Brow Raise, Brow Furrow & Brow Raise, Lip Corner 
+		Depressor  \\ 
+		& Eye Widen, Lip Stretch & Jaw Drop	Smile \\
+		\hline
+		Sadness & Inner Brow Raise, Brow Furrow & Brow Raise, Eye Widen, Lip 
+		Press  \\ 
+		& Lip Corner Depressor & Mouth Open, Lip Suck, Smile \\
+		\hline
+		Contempt & Brow Furrow, Smirk & Smile  \\ [1ex] 
+		\hline
+		\hline
+	\end{tabular}
+	\caption{Relationship between the facial expressions and the emotions 
+	predictors}
+	\label{table:1}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{||c | c||} 
+		\hline
+		\hline
+		Increase Positive Valence Likelihood & Increase Negative Valence 
+		Likelihood 	\\ [0.5ex] 
+		\hline
+		\hline
+		 Smile & Inner Brow Raise   \\ 
+		
+		Cheek Raise & Brow Furrow   \\ 
+		
+		 & Nose Wrinkle  \\
+		
+		 & Upper Lip Raise  \\
+		
+		 & Lip Corner Depressor  \\ 
+	
+		 & Chin Raise   \\ 
+		
+		 & Lip Press   \\ 
+		 & Lip Suck  \\ [1ex] 
+		\hline
+		\hline
+	\end{tabular}
+	\caption{Markers increasing and decreasing predicted valence metric. 
+	likelihood.}
+	\label{table:2}
+\end{table}
+
+Lastly, the engagement of the subject is measured as a weighted sum of the 
+following facial expressions:
+\begin{multicols}{2}
+\begin{itemize}
+	\item Brow raise,
+	\item Brow furrow,
+	\item Nose wrinkle,
+	\item Lip corner depressor,
+	\item Chin raise,
+	\item Lip pucker,
+	\item Lip press,
+	\item Mouth open,
+	\item Lip suck,
+	\item Smile.
+\end{itemize}
+\end{multicols}
+
+\paragraph{}Due to the ease of use, clear documentation, offline capabilities 
+and free 6 month trial, we have decided to proceed using Affectiva's Affdex SDK.
+
+
 \chapter{Data gathering methodology}
+\paragraph{}As we've demonstrated, there are great many approaches to take and 
+physiological markers to explore. Due to the nature of our desired use-case, 
+we've decided to omit those physiological signs and pertaining sensors, that 
+would excessively constrain and disturb the user. Similarly, we did not employ 
+techniques, that would restrict our application from workplace or school 
+environment. Therefore, we did not use EEG, fMRI scanning, neither Thermal 
+imagining, nor speech recognition. For our body sensors, we have chosen a 
+simple, inexpensive optical heart rate sensor, GSR\footnote{Galvanic Skin 
+Response} sensor and Arduino to read and resend collected data. Furthermore, we 
+used a headset with two high-speed infrared cameras with infrared illumination 
+and one 1920x1080 "world" camera. To provide referential emotion values, we 
+used a regular 720p web camera, and processed the camera feed with modified 
+Affdex sample OpenCV application.
 \section{Hardware}
+\paragraph{}The research has been done using two different computers. 
+\begin{itemize}
+	\item Desktop workstation with hexa-core AMD FX-6300 clocked at 4.0GHz, 
+	8GB of RAM and Radeon 7700 GPU,
+	\item Laptop with quad-core Intel Core i7-4770HQ, 16 GB of RAM and NVidia 
+	860M GPU.
+\end{itemize}
+\paragraph{}These two computers proved able to fully satisfy hardware needs of 
+the 
+research. We have also tried to run the modifiet Affdex sample application on 
+Raspberry Pi 3B with official IR camera, however we found out, that the single 
+board computer was greatly lacking computing power and would freeze, hang and 
+drop frames with even one face detected on video feed. Powerful hardware was 
+needed not only for the use of Affectiva SDK, but also for the Pupil Capture 
+software, supplied by the manufacturer of our headset. These two applications 
+taxed both our computers close to peak load, although since our EmoSens data 
+collection application requires very few resources, it did not negatively 
+impact our experiments.
+
+\paragraph{}The heart rate data was gathered by Pulse Sensor Amped SEN-11574, a 
+plug-and-play heart rate sensor for Arduino and Raspberry Pi. It's a simple, 
+inexpensive optical sensor, that incorporates amplification and noise 
+cancellation circuitry on a single board. We did find out, that it requires 
+tight strapping to subject's skin, otherwise the data collected has been 
+inconsistent with reality.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.5]{images/HRCircuit}
+	\centering
+	\caption{Pulse Sensor Amped SEN-11574 circuitry}
+	\label{fig:}
+\end{figure}
+\newpage
+
+\paragraph{}The Galvanic Skin Response data was collected using Groove GSR 
+sensor. Groove is an Arduino shield maker, with a plethora of different sensors 
+available to buy. Since we only needed GSR and it is a relatively trivial task 
+to wire the Sensor directly to Arduino while circumventing the need for the 
+Groove shield itself, we connected the Groove GSR sensor straight to Arduino's 
+GPIO pins.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.5]{images/GSRCircuit}
+	\centering
+	\caption{Groove GSR Sensor circuitry}
+	\label{fig:}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\subfloat[Pulse Sensor Amped 
+	SEN-11574]{\includegraphics[width=0.2\linewidth]{images/HRSensor}}%
+	\qquad
+	\subfloat[Groove GSR 
+	Sensor]{\includegraphics[width=0.25\linewidth]{images/GSRSensor}}%
+	\caption{Sensors}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Both of these sensors were sewn into a fingerless glove and wired 
+to Arduino Due connected via USB cable to computer.
+
+%add schema of the arduino wiring
+
+\newpage
+
+\paragraph{}The Pupil headset consists of two high-speed 200Hz IR eye cameras 
+with illumination and a single FullHD World camera connected together to a 
+computer using USB-A to USB-C connector.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/pupil}
+	\centering
+	\caption{Pupil headset}
+	\label{fig:}
+\end{figure}
+
 \section{Software}
+\paragraph{}Both development and experiments took place on computers running 
+Ubuntu 16.04. 
+We have chosen this operating system, as it has large community of developers, 
+computer scientists and because most innovative frameworks and SDKs target this 
+platform. To create the data collection software, we have used the Qt5 
+application framework. It's main advantages in our use-case is it's 
+intuitiveness, open-source and cross-platform compatibility. It has bindings 
+with Python\footnote{PyQt} and C++. It also adds extensions to C++, including 
+signals and slots, which greatly simplify handling of events, thus helping in 
+development of GUI. It was compiled by GNU GCC 5.4.0. The Arduino is 
+programmable in a it's own variant of simplified C++, that forgoes features of 
+the language such as inheritance. Last but not least, the modified Affdex 
+webcam application is written in C++, albeit due to the incompatibilities with 
+newer compilers was compiled in GNU GCC 4.8.
+
+\paragraph{}This leads us to the unexpected setback that we came across. Both 
+Affectiva and Pupil use OpenCV 2.4, but Affectiva forked it's version and when 
+building with CMake on a recent operating system, it will either fail, or 
+overwrite shared libraries, thus breaking QT5 and Pupil. One solution to this 
+problem might be to install Affectiva sample application on a separate 
+computer, but since we aimed to create a compact solution, we opted for 
+installing it in a virtual machine running stock Ubuntu 16.04 with only the 
+libraries, that Affectiva requires and nothing else.
+
+\paragraph{}Since Affectiva's licence agreement prohibits it's integration with 
+a copyleft open source licensed projects \footnote{In our case GNU GPL v2} we 
+have modified the sample OpenCV application to send out data serialized in 
+messagepack over zeromq, thus eliminating the need to include it in our 
+project. This has added benefit in that our project is therefore modular and 
+can use any and all face or other emotion recognition SDK with 
+little to no changes to our source code.
+
+\paragraph{}ZeroMQ is a large community of projects with focus on decentralized 
+messaging and computing engines. Both software and protocols are open source 
+and maintained by community of experts. The original core engine is libzmq, 
+available in repositories of most GNU/Linux distributions, but also available 
+to install on all the other major operating systems. On top of libzmq, there is 
+a large number of language bindings, such as PyZMQ, CZMQ, CPPZMQ, NZMQT 
+\footnote{Our project uses NZMQT due to it's great integration with QT5's 
+signals and slots}. There are also native languages written for Java, .NET, 
+JavaScript and many others. Most importantly, it's really lightweight and fast. 
+The core library is only 20K lines of C++ code and the message throughput is 8 
+million messages per second with latency in microseconds. There are three main 
+patterns used in ZeroMQ. Request-Reply, Publish-Subscribe and Pipeline pattern. 
+(\cite{hintjens2013zeromq} ; \cite{Akgul})
+ 
+
+\paragraph{}MessagePack is a low-overhead binary serialization format. Compared 
+to the better know binary serialization format BSON, it's better in every 
+possible technical aspect. It's faster, smaller, and even more compatible to 
+JSON than BSON is. It's got support for dozens of languages, notably for 
+Python, Java, C, C\# and multiple standards of C++. MessagePack by design 
+solves 
+the problem of interprocess communication, especially if the processes are 
+written in different languages, or are even running on different platforms.
+
+\paragraph{}For our project, we opted to use the Publish-Subscribe pattern, 
+with Pupil Capture and Affectiva being the Publishers and our application 
+serving as a Subscriber to their messages serialized with MessagePack. That way 
+we ensure, that the communication is fast and reliable and also that the 
+peculiarities of different programming languages are covered for ease of use. 
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.4]{images/zeromqdia}
+	\centering
+	\caption{Simplified diagram of the data flow.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}For visualization of collected data, we have used two QT libraries. 
+The QtCharts library, which is included in the open-source Qt 5.10 
+installation, and also the QCustomPlot for more complex and granular control. 
+QCustomPlot is a free and open-source Qt C++ widget for plotting and data 
+visualization. It has no dependencies and is well documented. It even supports 
+exporting to various format such as vectorized PDF files and rasterized 
+pictures in PNG, JPG and BMP.
+
+\section{EmoSens application}
+
+%TODO: add description of the classes, screenshots of the gui, etc.
+
+\section{The experiments}
+
+%TODO : Add the description of the data collection process, pictures, etc.
 
 \chapter{Data evaluation}
 
+%TODO: Evaluate the data from the visualization and maybe nerualt network
+
 \chapter{Results}
+
+\chapter{Discussion}
 \printbibliography
 \end{document}
