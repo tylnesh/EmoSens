@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("EmoSens");
     //ui->recognitionButton->setVisible(false);
     //ui->trainButton->setVisible(false);
 

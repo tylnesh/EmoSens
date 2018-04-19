@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_visualizeDialog_t {
-    QByteArrayData data[24];
-    char stringdata0[539];
+    QByteArrayData data[25];
+    char stringdata0[563];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -54,7 +54,8 @@ QT_MOC_LITERAL(19, 484, 20), // "horzScrollBarChanged"
 QT_MOC_LITERAL(20, 505, 5), // "value"
 QT_MOC_LITERAL(21, 511, 12), // "xAxisChanged"
 QT_MOC_LITERAL(22, 524, 8), // "QCPRange"
-QT_MOC_LITERAL(23, 533, 5) // "range"
+QT_MOC_LITERAL(23, 533, 5), // "range"
+QT_MOC_LITERAL(24, 539, 23) // "on_exportButton_clicked"
 
     },
     "visualizeDialog\0on_loadButton_clicked\0"
@@ -73,7 +74,7 @@ QT_MOC_LITERAL(23, 533, 5) // "range"
     "on_diameter0CheckBox_stateChanged\0"
     "on_diameter1CheckBox_stateChanged\0"
     "horzScrollBarChanged\0value\0xAxisChanged\0"
-    "QCPRange\0range"
+    "QCPRange\0range\0on_exportButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -83,7 +84,7 @@ static const uint qt_meta_data_visualizeDialog[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      17,   14, // methods
+      18,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -91,23 +92,24 @@ static const uint qt_meta_data_visualizeDialog[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   99,    2, 0x08 /* Private */,
-       3,    1,  100,    2, 0x08 /* Private */,
-       5,    1,  103,    2, 0x08 /* Private */,
-       7,    1,  106,    2, 0x08 /* Private */,
-       8,    1,  109,    2, 0x08 /* Private */,
-       9,    1,  112,    2, 0x08 /* Private */,
-      10,    1,  115,    2, 0x08 /* Private */,
-      11,    1,  118,    2, 0x08 /* Private */,
-      12,    1,  121,    2, 0x08 /* Private */,
-      13,    1,  124,    2, 0x08 /* Private */,
-      14,    1,  127,    2, 0x08 /* Private */,
-      15,    1,  130,    2, 0x08 /* Private */,
-      16,    1,  133,    2, 0x08 /* Private */,
-      17,    1,  136,    2, 0x08 /* Private */,
-      18,    1,  139,    2, 0x08 /* Private */,
-      19,    1,  142,    2, 0x08 /* Private */,
-      21,    1,  145,    2, 0x08 /* Private */,
+       1,    0,  104,    2, 0x08 /* Private */,
+       3,    1,  105,    2, 0x08 /* Private */,
+       5,    1,  108,    2, 0x08 /* Private */,
+       7,    1,  111,    2, 0x08 /* Private */,
+       8,    1,  114,    2, 0x08 /* Private */,
+       9,    1,  117,    2, 0x08 /* Private */,
+      10,    1,  120,    2, 0x08 /* Private */,
+      11,    1,  123,    2, 0x08 /* Private */,
+      12,    1,  126,    2, 0x08 /* Private */,
+      13,    1,  129,    2, 0x08 /* Private */,
+      14,    1,  132,    2, 0x08 /* Private */,
+      15,    1,  135,    2, 0x08 /* Private */,
+      16,    1,  138,    2, 0x08 /* Private */,
+      17,    1,  141,    2, 0x08 /* Private */,
+      18,    1,  144,    2, 0x08 /* Private */,
+      19,    1,  147,    2, 0x08 /* Private */,
+      21,    1,  150,    2, 0x08 /* Private */,
+      24,    0,  153,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -127,6 +129,7 @@ static const uint qt_meta_data_visualizeDialog[] = {
     QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void, QMetaType::Int,   20,
     QMetaType::Void, 0x80000000 | 22,   23,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -154,6 +157,7 @@ void visualizeDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 14: _t->on_diameter1CheckBox_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 15: _t->horzScrollBarChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 16: _t->xAxisChanged((*reinterpret_cast< QCPRange(*)>(_a[1]))); break;
+        case 17: _t->on_exportButton_clicked(); break;
         default: ;
         }
     }
@@ -184,13 +188,13 @@ int visualizeDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 17)
+        if (_id < 18)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 17;
+        _id -= 18;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 17)
+        if (_id < 18)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 17;
+        _id -= 18;
     }
     return _id;
 }

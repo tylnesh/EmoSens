@@ -53,6 +53,7 @@ public:
     QCheckBox *diameter0CheckBox;
     QCheckBox *diameter1CheckBox;
     QComboBox *graphComboBox;
+    QPushButton *exportButton;
 
     void setupUi(QDialog *visualizeDialog)
     {
@@ -178,6 +179,9 @@ public:
         graphComboBox->addItem(QString());
         graphComboBox->setObjectName(QStringLiteral("graphComboBox"));
         graphComboBox->setGeometry(QRect(1130, 40, 151, 41));
+        exportButton = new QPushButton(visualizeDialog);
+        exportButton->setObjectName(QStringLiteral("exportButton"));
+        exportButton->setGeometry(QRect(1140, 670, 89, 25));
 
         retranslateUi(visualizeDialog);
 
@@ -204,6 +208,7 @@ public:
         graphComboBox->setItemText(0, QApplication::translate("visualizeDialog", "Average emotions", nullptr));
         graphComboBox->setItemText(1, QApplication::translate("visualizeDialog", "Emotions progression", nullptr));
 
+        exportButton->setText(QApplication::translate("visualizeDialog", "Export", nullptr));
     } // retranslateUi
 
 };

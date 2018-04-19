@@ -54,6 +54,8 @@ private slots:
 
     void xAxisChanged(QCPRange range);
 
+    void on_exportButton_clicked();
+
 private:
     Ui::visualizeDialog *ui;
     QFile file;

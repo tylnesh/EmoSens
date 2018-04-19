@@ -949,6 +949,10 @@ the next version of the glove. If we can add wireless connectivity, such as
 Bluetooth LE, or nRF24L01 module, and Lithium-Ion battery, we can make the 
 glove completely cord-free.
 
+\paragraph{}Similarly, with the ever increasing power efficiency and raw 
+computing power of small computers such as Intel NUC, or single board computers 
+such as ODROID-XU4 or UDOO X86, we could run our experiments
+
 
 
 
@@ -1033,18 +1037,82 @@ pictures in PNG, JPG and BMP.
 
 \section{EmoSens application}
 
-%TODO: add description of the classes, screenshots of the gui, etc.
+\paragraph{}Our main application was written in C++ programming language. The 
+GUI was 
+created in QtCreator, using the Qt 5.10 framework. After the start of the 
+application, the main window is shown. Here, the user can choose whether to 
+collect data, or to visualize previously collected data. The QLineEdit on the 
+right is auto-filled with the computer's IP address. If user is running Pupil 
+Capture and Affectiva application on another computer on the local area 
+network, he or she can change the IP address of the server.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/mainwindow}
+	\centering
+	\caption{Main window of the application}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}When opened, the Data Collection Dialog polls the selected IP by 
+sending a request at port 50200, where Pupil Capture is listening. Pupil then 
+replies with the port at which it will publish it's ZeroMQ messages. After 
+subscribing to the publisher, EmoSens attempts to connect to the modified 
+Affectiva application, using the same IP address and port 5555. Lastly, it will 
+open the serial connection on "/dev/ttyACM0" to read data off of Arduino. When 
+all of the connections are successful, the dialog will spawn five threads. 
+Three threads that receive data from Pupil, one that receives data from 
+Affectiva\footnote{Or another face expression application} and one to receive 
+data from sensors. Since ZeroMQ can send millions of messages per second, we 
+decided to omit most of them and to save only one every 50 milliseconds. The 
+dialog runs a timer and every 50 milliseconds will save the current state of 
+pupils, heart rate, galvanic skin resistance and facial expressions. All the 
+information are simultaneously written to disk with time and date of the 
+experiment.
+
+
+
+
+
 
 \section{The experiment}
 
-\paragraph{} The experiment we've conducted consists of 
+\paragraph{} For our experiment we have gathered twelve subjects, with equal 
+sex ration. The subjects were aged 25-65 years, with various education 
+background and upbringing. The experiment we've conducted consisted of having 
+the subject watch a 4 minute collection of videos in four categories, depending 
+on the emotion, they were supposed to induce. These categories were: 
+\begin{itemize}
+	\item Joy
+	\item Disgust
+	\item Fear
+	\item Shame/Arousal
+	\end{itemize}
+Before the experiment, we have explained to the subjects the categories and 
+that they should act naturally. We have had trouble getting reliable heart-rate 
+data in some subjects, presumably due to the hair on the back of their wrists. 
+During the experiment, they were told not to look around, concentrating on the 
+screen of the laptop. Whole experience was observed and their behaviour was 
+documented with hand-written notes.
+
+\paragraph{} The first part of the shown video was an array of amusing videos. 
+It was a collection of various popular "fail" clips on Youtube. The second 
+part, disgust, was a long clip of an epidermoid cyst being extracted by a 
+dermatologist. Third part was a scary video clip of a ghost jumping in the 
+window of a car in a snowstorm. The last segment was an erotic slideshow 
+showing attractive naked males, females and both homosexual and heterosexual 
+pairs mid coitus. The segments were divided by a few seconds of blank screen to 
+allow subjects' emotion to return to neutral. After the experiment, we have 
+questioned the subjects about their feelings and emotions.
+
 
 \chapter{Data evaluation}
 
-%TODO: Evaluate the data from the visualization and maybe nerualt network
+%TODO: Evaluate the data from the visualization 
 
 \chapter{Results}
 
 \chapter{Discussion}
+
 \printbibliography
 \end{document}

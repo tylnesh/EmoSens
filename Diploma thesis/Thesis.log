@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  19 APR 2018 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  20 APR 2018 01:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,6 +669,9 @@ LaTeX Warning: Label `fig:' multiply defined.
 
 LaTeX Warning: Label `fig:' multiply defined.
 
+
+LaTeX Warning: Label `fig:' multiply defined.
+
 )
 \openout1 = `Thesis.aux'.
 
@@ -1262,11 +1265,11 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
  <./images/pupil.jpg>]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 1000.
+(csquotes)                Punctuation tracker may fail on input line 1004.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 1000.
+(csquotes)                Punctuation tracker may fail on input line 1004.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1276,30 +1279,29 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/zeromqdia.png Graphic file (type png)
 
 <use images/zeromqdia.png>
-Package pdftex.def Info: images/zeromqdia.png used on input line 1020.
+Package pdftex.def Info: images/zeromqdia.png used on input line 1024.
 (pdftex.def)             Requested size: 324.00475pt x 145.74191pt.
+
+<images/mainwindow.png, id=113, 1285.80376pt x 749.80125pt>
+File: images/mainwindow.png Graphic file (type png)
+
+<use images/mainwindow.png>
+Package pdftex.def Info: images/mainwindow.png used on input line 1051.
+(pdftex.def)             Requested size: 385.74411pt x 224.94211pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [27 <./images/zeromqdia.png>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[28 <./images/mainwindow.png>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[29]
 Chapter 3.
-
-Overfull \vbox (5.05856pt too high) has occurred while \output is active []
-
-
-[28
-
-]
-Chapter 4.
-
-Overfull \vbox (5.05856pt too high) has occurred while \output is active []
-
-
-[29
-
-]
-Chapter 5.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
@@ -1307,22 +1309,38 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [30
 
 ]
+Chapter 4.
 
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 1049.
-
-LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 104
-9.
-(/usr/share/texmf/tex/latex/lm/il2lmtt.fd
-File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [31
 
 ]
-Overfull \hbox (0.69733pt too wide) in paragraph at lines 1050--1050
+Chapter 5.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[32
+
+]
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 1117.
+
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 111
+7.
+(/usr/share/texmf/tex/latex/lm/il2lmtt.fd
+File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[33
+
+]
+Overfull \hbox (0.69733pt too wide) in paragraph at lines 1118--1118
 []\IL2/lmr/m/n/10.95 MCDUFF, Daniel; MAH-MOUD, Ab-del-rah-man; MAVA-DATI, Mo-ha
 m-mad; AMR, May; TUR-
  []
@@ -1331,27 +1349,27 @@ m-mad; AMR, May; TUR-
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[32]
-Overfull \hbox (5.90608pt too wide) in paragraph at lines 1050--1050
+[34]
+Overfull \hbox (5.90608pt too wide) in paragraph at lines 1118--1118
 []\IL2/lmr/m/n/10.95 MOSCIANO, Francesco; MEN-CAT-TINI, Ar-i-anna; RINGEVAL, Fa
 -bien; SCHULLER, Bj[]A\OMS/lmsy/m/n/10.95 {\IL2/lmr/m/n/10.95 rn;
  []
 
 
-Overfull \hbox (24.5903pt too wide) in paragraph at lines 1050--1050
+Overfull \hbox (24.5903pt too wide) in paragraph at lines 1118--1118
 \IL2/lmr/m/n/10.95 words. \IL2/lmr/m/it/10.95 Mem-ory\IL2/lmr/m/n/10.95 . Vol. 
 17, no. 8, pp. 802{808. Avail-able from DOI: $\IL2/lmtt/m/n/10.95 10 . 1080 / 0
 9658210903130764$\IL2/lmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (6.53412pt too wide) in paragraph at lines 1050--1050
+Overfull \hbox (6.53412pt too wide) in paragraph at lines 1118--1118
 []\IL2/lmr/m/n/10.95 RUSSELL, J. A.; BAR-RETT, Lisa Feld-man, 1999. Core af-fec
 t, pro-to-typ-i-cal emo-tional episodes,
  []
 
 
-Overfull \hbox (3.21545pt too wide) in paragraph at lines 1050--1050
+Overfull \hbox (3.21545pt too wide) in paragraph at lines 1118--1118
 []\IL2/lmr/m/n/10.95 SALAZAR-LOPEZ, E.; DOM[]A-NGUEZ, E.; RAMOS, V. Ju[]A^^Trez
 ; FUENTE, J. de la; MEINS,
  []
@@ -1360,15 +1378,15 @@ Overfull \hbox (3.21545pt too wide) in paragraph at lines 1050--1050
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[33]
-Overfull \hbox (2.31282pt too wide) in paragraph at lines 1050--1050
+[35]
+Overfull \hbox (2.31282pt too wide) in paragraph at lines 1118--1118
 []\IL2/lmr/m/n/10.95 TOMKINS, S., 1963. \IL2/lmr/m/it/10.95 Af-fect Im-agery Co
 n-scious-ness: Vol-ume II: The Neg-a-tive Af-fects\IL2/lmr/m/n/10.95 . Springer
 
  []
 
 
-Overfull \hbox (38.46854pt too wide) in paragraph at lines 1050--1050
+Overfull \hbox (38.46854pt too wide) in paragraph at lines 1118--1118
 []\IL2/lmr/m/n/10.95 WUNDT, W.M., 2017. \IL2/lmr/m/it/10.95 Out-lines of Psy-ch
 ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
 .
@@ -1378,7 +1396,7 @@ ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[34] (./Thesis.aux)
+[36] (./Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1387,10 +1405,10 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12492 strings out of 493014
- 205983 string characters out of 6135690
+ 12497 strings out of 493014
+ 206100 string characters out of 6135690
  465557 words of memory out of 5000000
- 15784 multiletter control sequences out of 15000+600000
+ 15788 multiletter control sequences out of 15000+600000
  53450 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,49p,816b,2346s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1404,10 +1422,10 @@ e1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Thesis.pdf (34 pages, 1305775 bytes).
+Output written on Thesis.pdf (36 pages, 1320915 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 190 PDF objects out of 1000 (max. 8388607)
+ 120 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

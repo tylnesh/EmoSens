@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -31,6 +32,7 @@ public:
     QLineEdit *ipEdit;
     QPushButton *dataCollectButton;
     QPushButton *visualizationButton;
+    QLabel *label;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -44,13 +46,16 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         ipEdit = new QLineEdit(centralWidget);
         ipEdit->setObjectName(QStringLiteral("ipEdit"));
-        ipEdit->setGeometry(QRect(992, 110, 181, 40));
+        ipEdit->setGeometry(QRect(850, 150, 181, 40));
         dataCollectButton = new QPushButton(centralWidget);
         dataCollectButton->setObjectName(QStringLiteral("dataCollectButton"));
         dataCollectButton->setGeometry(QRect(440, 120, 301, 46));
         visualizationButton = new QPushButton(centralWidget);
         visualizationButton->setObjectName(QStringLiteral("visualizationButton"));
         visualizationButton->setGeometry(QRect(440, 180, 301, 46));
+        label = new QLabel(centralWidget);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(850, 120, 151, 21));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -74,6 +79,7 @@ public:
         ipEdit->setText(QApplication::translate("MainWindow", "127.0.0.1", nullptr));
         dataCollectButton->setText(QApplication::translate("MainWindow", "Collect data", nullptr));
         visualizationButton->setText(QApplication::translate("MainWindow", "Visualize data", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Server IP", nullptr));
     } // retranslateUi
 
 };

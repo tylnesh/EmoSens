@@ -245,6 +245,19 @@
     </property>
    </item>
   </widget>
+  <widget class="QPushButton" name="exportButton">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>670</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>

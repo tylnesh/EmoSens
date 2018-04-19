@@ -15,6 +15,7 @@ visualizeDialog::visualizeDialog(QWidget *parent) :
     ui(new Ui::visualizeDialog)
 {
     ui->setupUi(this);
+    ui->horizontalScrollBar->setVisible(false);
 
     //QString filename = QFileDialog::getOpenFileName(this, tr("Open data file"), "$HOME/output/", tr("Text Files (*.dat *.txt *.csv)"));
 }
@@ -27,7 +28,7 @@ visualizeDialog::~visualizeDialog()
 void visualizeDialog::on_loadButton_clicked()
 {
    // QString filename = QFileDialog::getOpenFileName(this, tr("Open data file"), "$HOME/output/", tr("Text Files (*.dat *.txt *.csv)"));
-    file.setFileName(QFileDialog::getOpenFileName(this, tr("Open file"), "./output", tr("Text Files (*.dat *.txt *.csv)")));
+    file.setFileName(QFileDialog::getOpenFileName(this, tr("Open file"), "../output", tr("Text Files (*.dat *.txt *.csv)")));
    // file.open(QIODevice::ReadOnly);
 
 
@@ -83,10 +84,10 @@ void visualizeDialog::on_loadButton_clicked()
           // 11 - 16 are pupil center positions and gaze positions.
           // TODO - add changes of position of gaze and pupil to visualization.
 
-          diameter0Vector.append(line.split(" ").at(17).toDouble());
+          diameter0Vector.append(line.split(" ").at(17).toDouble()*10);
           diameter0Sum += line.split(" ").at(17).toDouble();
 
-          diameter0Vector.append(line.split(" ").at(18).toDouble());
+          diameter0Vector.append(line.split(" ").at(18).toDouble()*10);
           diameter1Sum += line.split(" ").at(18).toDouble();
 
        }
@@ -282,36 +283,61 @@ void visualizeDialog::on_loadButton_clicked()
        ui->lineChartWidget->graph(8)->setData(x,affectVector[8]);
        ui->lineChartWidget->graph(8)->rescaleAxes(true);
 
-//       ui->lineChartWidget->addGraph();
-//       pen.setColor(QRgb(0xfaa43a));
-//       ui->lineChartWidget->graph(9)->setPen(pen);
-//       ui->lineChartWidget->graph(9)->setName("GSR");
-//       ui->lineChartWidget->graph(9)->setData(x,GSRVector);
-//       ui->lineChartWidget->graph(9)->rescaleAxes(true);
+        ui->lineChartWidget->addGraph();
+       pen.setColor(QRgb(0xfaa43a));
+       ui->lineChartWidget->graph(9)->setPen(pen);
+       ui->lineChartWidget->graph(9)->setName("GSR");
+       ui->lineChartWidget->graph(9)->setData(x,GSRVector);
+       ui->lineChartWidget->graph(9)->rescaleAxes(true);
 
-//       ui->lineChartWidget->addGraph();
-//       pen.setColor(QRgb(0xf17cb0));
-//       ui->lineChartWidget->graph(10)->setPen(pen);
-//       ui->lineChartWidget->graph(10)->setName("HR");
-//       ui->lineChartWidget->graph(10)->setData(x,HRVector);
-//       ui->lineChartWidget->graph(10)->rescaleAxes(true);
-
-
-//       ui->lineChartWidget->addGraph();
-//       pen.setColor(QRgb(0xB276B2));
-//       ui->lineChartWidget->graph(11)->setPen(pen);
-//       ui->lineChartWidget->graph(11)->setName("Pupil 0");
-//       ui->lineChartWidget->graph(11)->setData(x,diameter0Vector);
-//       ui->lineChartWidget->graph(11)->rescaleAxes(true);
-
-//       ui->lineChartWidget->addGraph();
-//       pen.setColor(QRgb(0xB276B2));
-//       ui->lineChartWidget->graph(12)->setPen(pen);
-//       ui->lineChartWidget->graph(12)->setName("Pupil 1");
-//       ui->lineChartWidget->graph(12)->setData(x,diameter1Vector);
-//       ui->lineChartWidget->graph(12)->rescaleAxes(true);
+       ui->lineChartWidget->addGraph();
+       pen.setColor(QRgb(0xf17cb0));
+       ui->lineChartWidget->graph(10)->setPen(pen);
+       ui->lineChartWidget->graph(10)->setName("HR");
+       ui->lineChartWidget->graph(10)->setData(x,HRVector);
+       ui->lineChartWidget->graph(10)->rescaleAxes(true);
 
 
+       ui->lineChartWidget->addGraph();
+       pen.setColor(QRgb(0xB276B2));
+       ui->lineChartWidget->graph(11)->setPen(pen);
+       ui->lineChartWidget->graph(11)->setName("Pupil 0");
+       ui->lineChartWidget->graph(11)->setData(x,diameter0Vector);
+       ui->lineChartWidget->graph(11)->rescaleAxes(true);
+
+       ui->lineChartWidget->addGraph();
+       pen.setColor(QRgb(0xB276B2));
+       ui->lineChartWidget->graph(12)->setPen(pen);
+       ui->lineChartWidget->graph(12)->setName("Pupil 1");
+       ui->lineChartWidget->graph(12)->setData(x,diameter1Vector);
+       ui->lineChartWidget->graph(12)->rescaleAxes(true);
+
+
+
+
+       ui->lineChartWidget->setVisible(false);
+       ui->barChartWidget->setVisible(true);
+
+       ui->angerCheckBox->setVisible(false);
+       ui->contemptCheckBox->setVisible(false);
+       ui->disgustCheckBox->setVisible(false);
+       ui->engagementCheckBox->setVisible(false);
+       ui->fearCheckBox->setVisible(false);
+       ui->joyCheckBox->setVisible(false);
+       ui->sadnessCheckBox->setVisible(false);
+       ui->surpriseCheckBox->setVisible(false);
+       ui->valenceCheckBox->setVisible(false);
+
+       ui->gsrCheckBox->setVisible(false);
+       ui->hrCheckBox->setVisible(false);
+
+       ui->diameter0CheckBox->setVisible(false);
+       ui->diameter1CheckBox->setVisible(false);
+
+       ui->line->setVisible(false);
+       ui->line_2->setVisible(false);
+
+       ui->lineChartWidget->yAxis->setRange(0, 200,Qt::AlignCenter);
 
 
 
@@ -368,6 +394,12 @@ void visualizeDialog::on_loadButton_clicked()
             ui->diameter1CheckBox->setVisible(true);
             ui->line->setVisible(true);
             ui->line_2->setVisible(true);
+
+            ui->lineChartWidget->yAxis->setRange(0, 200,Qt::AlignJustify);
+            ui->lineChartWidget->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignLeft|Qt::AlignBottom);
+            //ui->lineChartWidget->axisRect()->insetLayout()->
+
+            ui->lineChartWidget->replot();
             break;
 
         }
@@ -474,6 +506,7 @@ void visualizeDialog::on_loadButton_clicked()
       if (qAbs(ui->lineChartWidget->xAxis->range().center()-value/100.0) > 0.01) // if user is dragging plot, we don't want to replot twice
       {
         ui->lineChartWidget->xAxis->setRange(value/100.0, ui->lineChartWidget->xAxis->range().size(), Qt::AlignCenter);
+
         ui->lineChartWidget->replot();
       }
     }
@@ -486,3 +519,8 @@ void visualizeDialog::on_loadButton_clicked()
       ui->horizontalScrollBar->setPageStep(qRound(range.size()*100.0)); // adjust size of scroll bar slider
     }
 
+
+void visualizeDialog::on_exportButton_clicked()
+{
+    ui->lineChartWidget->savePng("export.png");
+}

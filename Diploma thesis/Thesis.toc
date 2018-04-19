@@ -112,9 +112,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Software}{25}
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Software}{26}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{26}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{26}
 \defcounter {refsection}{0}\relax 
@@ -130,15 +132,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}EmoSens application}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}The experiment}{27}
+\contentsline {paragraph}{}{27}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Data evaluation}{28}
+\contentsline {section}{\numberline {2.4}The experiment}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{29}
+\contentsline {paragraph}{}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{30}
+\contentsline {paragraph}{}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Data evaluation}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Results}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{32}
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
