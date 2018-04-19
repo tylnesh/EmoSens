@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  18 APR 2018 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  19 APR 2018 01:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -787,18 +787,16 @@ Package scrpage2 Warning: seems you are using a constant headheight.
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 109--116
 
-] [2
+ []
 
-] [3
-
-] [4
+[3] [4
 
 ] [5
 
-]
-(./Thesis.toc
+] (./Thesis.toc
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 19.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -844,7 +842,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 148.
+(csquotes)                Punctuation tracker may fail on input line 167.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -855,30 +853,30 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 178.
+(csquotes)                Punctuation tracker may fail on input line 197.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 179.
+(csquotes)                Punctuation tracker may fail on input line 198.
 
 <images/Primary_Emotions.jpg, id=32, 416.55624pt x 249.93375pt>
 File: images/Primary_Emotions.jpg Graphic file (type jpg)
 
 <use images/Primary_Emotions.jpg>
-Package pdftex.def Info: images/Primary_Emotions.jpg used on input line 182.
+Package pdftex.def Info: images/Primary_Emotions.jpg used on input line 201.
 (pdftex.def)             Requested size: 249.93567pt x 149.9614pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 189.
+(csquotes)                Punctuation tracker may fail on input line 208.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 196.
+(csquotes)                Punctuation tracker may fail on input line 215.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 205.
+(csquotes)                Punctuation tracker may fail on input line 224.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -888,35 +886,35 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 Chapter 1.
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 232.
+(csquotes)                Punctuation tracker may fail on input line 251.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 232.
+(csquotes)                Punctuation tracker may fail on input line 251.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 237.
+(csquotes)                Punctuation tracker may fail on input line 256.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 242.
+(csquotes)                Punctuation tracker may fail on input line 261.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 250.
+(csquotes)                Punctuation tracker may fail on input line 269.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 260.
+(csquotes)                Punctuation tracker may fail on input line 279.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 264.
+(csquotes)                Punctuation tracker may fail on input line 283.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 266.
+(csquotes)                Punctuation tracker may fail on input line 285.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -927,34 +925,34 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 271.
+(csquotes)                Punctuation tracker may fail on input line 290.
 
 <images/russel_model.png, id=40, 673.51625pt x 472.76625pt>
 File: images/russel_model.png Graphic file (type png)
 
 <use images/russel_model.png>
-Package pdftex.def Info: images/russel_model.png used on input line 275.
+Package pdftex.def Info: images/russel_model.png used on input line 294.
 (pdftex.def)             Requested size: 269.40172pt x 189.10315pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 286.
+(csquotes)                Punctuation tracker may fail on input line 305.
 
 <images/vector0.jpg, id=41, 903.375pt x 900.36375pt>
 File: images/vector0.jpg Graphic file (type jpg)
  <use images/vector0.jpg>
-Package pdftex.def Info: images/vector0.jpg used on input line 295.
+Package pdftex.def Info: images/vector0.jpg used on input line 314.
 (pdftex.def)             Requested size: 88.2022pt x 87.89845pt.
 
 <images/vector1.jpg, id=42, 1204.5pt x 1158.3275pt>
 File: images/vector1.jpg Graphic file (type jpg)
  <use images/vector1.jpg>
-Package pdftex.def Info: images/vector1.jpg used on input line 298.
+Package pdftex.def Info: images/vector1.jpg used on input line 317.
 (pdftex.def)             Requested size: 88.2022pt x 84.82056pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 310.
+(csquotes)                Punctuation tracker may fail on input line 329.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -965,50 +963,50 @@ tor1.jpg>] <images/consensual.jpeg, id=47, 523.9575pt x 492.84125pt>
 File: images/consensual.jpeg Graphic file (type jpg)
 
 <use images/consensual.jpeg>
-Package pdftex.def Info: images/consensual.jpeg used on input line 314.
+Package pdftex.def Info: images/consensual.jpeg used on input line 333.
 (pdftex.def)             Requested size: 209.57928pt x 197.133pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 328.
+(csquotes)                Punctuation tracker may fail on input line 347.
 
 <images/Plutchik_wheel.png, id=48, 593.21625pt x 601.24625pt>
 File: images/Plutchik_wheel.png Graphic file (type png)
 
 <use images/Plutchik_wheel.png>
-Package pdftex.def Info: images/Plutchik_wheel.png used on input line 332.
+Package pdftex.def Info: images/Plutchik_wheel.png used on input line 351.
 (pdftex.def)             Requested size: 177.96625pt x 180.37526pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 341.
+(csquotes)                Punctuation tracker may fail on input line 360.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 343.
+(csquotes)                Punctuation tracker may fail on input line 362.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 345.
+(csquotes)                Punctuation tracker may fail on input line 364.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 346.
+(csquotes)                Punctuation tracker may fail on input line 365.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 355.
+(csquotes)                Punctuation tracker may fail on input line 374.
 
 <images/pad_model.png, id=50, 663.47874pt x 477.785pt>
 File: images/pad_model.png Graphic file (type png)
 
 <use images/pad_model.png>
-Package pdftex.def Info: images/pad_model.png used on input line 358.
+Package pdftex.def Info: images/pad_model.png used on input line 377.
 (pdftex.def)             Requested size: 265.3868pt x 191.11061pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 366.
+(csquotes)                Punctuation tracker may fail on input line 385.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1019,24 +1017,24 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/lovheimcube.png Graphic file (type png)
 
 <use images/lovheimcube.png>
-Package pdftex.def Info: images/lovheimcube.png used on input line 374.
+Package pdftex.def Info: images/lovheimcube.png used on input line 393.
 (pdftex.def)             Requested size: 321.1943pt x 217.60915pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 382.
+(Font)              <9> on input line 401.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 382.
+(Font)              <5> on input line 401.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 384.
+(csquotes)                Punctuation tracker may fail on input line 403.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 389.
+(csquotes)                Punctuation tracker may fail on input line 408.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 402.
+(csquotes)                Punctuation tracker may fail on input line 421.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1045,11 +1043,11 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [13 <./images/pad_model.png (PNG copy)>]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 406.
+(csquotes)                Punctuation tracker may fail on input line 425.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 430.
+(csquotes)                Punctuation tracker may fail on input line 449.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1058,23 +1056,23 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [14 <./images/lovheimcube.png>]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 445.
+(csquotes)                Punctuation tracker may fail on input line 464.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 450.
+(csquotes)                Punctuation tracker may fail on input line 469.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 479.
+(csquotes)                Punctuation tracker may fail on input line 498.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 486.
+(csquotes)                Punctuation tracker may fail on input line 505.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 491.
+(csquotes)                Punctuation tracker may fail on input line 510.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1083,23 +1081,23 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [15]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 501.
+(csquotes)                Punctuation tracker may fail on input line 520.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 511.
+(csquotes)                Punctuation tracker may fail on input line 530.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 515.
+(csquotes)                Punctuation tracker may fail on input line 534.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 526.
+(csquotes)                Punctuation tracker may fail on input line 545.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 532.
+(csquotes)                Punctuation tracker may fail on input line 551.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1108,52 +1106,52 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [16]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 539.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 542.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 545.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
 (csquotes)                Punctuation tracker may fail on input line 558.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 573.
+(csquotes)                Punctuation tracker may fail on input line 561.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 578.
+(csquotes)                Punctuation tracker may fail on input line 564.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 578.
+(csquotes)                Punctuation tracker may fail on input line 577.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 582.
+(csquotes)                Punctuation tracker may fail on input line 592.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 597.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 597.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 601.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [17]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 632.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 651.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 632.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 651.
 
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 18 might be wrong on input line 638
+(multicol)                Footnotes on page 18 might be wrong on input line 657
 .
 
 
@@ -1163,7 +1161,7 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [18]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 658.
+(csquotes)                Punctuation tracker may fail on input line 677.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1172,11 +1170,11 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [19]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 712.
+(csquotes)                Punctuation tracker may fail on input line 731.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 718.
+(csquotes)                Punctuation tracker may fail on input line 737.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1195,7 +1193,7 @@ Chapter 2.
 File: images/HRCircuit.png Graphic file (type png)
 
 <use images/HRCircuit.png>
-Package pdftex.def Info: images/HRCircuit.png used on input line 851.
+Package pdftex.def Info: images/HRCircuit.png used on input line 870.
 (pdftex.def)             Requested size: 422.07584pt x 157.08649pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1207,16 +1205,16 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/GSRCircuit.png Graphic file (type png)
 
 <use images/GSRCircuit.png>
-Package pdftex.def Info: images/GSRCircuit.png used on input line 867.
+Package pdftex.def Info: images/GSRCircuit.png used on input line 886.
 (pdftex.def)             Requested size: 406.51776pt x 165.61833pt.
  <images/HRSensor.jpg, id=94, 602.25pt x 602.25pt>
 File: images/HRSensor.jpg Graphic file (type jpg)
 
 <use images/HRSensor.jpg>
-Package pdftex.def Info: images/HRSensor.jpg used on input line 876.
+Package pdftex.def Info: images/HRSensor.jpg used on input line 897.
 (pdftex.def)             Requested size: 88.2022pt x 88.20161pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 876--876
+Underfull \hbox (badness 10000) in paragraph at lines 897--897
 []\IL2/lmr/m/n/9 (a) |Pulse Sen-sor
  []
 
@@ -1224,47 +1222,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 876--876
 File: images/GSRSensor.jpg Graphic file (type jpg)
 
 <use images/GSRSensor.jpg>
-Package pdftex.def Info: images/GSRSensor.jpg used on input line 879.
+Package pdftex.def Info: images/GSRSensor.jpg used on input line 900.
 (pdftex.def)             Requested size: 110.25443pt x 82.68442pt.
+
+<images/arduinoschema.png, id=96, 1220.56pt x 2409.0pt>
+File: images/arduinoschema.png Graphic file (type png)
+
+<use images/arduinoschema.png>
+Package pdftex.def Info: images/arduinoschema.png used on input line 907.
+(pdftex.def)             Requested size: 244.10767pt x 481.79147pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [23 <./images/HRCircuit.png> <./images/GSRCircuit.png> <./images/HRSensor.jpg> 
-<./images/GSRSensor.jpg>] <images/pupil.jpg, id=99, 1204.5pt x 1204.5pt>
-File: images/pupil.jpg Graphic file (type jpg)
-
-<use images/pupil.jpg>
-Package pdftex.def Info: images/pupil.jpg used on input line 896.
-(pdftex.def)             Requested size: 240.89574pt x 240.89574pt.
-
+<./images/GSRSensor.jpg>]
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[24 <./images/pupil.jpg>]
+[24 <./images/arduinoschema.png>]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 947.
+(csquotes)                Punctuation tracker may fail on input line 970.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 947.
+(csquotes)                Punctuation tracker may fail on input line 970.
 
-<images/zeromqdia.png, id=103, 810.02625pt x 364.36125pt>
+<images/zeromqdia.png, id=104, 810.02625pt x 364.36125pt>
 File: images/zeromqdia.png Graphic file (type png)
 
 <use images/zeromqdia.png>
-Package pdftex.def Info: images/zeromqdia.png used on input line 967.
+Package pdftex.def Info: images/zeromqdia.png used on input line 990.
 (pdftex.def)             Requested size: 324.00475pt x 145.74191pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[25 <./images/zeromqdia.png>]
+[25]
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[26]
+[26 <./images/zeromqdia.png>]
 Chapter 3.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1291,10 +1290,10 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 996.
+(csquotes)                Punctuation tracker may fail on input line 1019.
 
-LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 996
-.
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 101
+9.
 (/usr/share/texmf/tex/latex/lm/il2lmtt.fd
 File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1304,7 +1303,7 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [30
 
 ]
-Overfull \hbox (0.69733pt too wide) in paragraph at lines 997--997
+Overfull \hbox (0.69733pt too wide) in paragraph at lines 1020--1020
 []\IL2/lmr/m/n/10.95 MCDUFF, Daniel; MAH-MOUD, Ab-del-rah-man; MAVA-DATI, Mo-ha
 m-mad; AMR, May; TUR-
  []
@@ -1314,26 +1313,26 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [31]
-Overfull \hbox (5.90608pt too wide) in paragraph at lines 997--997
+Overfull \hbox (5.90608pt too wide) in paragraph at lines 1020--1020
 []\IL2/lmr/m/n/10.95 MOSCIANO, Francesco; MEN-CAT-TINI, Ar-i-anna; RINGEVAL, Fa
 -bien; SCHULLER, Bj[]A\OMS/lmsy/m/n/10.95 {\IL2/lmr/m/n/10.95 rn;
  []
 
 
-Overfull \hbox (24.5903pt too wide) in paragraph at lines 997--997
+Overfull \hbox (24.5903pt too wide) in paragraph at lines 1020--1020
 \IL2/lmr/m/n/10.95 words. \IL2/lmr/m/it/10.95 Mem-ory\IL2/lmr/m/n/10.95 . Vol. 
 17, no. 8, pp. 802{808. Avail-able from DOI: $\IL2/lmtt/m/n/10.95 10 . 1080 / 0
 9658210903130764$\IL2/lmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (6.53412pt too wide) in paragraph at lines 997--997
+Overfull \hbox (6.53412pt too wide) in paragraph at lines 1020--1020
 []\IL2/lmr/m/n/10.95 RUSSELL, J. A.; BAR-RETT, Lisa Feld-man, 1999. Core af-fec
 t, pro-to-typ-i-cal emo-tional episodes,
  []
 
 
-Overfull \hbox (3.21545pt too wide) in paragraph at lines 997--997
+Overfull \hbox (3.21545pt too wide) in paragraph at lines 1020--1020
 []\IL2/lmr/m/n/10.95 SALAZAR-LOPEZ, E.; DOM[]A-NGUEZ, E.; RAMOS, V. Ju[]A^^Trez
 ; FUENTE, J. de la; MEINS,
  []
@@ -1343,14 +1342,14 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [32]
-Overfull \hbox (2.31282pt too wide) in paragraph at lines 997--997
+Overfull \hbox (2.31282pt too wide) in paragraph at lines 1020--1020
 []\IL2/lmr/m/n/10.95 TOMKINS, S., 1963. \IL2/lmr/m/it/10.95 Af-fect Im-agery Co
 n-scious-ness: Vol-ume II: The Neg-a-tive Af-fects\IL2/lmr/m/n/10.95 . Springer
 
  []
 
 
-Overfull \hbox (38.46854pt too wide) in paragraph at lines 997--997
+Overfull \hbox (38.46854pt too wide) in paragraph at lines 1020--1020
 []\IL2/lmr/m/n/10.95 WUNDT, W.M., 2017. \IL2/lmr/m/it/10.95 Out-lines of Psy-ch
 ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
 .
@@ -1370,8 +1369,8 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  12487 strings out of 493014
- 205851 string characters out of 6135690
- 466557 words of memory out of 5000000
+ 205891 string characters out of 6135690
+ 465557 words of memory out of 5000000
  15780 multiletter control sequences out of 15000+600000
  53450 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1386,9 +1385,9 @@ e1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Thesis.pdf (33 pages, 1145292 bytes).
+Output written on Thesis.pdf (33 pages, 1228685 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
+ 179 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)

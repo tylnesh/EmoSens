@@ -114,8 +114,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{24}
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
@@ -125,6 +123,8 @@
 \contentsline {paragraph}{}{25}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{26}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}EmoSens application}{26}
 \defcounter {refsection}{0}\relax 

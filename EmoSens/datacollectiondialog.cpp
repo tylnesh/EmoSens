@@ -14,14 +14,6 @@
 #include <QDialog>
 #include <QtWidgets/QMainWindow>
 
-#include <Frame.h>
-#include <Face.h>
-#include <FrameDetector.h>
-#include <AffdexException.h>
-#include <FaceListener.h>
-#include <CameraDetector.h>
-#include <ImageListener.h>
-
 //#include <QtMultimediaWidgets>
 //#include <P
 
@@ -137,7 +129,8 @@ DataCollectionDialog::DataCollectionDialog(QWidget *parent, const QString &ip) :
           nzmqtSubscriber* sub2 = new nzmqtSubscriber(*context, address, "gaze", this );
 
 //          context->start();
-          nzmqtSubscriber* affect = new nzmqtSubscriber(*context, "tcp://192.168.1.21:5555", "", this);
+          address = "tcp://"+m_ip+":5555";
+          nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "", this);
 
           connect(sub0, SIGNAL(extractData(QVariant, QString)),this,SLOT(dataReceived(QVariant,QString)));
           connect(sub1, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
