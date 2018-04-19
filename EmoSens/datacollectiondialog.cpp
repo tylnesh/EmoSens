@@ -120,7 +120,7 @@ DataCollectionDialog::DataCollectionDialog(QWidget *parent, const QString &ip) :
           req.recv(&reply);
 
           QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
-
+qDebug() << sub_port;
           context->start();
           QString address = "tcp://"+m_ip+":"+sub_port;
 
@@ -185,7 +185,7 @@ DataCollectionDialog::DataCollectionDialog(QWidget *parent, const QString &ip) :
              series->append("Anger", affect[0]);
              series->append("Contempt", affect[1]);
              series->append("Disgust", affect[2]);
-             series->append("Engagement", affect[3]);
+            // series->append("Engagement", affect[3]);
              series->append("Fear", affect[4]);
              series->append("Joy", affect[5]);
              series->append("Sadness", affect[6]);
@@ -484,7 +484,7 @@ void DataCollectionDialog::realTimeDataSlot()
         series->append("Anger", affect[0]);
         series->append("Contempt", affect[1]);
         series->append("Disgust", affect[2]);
-        series->append("Engagement", affect[3]);
+        //series->append("Engagement", affect[3]);
         series->append("Fear", affect[4]);
         series->append("Joy", affect[5]);
         series->append("Sadness", affect[6]);
