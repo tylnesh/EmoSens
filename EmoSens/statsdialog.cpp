@@ -220,7 +220,7 @@ statsDialog::statsDialog(QWidget *parent,
 
 
 
-//    ui->lineChartWidget->chart()->createDefaultAxes();
+  //  ui->lineChartWidget->chart()->createDefaultAxes();
 
 
 

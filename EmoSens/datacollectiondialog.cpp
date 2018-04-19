@@ -45,10 +45,6 @@ DataCollectionDialog::DataCollectionDialog(QWidget *parent, const QString &ip) :
 
          emotion.setFileName("emotion_" + local.toString() +".dat");
          emotion.open(QIODevice::ReadWrite);
-
-
-
-
          timer = new QTimer(this);
          connect(timer, SIGNAL(timeout()), this, SLOT(incrementT()));
 
@@ -129,11 +125,7 @@ qDebug() << sub_port;
              series->append("Anger", affect[0]);
              series->append("Contempt", affect[1]);
              series->append("Disgust", affect[2]);
-<<<<<<< HEAD
-             //series->append("Engagement", affect[3]);
-=======
-            // series->append("Engagement", affect[3]);
->>>>>>> b63025ae8b63e1142b2ae446b0e1b2ef5e758a08
+          // series->append("Engagement", affect[3]);
              series->append("Fear", affect[4]);
              series->append("Joy", affect[5]);
              series->append("Sadness", affect[6]);
@@ -281,7 +273,7 @@ void DataCollectionDialog::handleTimeout()
         //qDebug() << QObject::tr("Data successfully received from port %1").arg(serial->portName()) << endl;
        // qDebug(m_readData);
 
-        if (QString(m_readData).length() != 0 &&  QString(m_readData).length() < 15);
+        if (QString(m_readData).length() != 0 &&  QString(m_readData).length() < 15)
         {
 
         arduino = QString(m_readData);
