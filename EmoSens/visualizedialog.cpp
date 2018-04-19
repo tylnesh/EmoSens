@@ -58,8 +58,6 @@ void visualizeDialog::on_loadButton_clicked()
           affectVector[1].append(line.split(" ").at(3).toDouble());
           contemptSum += line.split(" ").at(3).toDouble();
 
-          //qDebug () <<  line.split(" ").at(3).toDouble();
-
           affectVector[2].append(line.split(" ").at(4).toDouble());
           disgustSum += line.split(" ").at(4).toDouble();
 

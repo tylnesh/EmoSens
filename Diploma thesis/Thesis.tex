@@ -890,8 +890,7 @@ GPIO pins.
 \end{figure}
 
 
-
-\begin{figure}
+\begin{figure} [ht]
 	\centering
 	\subfloat[Pulse Sensor Amped 
 	SEN-11574]{\includegraphics[width=0.2\linewidth]{images/HRSensor}}%
@@ -902,24 +901,55 @@ GPIO pins.
 	\label{fig:}
 \end{figure}
 
-\begin{figure} [tb]
-	\centering
-	\includegraphics[scale=0.2]{images/arduinoschema}
-	\centering
-	\caption{ Schema of our sensors wired to Arduino Due}
-	\label{fig:}
-\end{figure} 
-
 \paragraph{}Both of these sensors were sewn into a fingerless glove and wired 
 to Arduino Due connected via USB cable to computer.
 
 
+\vfill
+\begin{figure} [h]
+	\centering
+	\includegraphics[scale=0.25]{images/arduinoschema}
+	\centering
+	\caption{ Schema of our sensors wired to Arduino Due}
+	\label{fig:}
+\end{figure} 
+\vfill
+\clearpage
 
-\newpage
+
+
+
+
+
+
 
 \paragraph{}The Pupil headset consists of two high-speed 200Hz IR eye cameras 
 with illumination and a single FullHD World camera connected together to a 
-computer using USB-A to USB-C connector.
+computer using USB-A to USB-C connector. All three cameras are attached on a 3D 
+printed rigid frame. The IR eye cameras are set on a replaceable joint, 
+allowing them to be slightly adjusted to capture eyes of most people. This 
+design, however has a slight disadvantage in case the subjects has round head, 
+or above average head circumference.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/pupil}
+	\centering
+	\caption{Pupil headset}
+	\label{fig:}
+\end{figure} 
+
+
+\paragraph{}In future iterations of the design, we will swap out Arduino Due 
+for an alternative with a smaller footprint. One alternative, that fit's the 
+specification would be the BareDuino Nano, with it's 21x14mm size, <2g weight 
+\footnote{Compared to the 101.52x53.3mm and 36g Arduino Due} 
+and otherwise equivalent with Arduino Uno. This would allow us to sew it inside 
+the next version of the glove. If we can add wireless connectivity, such as 
+Bluetooth LE, or nRF24L01 module, and Lithium-Ion battery, we can make the 
+glove completely cord-free.
+
+
 
 
 \section{Software}
@@ -1005,9 +1035,9 @@ pictures in PNG, JPG and BMP.
 
 %TODO: add description of the classes, screenshots of the gui, etc.
 
-\section{The experiments}
+\section{The experiment}
 
-%TODO : Add the description of the data collection process, pictures, etc.
+\paragraph{} The experiment we've conducted consists of 
 
 \chapter{Data evaluation}
 

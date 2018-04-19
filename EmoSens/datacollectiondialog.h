@@ -130,10 +130,7 @@ private:
     int t=0;
     bool record = false;
 
-    QFile neutral;
-    QFile disgust;
-    QFile shameful;
-    QFile pleasant;
+
     QFile emotion;
 
 

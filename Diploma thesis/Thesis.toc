@@ -108,33 +108,37 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{24}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Software}{24}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{24}
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{25}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{25}
+\contentsline {section}{\numberline {2.2}Software}{25}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{25}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}EmoSens application}{26}
+\contentsline {paragraph}{}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}The experiments}{26}
+\contentsline {paragraph}{}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Data evaluation}{27}
+\contentsline {paragraph}{}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{28}
+\contentsline {paragraph}{}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{29}
+\contentsline {paragraph}{}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}EmoSens application}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}The experiment}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{27}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Data evaluation}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Results}{29}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{30}
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
