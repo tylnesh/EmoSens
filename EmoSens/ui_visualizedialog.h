@@ -34,6 +34,7 @@ public:
     QWidget *widget;
     QtCharts::QChartView *barChartWidget;
     QCustomPlot *lineChartWidget;
+    QCustomPlot *pupilChartWidget;
     QScrollBar *horizontalScrollBar;
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
@@ -72,6 +73,9 @@ public:
         lineChartWidget = new QCustomPlot(widget);
         lineChartWidget->setObjectName(QStringLiteral("lineChartWidget"));
         lineChartWidget->setGeometry(QRect(10, 0, 1101, 691));
+        pupilChartWidget = new QCustomPlot(widget);
+        pupilChartWidget->setObjectName(QStringLiteral("pupilChartWidget"));
+        pupilChartWidget->setGeometry(QRect(10, 10, 1101, 691));
         horizontalScrollBar = new QScrollBar(visualizeDialog);
         horizontalScrollBar->setObjectName(QStringLiteral("horizontalScrollBar"));
         horizontalScrollBar->setGeometry(QRect(10, 700, 1111, 16));
@@ -177,6 +181,7 @@ public:
         graphComboBox = new QComboBox(visualizeDialog);
         graphComboBox->addItem(QString());
         graphComboBox->addItem(QString());
+        graphComboBox->addItem(QString());
         graphComboBox->setObjectName(QStringLiteral("graphComboBox"));
         graphComboBox->setGeometry(QRect(1130, 40, 151, 41));
         exportButton = new QPushButton(visualizeDialog);
@@ -207,6 +212,7 @@ public:
         diameter1CheckBox->setText(QApplication::translate("visualizeDialog", "Pupil 1 Diameter", nullptr));
         graphComboBox->setItemText(0, QApplication::translate("visualizeDialog", "Average emotions", nullptr));
         graphComboBox->setItemText(1, QApplication::translate("visualizeDialog", "Emotions progression", nullptr));
+        graphComboBox->setItemText(2, QApplication::translate("visualizeDialog", "Pupil Movement", nullptr));
 
         exportButton->setText(QApplication::translate("visualizeDialog", "Export", nullptr));
     } // retranslateUi

@@ -55,6 +55,16 @@
      </rect>
     </property>
    </widget>
+   <widget class="QCustomPlot" name="pupilChartWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1101</width>
+      <height>691</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QScrollBar" name="horizontalScrollBar">
    <property name="geometry">
@@ -242,6 +252,11 @@
    <item>
     <property name="text">
      <string>Emotions progression</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Pupil Movement</string>
     </property>
    </item>
   </widget>

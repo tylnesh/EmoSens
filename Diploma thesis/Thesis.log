@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  20 APR 2018 01:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  20 APR 2018 05:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,6 +672,165 @@ LaTeX Warning: Label `fig:' multiply defined.
 
 LaTeX Warning: Label `fig:' multiply defined.
 
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
 )
 \openout1 = `Thesis.aux'.
 
@@ -1293,54 +1452,461 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [27 <./images/zeromqdia.png>]
+<images/datacollectiondialog.png, id=117, 1866.975pt x 1057.9525pt>
+File: images/datacollectiondialog.png Graphic file (type png)
+
+<use images/datacollectiondialog.png>
+Package pdftex.def Info: images/datacollectiondialog.png used on input line 107
+5.
+(pdftex.def)             Requested size: 373.3884pt x 211.58675pt.
+
+<images/livebargraph.png, id=118, 1288.815pt x 753.81625pt>
+File: images/livebargraph.png Graphic file (type png)
+
+<use images/livebargraph.png>
+Package pdftex.def Info: images/livebargraph.png used on input line 1092.
+(pdftex.def)             Requested size: 257.75844pt x 150.76057pt.
+
+<images/livelinegraph.png, id=119, 1286.8075pt x 750.805pt>
+File: images/livelinegraph.png Graphic file (type png)
+
+<use images/livelinegraph.png>
+Package pdftex.def Info: images/livelinegraph.png used on input line 1104.
+(pdftex.def)             Requested size: 257.35693pt x 150.15834pt.
+
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[28 <./images/mainwindow.png>]
+[28 <./images/mainwindow.png> <./images/datacollectiondialog.png>]
+<images/loaddata.png, id=123, 1279.78125pt x 745.78625pt>
+File: images/loaddata.png Graphic file (type png)
+
+<use images/loaddata.png>
+Package pdftex.def Info: images/loaddata.png used on input line 1118.
+(pdftex.def)             Requested size: 255.95172pt x 149.1546pt.
+
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[29]
+[29 <./images/livebargraph.png> <./images/livelinegraph.png> <./images/loaddata
+.png>] <images/loadbargraph.png, id=127, 1283.79625pt x 749.80125pt>
+File: images/loadbargraph.png Graphic file (type png)
+
+<use images/loadbargraph.png>
+Package pdftex.def Info: images/loadbargraph.png used on input line 1134.
+(pdftex.def)             Requested size: 256.7547pt x 149.9576pt.
+
+<images/loadlinegraph.png, id=128, 1287.81125pt x 751.80875pt>
+File: images/loadlinegraph.png Graphic file (type png)
+
+<use images/loadlinegraph.png>
+Package pdftex.def Info: images/loadlinegraph.png used on input line 1142.
+(pdftex.def)             Requested size: 257.5577pt x 150.35909pt.
+
+<images/loadgazegraph.png, id=129, 1283.79625pt x 748.7975pt>
+File: images/loadgazegraph.png Graphic file (type png)
+
+<use images/loadgazegraph.png>
+Package pdftex.def Info: images/loadgazegraph.png used on input line 1151.
+(pdftex.def)             Requested size: 256.7547pt x 149.75684pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[30 <./images/loadbargraph.png> <./images/loadlinegraph.png> <./images/loadgaze
+graph.png>] <images/experiment.jpg, id=133, 935.495pt x 702.625pt>
+File: images/experiment.jpg Graphic file (type jpg)
+
+<use images/experiment.jpg>
+Package pdftex.def Info: images/experiment.jpg used on input line 1192.
+(pdftex.def)             Requested size: 280.65067pt x 210.78912pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[31 <./images/experiment.jpg>]
 Chapter 3.
+<images/1_full.png, id=138, 828.84656pt x 520.19344pt>
+File: images/1_full.png Graphic file (type png)
+ <use images/1_full.png>
+Package pdftex.def Info: images/1_full.png used on input line 1212.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
-Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+<images/1_gaze.png, id=139, 828.84656pt x 520.19344pt>
+File: images/1_gaze.png Graphic file (type png)
+ <use images/1_gaze.png>
+Package pdftex.def Info: images/1_gaze.png used on input line 1225.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
+<images/1_pupil.png, id=140, 828.84656pt x 520.19344pt>
+File: images/1_pupil.png Graphic file (type png)
 
-[30
-
-]
-Chapter 4.
-
-Overfull \vbox (5.05856pt too high) has occurred while \output is active []
-
-
-[31
-
-]
-Chapter 5.
+<use images/1_pupil.png>
+Package pdftex.def Info: images/1_pupil.png used on input line 1237.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [32
 
+ <./images/1_full.png (PNG copy)> <./images/1_gaze.png (PNG copy)>]
+<images/1_HRGSRpupil.png, id=144, 828.84656pt x 520.19344pt>
+File: images/1_HRGSRpupil.png Graphic file (type png)
+
+<use images/1_HRGSRpupil.png>
+Package pdftex.def Info: images/1_HRGSRpupil.png used on input line 1251.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/1_emotions.png, id=145, 828.84656pt x 520.19344pt>
+File: images/1_emotions.png Graphic file (type png)
+
+<use images/1_emotions.png>
+Package pdftex.def Info: images/1_emotions.png used on input line 1268.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[33 <./images/1_pupil.png (PNG copy)> <./images/1_HRGSRpupil.png (PNG copy)>]
+<images/2_full.png, id=149, 828.84656pt x 520.19344pt>
+File: images/2_full.png Graphic file (type png)
+ <use images/2_full.png>
+Package pdftex.def Info: images/2_full.png used on input line 1279.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/2_gaze.png, id=150, 828.84656pt x 520.19344pt>
+File: images/2_gaze.png Graphic file (type png)
+ <use images/2_gaze.png>
+Package pdftex.def Info: images/2_gaze.png used on input line 1290.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/2_pupil.png, id=151, 828.84656pt x 520.19344pt>
+File: images/2_pupil.png Graphic file (type png)
+
+<use images/2_pupil.png>
+Package pdftex.def Info: images/2_pupil.png used on input line 1302.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/2_HRGSRpupil.png, id=152, 828.84656pt x 520.19344pt>
+File: images/2_HRGSRpupil.png Graphic file (type png)
+
+<use images/2_HRGSRpupil.png>
+Package pdftex.def Info: images/2_HRGSRpupil.png used on input line 1315.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/2_emotions.png, id=153, 828.84656pt x 520.19344pt>
+File: images/2_emotions.png Graphic file (type png)
+
+<use images/2_emotions.png>
+Package pdftex.def Info: images/2_emotions.png used on input line 1328.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/3_full.png, id=154, 828.84656pt x 520.19344pt>
+File: images/3_full.png Graphic file (type png)
+ <use images/3_full.png>
+Package pdftex.def Info: images/3_full.png used on input line 1340.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[34 <./images/1_emotions.png (PNG copy)> <./images/2_full.png (PNG copy)>]
+<images/3_gaze.png, id=158, 828.84656pt x 520.19344pt>
+File: images/3_gaze.png Graphic file (type png)
+ <use images/3_gaze.png>
+Package pdftex.def Info: images/3_gaze.png used on input line 1351.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/3_pupil.png, id=159, 828.84656pt x 520.19344pt>
+File: images/3_pupil.png Graphic file (type png)
+
+<use images/3_pupil.png>
+Package pdftex.def Info: images/3_pupil.png used on input line 1364.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/3_HRGSRpupil.png, id=160, 828.84656pt x 520.19344pt>
+File: images/3_HRGSRpupil.png Graphic file (type png)
+
+<use images/3_HRGSRpupil.png>
+Package pdftex.def Info: images/3_HRGSRpupil.png used on input line 1376.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/3_emotions.png, id=161, 828.84656pt x 520.19344pt>
+File: images/3_emotions.png Graphic file (type png)
+
+<use images/3_emotions.png>
+Package pdftex.def Info: images/3_emotions.png used on input line 1389.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/4_full.png, id=162, 828.84656pt x 520.19344pt>
+File: images/4_full.png Graphic file (type png)
+ <use images/4_full.png>
+Package pdftex.def Info: images/4_full.png used on input line 1402.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[35 <./images/2_gaze.png (PNG copy)> <./images/2_pupil.png (PNG copy)>]
+<images/4_gaze.png, id=166, 828.84656pt x 520.19344pt>
+File: images/4_gaze.png Graphic file (type png)
+ <use images/4_gaze.png>
+Package pdftex.def Info: images/4_gaze.png used on input line 1413.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/4_pupil.png, id=167, 828.84656pt x 520.19344pt>
+File: images/4_pupil.png Graphic file (type png)
+
+<use images/4_pupil.png>
+Package pdftex.def Info: images/4_pupil.png used on input line 1424.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/4_HRGSRpupil.png, id=168, 828.84656pt x 520.19344pt>
+File: images/4_HRGSRpupil.png Graphic file (type png)
+
+<use images/4_HRGSRpupil.png>
+Package pdftex.def Info: images/4_HRGSRpupil.png used on input line 1437.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/5_emotions.png, id=169, 828.84656pt x 520.19344pt>
+File: images/5_emotions.png Graphic file (type png)
+
+<use images/5_emotions.png>
+Package pdftex.def Info: images/5_emotions.png used on input line 1449.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/5_full.png, id=170, 828.84656pt x 520.19344pt>
+File: images/5_full.png Graphic file (type png)
+ <use images/5_full.png>
+Package pdftex.def Info: images/5_full.png used on input line 1461.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[36 <./images/2_HRGSRpupil.png (PNG copy)> <./images/2_emotions.png (PNG copy)>
+] <images/5_gaze.png, id=174, 828.84656pt x 520.19344pt>
+File: images/5_gaze.png Graphic file (type png)
+
+<use images/5_gaze.png>
+Package pdftex.def Info: images/5_gaze.png used on input line 1473.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/5_pupil.png, id=175, 828.84656pt x 520.19344pt>
+File: images/5_pupil.png Graphic file (type png)
+
+<use images/5_pupil.png>
+Package pdftex.def Info: images/5_pupil.png used on input line 1484.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/5_HRGSRpupil.png, id=176, 828.84656pt x 520.19344pt>
+File: images/5_HRGSRpupil.png Graphic file (type png)
+
+<use images/5_HRGSRpupil.png>
+Package pdftex.def Info: images/5_HRGSRpupil.png used on input line 1497.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/5_emotions.png Graphic file (type png)
+ <use images/5_emotions.png>
+Package pdftex.def Info: images/5_emotions.png used on input line 1510.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_full.png, id=177, 828.84656pt x 520.19344pt>
+File: images/7_full.png Graphic file (type png)
+ <use images/7_full.png>
+Package pdftex.def Info: images/7_full.png used on input line 1522.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[37 <./images/3_full.png (PNG copy)> <./images/3_gaze.png (PNG copy)>]
+<images/7_gaze.png, id=182, 828.84656pt x 520.19344pt>
+File: images/7_gaze.png Graphic file (type png)
+ <use images/7_gaze.png>
+Package pdftex.def Info: images/7_gaze.png used on input line 1533.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_pupil.png, id=183, 828.84656pt x 520.19344pt>
+File: images/7_pupil.png Graphic file (type png)
+
+<use images/7_pupil.png>
+Package pdftex.def Info: images/7_pupil.png used on input line 1543.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_HRGSRpupil.png, id=184, 828.84656pt x 520.19344pt>
+File: images/7_HRGSRpupil.png Graphic file (type png)
+
+<use images/7_HRGSRpupil.png>
+Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1555.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_emotions.png, id=185, 828.84656pt x 520.19344pt>
+File: images/7_emotions.png Graphic file (type png)
+
+<use images/7_emotions.png>
+Package pdftex.def Info: images/7_emotions.png used on input line 1567.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_full.png Graphic file (type png)
+ <use images/7_full.png>
+Package pdftex.def Info: images/7_full.png used on input line 1581.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[38 <./images/3_pupil.png (PNG copy)> <./images/3_HRGSRpupil.png (PNG copy)>]
+File: images/7_gaze.png Graphic file (type png)
+
+<use images/7_gaze.png>
+Package pdftex.def Info: images/7_gaze.png used on input line 1591.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_pupil.png Graphic file (type png)
+ <use images/7_pupil.png>
+Package pdftex.def Info: images/7_pupil.png used on input line 1601.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_HRGSRpupil.png Graphic file (type png)
+ <use images/7_HRGSRpupil.png>
+Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1613.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_emotions.png Graphic file (type png)
+
+<use images/7_emotions.png>
+Package pdftex.def Info: images/7_emotions.png used on input line 1624.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_full.png Graphic file (type png)
+ <use images/7_full.png>
+Package pdftex.def Info: images/7_full.png used on input line 1637.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[39 <./images/3_emotions.png (PNG copy)> <./images/4_full.png (PNG copy)>]
+File: images/7_gaze.png Graphic file (type png)
+
+<use images/7_gaze.png>
+Package pdftex.def Info: images/7_gaze.png used on input line 1647.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_pupil.png Graphic file (type png)
+ <use images/7_pupil.png>
+Package pdftex.def Info: images/7_pupil.png used on input line 1657.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_HRGSRpupil.png Graphic file (type png)
+ <use images/7_HRGSRpupil.png>
+Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1669.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_emotions.png Graphic file (type png)
+
+<use images/7_emotions.png>
+Package pdftex.def Info: images/7_emotions.png used on input line 1680.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_full.png, id=192, 828.84656pt x 520.19344pt>
+File: images/8_full.png Graphic file (type png)
+ <use images/8_full.png>
+Package pdftex.def Info: images/8_full.png used on input line 1696.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[40 <./images/4_gaze.png (PNG copy)> <./images/4_pupil.png (PNG copy)>]
+<images/8_gaze.png, id=196, 828.84656pt x 520.19344pt>
+File: images/8_gaze.png Graphic file (type png)
+ <use images/8_gaze.png>
+Package pdftex.def Info: images/8_gaze.png used on input line 1706.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_pupil.png, id=197, 828.84656pt x 520.19344pt>
+File: images/8_pupil.png Graphic file (type png)
+
+<use images/8_pupil.png>
+Package pdftex.def Info: images/8_pupil.png used on input line 1716.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_HRGSRpupil.png, id=198, 828.84656pt x 520.19344pt>
+File: images/8_HRGSRpupil.png Graphic file (type png)
+
+<use images/8_HRGSRpupil.png>
+Package pdftex.def Info: images/8_HRGSRpupil.png used on input line 1728.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_emotions.png, id=199, 828.84656pt x 520.19344pt>
+File: images/8_emotions.png Graphic file (type png)
+
+<use images/8_emotions.png>
+Package pdftex.def Info: images/8_emotions.png used on input line 1739.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[41 <./images/4_HRGSRpupil.png (PNG copy)> <./images/5_emotions.png (PNG copy)>
+]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[42 <./images/5_full.png (PNG copy)> <./images/5_gaze.png (PNG copy)> <./images
+/5_pupil.png (PNG copy)>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[43 <./images/5_HRGSRpupil.png (PNG copy)> <./images/7_full.png (PNG copy)>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[44 <./images/7_gaze.png (PNG copy)> <./images/7_pupil.png (PNG copy)> <./image
+s/7_HRGSRpupil.png (PNG copy)>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[45 <./images/7_emotions.png (PNG copy)>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[46]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[47]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[48 <./images/8_full.png (PNG copy)>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[49 <./images/8_gaze.png (PNG copy)> <./images/8_pupil.png (PNG copy)> <./image
+s/8_HRGSRpupil.png (PNG copy)>]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[50 <./images/8_emotions.png (PNG copy)>]
+Chapter 4.
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[51
+
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 1117.
+(csquotes)                Punctuation tracker may fail on input line 1751.
 
-LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 111
-7.
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 175
+1.
 (/usr/share/texmf/tex/latex/lm/il2lmtt.fd
 File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[33
+[52
 
 ]
-Overfull \hbox (0.69733pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (0.69733pt too wide) in paragraph at lines 1752--1752
 []\IL2/lmr/m/n/10.95 MCDUFF, Daniel; MAH-MOUD, Ab-del-rah-man; MAVA-DATI, Mo-ha
 m-mad; AMR, May; TUR-
  []
@@ -1349,27 +1915,27 @@ m-mad; AMR, May; TUR-
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[34]
-Overfull \hbox (5.90608pt too wide) in paragraph at lines 1118--1118
+[53]
+Overfull \hbox (5.90608pt too wide) in paragraph at lines 1752--1752
 []\IL2/lmr/m/n/10.95 MOSCIANO, Francesco; MEN-CAT-TINI, Ar-i-anna; RINGEVAL, Fa
 -bien; SCHULLER, Bj[]A\OMS/lmsy/m/n/10.95 {\IL2/lmr/m/n/10.95 rn;
  []
 
 
-Overfull \hbox (24.5903pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (24.5903pt too wide) in paragraph at lines 1752--1752
 \IL2/lmr/m/n/10.95 words. \IL2/lmr/m/it/10.95 Mem-ory\IL2/lmr/m/n/10.95 . Vol. 
 17, no. 8, pp. 802{808. Avail-able from DOI: $\IL2/lmtt/m/n/10.95 10 . 1080 / 0
 9658210903130764$\IL2/lmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (6.53412pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (6.53412pt too wide) in paragraph at lines 1752--1752
 []\IL2/lmr/m/n/10.95 RUSSELL, J. A.; BAR-RETT, Lisa Feld-man, 1999. Core af-fec
 t, pro-to-typ-i-cal emo-tional episodes,
  []
 
 
-Overfull \hbox (3.21545pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (3.21545pt too wide) in paragraph at lines 1752--1752
 []\IL2/lmr/m/n/10.95 SALAZAR-LOPEZ, E.; DOM[]A-NGUEZ, E.; RAMOS, V. Ju[]A^^Trez
 ; FUENTE, J. de la; MEINS,
  []
@@ -1378,15 +1944,15 @@ Overfull \hbox (3.21545pt too wide) in paragraph at lines 1118--1118
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[35]
-Overfull \hbox (2.31282pt too wide) in paragraph at lines 1118--1118
+[54]
+Overfull \hbox (2.31282pt too wide) in paragraph at lines 1752--1752
 []\IL2/lmr/m/n/10.95 TOMKINS, S., 1963. \IL2/lmr/m/it/10.95 Af-fect Im-agery Co
 n-scious-ness: Vol-ume II: The Neg-a-tive Af-fects\IL2/lmr/m/n/10.95 . Springer
 
  []
 
 
-Overfull \hbox (38.46854pt too wide) in paragraph at lines 1118--1118
+Overfull \hbox (38.46854pt too wide) in paragraph at lines 1752--1752
 []\IL2/lmr/m/n/10.95 WUNDT, W.M., 2017. \IL2/lmr/m/it/10.95 Out-lines of Psy-ch
 ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
 .
@@ -1396,7 +1962,7 @@ ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[36] (./Thesis.aux)
+[55] (./Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1405,10 +1971,10 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12497 strings out of 493014
- 206100 string characters out of 6135690
- 465557 words of memory out of 5000000
- 15788 multiletter control sequences out of 15000+600000
+ 12707 strings out of 493014
+ 210804 string characters out of 6135690
+ 466557 words of memory out of 5000000
+ 15956 multiletter control sequences out of 15000+600000
  53450 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,49p,816b,2346s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1422,10 +1988,10 @@ e1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Thesis.pdf (36 pages, 1320915 bytes).
+Output written on Thesis.pdf (55 pages, 6102173 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 295 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

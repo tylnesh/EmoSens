@@ -84,10 +84,16 @@ void visualizeDialog::on_loadButton_clicked()
           // 11 - 16 are pupil center positions and gaze positions.
           // TODO - add changes of position of gaze and pupil to visualization.
 
+          gazeXVector.append(line.split(" ").at(19).toDouble());
+
+
+          gazeYVector.append(line.split(" ").at(20).toDouble());
+
+
           diameter0Vector.append(line.split(" ").at(17).toDouble()*10);
           diameter0Sum += line.split(" ").at(17).toDouble();
 
-          diameter0Vector.append(line.split(" ").at(18).toDouble()*10);
+          diameter1Vector.append(line.split(" ").at(18).toDouble()*10);
           diameter1Sum += line.split(" ").at(18).toDouble();
 
        }
@@ -339,6 +345,22 @@ void visualizeDialog::on_loadButton_clicked()
 
        ui->lineChartWidget->yAxis->setRange(0, 200,Qt::AlignCenter);
 
+      // ui->pupilChartWidget;
+
+
+       ui->pupilChartWidget->addGraph();
+       pen.setColor(QRgb(0xB276B2));
+       ui->pupilChartWidget->graph(0)->setPen(pen);
+       ui->pupilChartWidget->graph(0)->setName("Gaze");
+       ui->pupilChartWidget->graph(0)->setData(gazeXVector,gazeYVector);
+       //ui->pupilChartWidget->graph(0)->rescaleAxes(true);
+       ui->pupilChartWidget->xAxis->setRange(0.5, 1,Qt::AlignCenter);
+       ui->pupilChartWidget->yAxis->setRange(0.5, 1,Qt::AlignCenter);
+
+       ui->pupilChartWidget->setVisible(false);
+
+       for (int i = 0; i<gazeXVector.length(); i++) qDebug() << gazeXVector.at(i) << " " << gazeYVector.at(i);
+
 
 
        //qDebug() << gsrSum;
@@ -351,6 +373,8 @@ void visualizeDialog::on_loadButton_clicked()
         case 0:
             ui->lineChartWidget->setVisible(false);
             ui->barChartWidget->setVisible(true);
+            ui->pupilChartWidget->setVisible(false);
+
 
             ui->angerCheckBox->setVisible(false);
             ui->contemptCheckBox->setVisible(false);
@@ -376,6 +400,8 @@ void visualizeDialog::on_loadButton_clicked()
 
             ui->lineChartWidget->setVisible(true);
             ui->barChartWidget->setVisible(false);
+            ui->pupilChartWidget->setVisible(false);
+
 
             ui->angerCheckBox->setVisible(true);
             ui->contemptCheckBox->setVisible(true);
@@ -402,6 +428,38 @@ void visualizeDialog::on_loadButton_clicked()
             ui->lineChartWidget->replot();
             break;
 
+        case 2:
+
+            ui->lineChartWidget->setVisible(false);
+            ui->barChartWidget->setVisible(true);
+            ui->pupilChartWidget->setVisible(false);
+
+
+            ui->angerCheckBox->setVisible(false);
+            ui->contemptCheckBox->setVisible(false);
+            ui->disgustCheckBox->setVisible(false);
+            ui->engagementCheckBox->setVisible(false);
+            ui->fearCheckBox->setVisible(false);
+            ui->joyCheckBox->setVisible(false);
+            ui->sadnessCheckBox->setVisible(false);
+            ui->surpriseCheckBox->setVisible(false);
+            ui->valenceCheckBox->setVisible(false);
+
+            ui->gsrCheckBox->setVisible(false);
+            ui->hrCheckBox->setVisible(false);
+
+            ui->diameter0CheckBox->setVisible(false);
+            ui->diameter1CheckBox->setVisible(false);
+
+            ui->line->setVisible(false);
+            ui->line_2->setVisible(false);
+            ui->lineChartWidget->setVisible(false);
+            ui->barChartWidget->setVisible(false);
+            ui->pupilChartWidget->setVisible(true);
+            ui->pupilChartWidget->replot();
+
+            break;
+
         }
 
     }
@@ -419,85 +477,85 @@ void visualizeDialog::on_loadButton_clicked()
 
     void visualizeDialog::on_contemptCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(1)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(1)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(1)->setVisible(false); ui->lineChartWidget->legend->elementAt(1)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(1)->setVisible(true); ui->lineChartWidget->legend->elementAt(1)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_disgustCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(2)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(2)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(2)->setVisible(false); ui->lineChartWidget->legend->elementAt(2)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(2)->setVisible(true); ui->lineChartWidget->legend->elementAt(2)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_engagementCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(3)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(3)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(3)->setVisible(false); ui->lineChartWidget->legend->elementAt(3)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(3)->setVisible(true); ui->lineChartWidget->legend->elementAt(3)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_fearCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(4)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(4)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(4)->setVisible(false); ui->lineChartWidget->legend->elementAt(4)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(4)->setVisible(true); ui->lineChartWidget->legend->elementAt(4)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_joyCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(5)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(5)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(5)->setVisible(false); ui->lineChartWidget->legend->elementAt(5)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(5)->setVisible(true); ui->lineChartWidget->legend->elementAt(5)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_sadnessCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(6)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(6)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(6)->setVisible(false); ui->lineChartWidget->legend->elementAt(6)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(6)->setVisible(true); ui->lineChartWidget->legend->elementAt(6)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_surpriseCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(7)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(7)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(7)->setVisible(false); ui->lineChartWidget->legend->elementAt(7)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(7)->setVisible(true); ui->lineChartWidget->legend->elementAt(7)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_valenceCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(8)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(8)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(8)->setVisible(false); ui->lineChartWidget->legend->elementAt(8)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(8)->setVisible(true); ui->lineChartWidget->legend->elementAt(8)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_gsrCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(9)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(9)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(9)->setVisible(false); ui->lineChartWidget->legend->elementAt(9)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(9)->setVisible(true); ui->lineChartWidget->legend->elementAt(9)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_hrCheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(10)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(10)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(10)->setVisible(false); ui->lineChartWidget->legend->elementAt(10)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(10)->setVisible(true); ui->lineChartWidget->legend->elementAt(10)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_diameter0CheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(11)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(11)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(11)->setVisible(false); ui->lineChartWidget->legend->elementAt(11)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(11)->setVisible(true); ui->lineChartWidget->legend->elementAt(11)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
     void visualizeDialog::on_diameter1CheckBox_stateChanged(int arg1)
     {
-        if (arg1 == 0) ui->lineChartWidget->graph(12)->setVisible(false);
-        if (arg1 == 2) ui->lineChartWidget->graph(12)->setVisible(true);
+        if (arg1 == 0) { ui->lineChartWidget->graph(12)->setVisible(false); ui->lineChartWidget->legend->elementAt(12)->setVisible(false); }
+        if (arg1 == 2) { ui->lineChartWidget->graph(12)->setVisible(true); ui->lineChartWidget->legend->elementAt(12)->setVisible(true); }
          ui->lineChartWidget->replot();
     }
 
@@ -522,5 +580,6 @@ void visualizeDialog::on_loadButton_clicked()
 
 void visualizeDialog::on_exportButton_clicked()
 {
-    ui->lineChartWidget->savePng("export.png");
+    ui->lineChartWidget->savePng("lineexport.png");
+    ui->pupilChartWidget->savePng("gazeexport.png");
 }

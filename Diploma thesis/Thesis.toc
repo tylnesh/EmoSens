@@ -136,17 +136,131 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}The experiment}{28}
-\defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{}{28}
+\contentsline {paragraph}{}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Data evaluation}{30}
+\contentsline {paragraph}{}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Results}{31}
+\contentsline {paragraph}{}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{32}
+\contentsline {paragraph}{}{30}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}The experiment}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Data evaluation}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Subject 1}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{33}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Subject 2}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{34}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Subject 3}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{35}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Subject 4}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{36}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Subject 5}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{37}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Subject 6}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.7}Subject 7}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{39}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.8}Subject 7}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{40}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.9}Subject 8}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{}{41}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Discussion}{51}
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 

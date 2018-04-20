@@ -1070,10 +1070,92 @@ pupils, heart rate, galvanic skin resistance and facial expressions. All the
 information are simultaneously written to disk with time and date of the 
 experiment.
 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/datacollectiondialog}
+	\centering
+	\caption{Data collection in progress}
+	\label{fig:}
+\end{figure}
 
+\paragraph{}As shown, there are three buttons on this screen. Start, pause and 
+show stats. There are also four real-time charts. the pie chart shows current 
+emotion derived from the facial expression. The line graph on the bottom-left 
+part shows current heart rate. This does not represent real data, since it's 
+extrapolating from 3 second intervals, but is enough to show impulses and 
+changes. The bottom-center chart shows galvanic skin response. The last chart 
+on the screen is shows subject's emotion valence. This is calculated based upon 
+the information on Table 1.2.
 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/livebargraph}
+	\centering
+	\caption{Current ratio of emotions.}
+	\label{fig:}
+\end{figure}
 
+\paragraph{}User can, at any time, use the "show stats" button to reveal the 
+average ratio of emotions up until the push of the button, represented as a bar 
+graph.
 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/livelinegraph}
+	\centering
+	\caption{Emotions plotted up until this moment}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Line chart plotting the emotion variance up until this moment. User 
+can scroll horizontally to see the whole detailed chart. The user can also pick 
+and choose which metrics or emotions they want to plot on the chart. The user 
+can also have multiple charts opened at the same time by pressing the "Show 
+stats" button several times.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/loaddata}
+	\centering
+	\caption{QFileDialog - Choose the data file to load.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Going back to the main window, user can instead load a previous 
+experiment from the "output" folder. After the file loads\footnote{This can 
+take a while, depending on the length of the experiment and power of the 
+computer.} you can expose either bar chart showing the ratio of the affects, 
+line chart displaying emotions depending on time, or the line chart showing the 
+movement of the gaze. This, of course, is the relative gaze of the subjects, 
+since the data is collected from the cameras attached to the Pupil headset. 
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/loadbargraph}
+	\centering
+	\caption{Bar chart from the loaded data file.}
+	\label{fig:}
+\end{figure}
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/loadlinegraph}
+	\centering
+	\caption{Line chart detailing the evolution of emotions during the 
+	experiment.}
+	\label{fig:}
+\end{figure}
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.2]{images/loadgazegraph}
+	\centering
+	\caption{Line chart detailing the concentration of the subject's gaze.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Note that there is a button allowing user to export his chart to 
+vectorized PDF or rasterized image file such as PNG or JPEG.
 
 \section{The experiment}
 
@@ -1103,14 +1185,566 @@ window of a car in a snowstorm. The last segment was an erotic slideshow
 showing attractive naked males, females and both homosexual and heterosexual 
 pairs mid coitus. The segments were divided by a few seconds of blank screen to 
 allow subjects' emotion to return to neutral. After the experiment, we have 
-questioned the subjects about their feelings and emotions.
+questioned the subjects about their feelings and emotions. 
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/experiment}
+	\centering
+	\caption{Setting up the experiment for one of the subjects}
+	\label{fig:}
+\end{figure}
 
 
 \chapter{Data evaluation}
 
-%TODO: Evaluate the data from the visualization 
+\paragraph{}After conducting the experiment, we were left with a lot of data. 
+Unfortunately, a few of the subjects did not register with either the hear 
+rate, the galvanic skin resistance sensor or neither of the two. This has 
+rendered their contribution incomplete. Pupil headset, nevertheless, has been 
+very reliable and provided us with full load of data. Full data will be 
+provided on the disk with the application, however here are a few interesting 
+findings. For the closer look, we have chosen eight subjects.
 
-\chapter{Results}
+\section{Subject 1}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/1_full}
+	\centering
+	\caption{Subject 1 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Subject 1 was a tall woman in her thirties. As it is easy to 
+discern, 
+she did not sit directly and thus her gaze has a slight bias to one corner her 
+field of view. 
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/1_gaze}
+	\centering
+	\caption{Subject 1 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}This is also reinforced by the data from the pupil diameters. Since 
+she was looking at the screen slight from the flank, one of her pupil is 
+continuously bigger than the other one.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/1_pupil}
+	\centering
+	\caption{Subject 1 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Subject's biometric data is rather inconclusive, but despite that, 
+we can point out that her skin conductivity kept slightly increasing during the 
+experiment, having spiked early on, during the "joy-inducing" segment of the 
+video. Her heart rate is stable throughout the duration of the video and as per 
+her comments, it did not leave a lasting impression.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/1_HRGSRpupil}
+	\centering
+	\caption{Subject 1 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Looking at her emotion chart, we can observe slight correlation 
+between emotional valence and GSR in the joy-inducing part of the experiment. 
+Joy, however, doesn't seem to spike that high, but mixed with slight surprise, 
+it drives the valence and engagements metrics up. Affectiva hasn't been able to 
+determine disgust, although, by subject's expression, she has been feeling it 
+quite strongly. At the end of the experiment, subject got a bit restless, thus 
+causing the GSR to behave erratically.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/1_emotions}
+	\centering
+	\caption{Subject 1 - Sorted emotions.}
+	\label{fig:}
+\end{figure}
+\newpage
+
+
+\section{Subject 2}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/2_full}
+	\centering
+	\caption{Subject 2 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}The second subject was the husband of Subject 1. At similar height, 
+we do not see the bias we've seen in the first case, but the head movement did 
+influence the gaze information in this case.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/2_gaze}
+	\centering
+	\caption{Subject 2 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}The different case is here reinforced by the almost equal diameter 
+of the pupils. This suggests, that the subject was looking at the screen at 
+right angle.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/2_pupil}
+	\centering
+	\caption{Subject 2 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Here the biometric data suggests, that the subject was the whole 
+time rather neutral, only getting aroused in the last segment of the video, 
+with both heart rate and skin conductivity consistently growing.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/2_HRGSRpupil}
+	\centering
+	\caption{Subject 2 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}There is a slight discrepancy between the biometric data and the 
+Affectiva's estimation. Although the sensors suggest calm in the first part, 
+face expressions were assessed as a sign of engagement. In the end, though, 
+both sensors and face expression recognition agreed on a level of arousal.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/2_emotions}
+	\centering
+	\caption{Subject 2 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+\section{Subject 3}
+\paragraph{}With 64 year old lady, we can see rather different emotional 
+activity. We have a strong GSR and heart rate signal, with slightly indecisive 
+pupil and gaze data. 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/3_full}
+	\centering
+	\caption{Subject 3 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}Having imperfect sights, we can assume she has unconsciously leaned 
+towards her better eye, explaining non-existent vertical and large horizontal 
+bias.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/3_gaze}
+	\centering
+	\caption{Subject 3 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Pupil data corroborates our assumption. One pupil was smaller from 
+the start of the experiment and in the middle, it dropped altogether. This can 
+be explained by leaning head and bigger eyelids covering the field of view of 
+the eye camera.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/3_pupil}
+	\centering
+	\caption{Subject 3 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}The raw data indicates turbulent activity at the beginning of the 
+test, then tapering off and stabilizing.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/3_HRGSRpupil}
+	\centering
+	\caption{Subject 3 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}This is confirmed by the last chart, showing great joy and 
+engagement in the first segment. Interestingly, we can see contempt spiking 
+near the end, when the video converts into the erotic slideshow. We can assume, 
+that this change is brought about by different background of the subject.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/3_emotions}
+	\centering
+	\caption{Subject 3 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+
+\section{Subject 4}
+\paragraph{}The husband of Subject 3, we can observe vastly different reaction 
+to the video shown. Strong heart rate and GSR signal makes this a reliable 
+example of the studied phenomena. 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/4_full}
+	\centering
+	\caption{Subject 4 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}Gaze seems to be concentrated towards the center, leaning 
+downwards. This corresponds with the stature of the subject and the position, 
+in which he took part in the experiment.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/4_gaze}
+	\centering
+	\caption{Subject 4 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}During the experiment, pupils were closely matched, making this a 
+high quality sample.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/4_pupil}
+	\centering
+	\caption{Subject 4 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Subject 4's biometric signal was strong during the whole 
+experiment. Especially the relative lack of heart rate signal drops suggest, 
+that sensors were attached perfectly. 
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/4_HRGSRpupil}
+	\centering
+	\caption{Subject 4 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}On subject's emotion chart, we can see engagement in the first 
+quadrant of the experiment. This is, however, overshadowed by large activity in 
+last quadrant, corroborated by increased biometric signal.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/5_emotions}
+	\centering
+	\caption{Subject 4 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+
+\section{Subject 5}
+\paragraph{}This sample is slightly disturbed by the presence of the child of 
+the subject. Even then, it can be valuable, as can be seen on the charts below. 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/5_full}
+	\centering
+	\caption{Subject 5 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}Due to the presence of the child, the subject's gaze is spread out 
+and there is no focal point. This, however, did not disturb the experiment to 
+the degree that we anticipated. For this reason, we have kept this sample in 
+the evaluation.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/5_gaze}
+	\centering
+	\caption{Subject 5 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Due to whole head unconsciously turning towards her child, the 
+pupil disparity is relatively low.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/5_pupil}
+	\centering
+	\caption{Subject 5 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Subject's heart rate and galvanic skin conductivity was very 
+erratic during this experiment. Therefore, we had to rely on the facial 
+expressions and pupil data to gather information.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/5_HRGSRpupil}
+	\centering
+	\caption{Subject 5 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Fitting the pattern of the video, first quadrant is influenced by 
+engagement, surprise an joy. Third quadrant sees the increase of pupil 
+diameter, valence and engagement. Lastly, the arousing part shows signs of 
+surprise and engagement.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/5_emotions}
+	\centering
+	\caption{Subject 5 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+
+\section{Subject 6}
+\paragraph{}Subject 6 is a male, 32 year old medical doctor. This has skewed 
+the emotional response in an interesting, although predictable way. 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_full}
+	\centering
+	\caption{Subject 7 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}Subject 6 tends to physically look down, when anticipating 
+something fear-inducing. This has obviously influenced the sample of the gaze 
+data.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_gaze}
+	\centering
+	\caption{Subject 7 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}The sizes of both pupils are tightly matched. No further influences 
+on the sample have been observed.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_pupil}
+	\centering
+	\caption{Subject 7 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Due to subject's movement during laughter, frightful recoil and 
+general restlessness, his biometric signal is rather wandering. However, there 
+is still recognizable arousal in the first and the last quadrant of the video.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_HRGSRpupil}
+	\centering
+	\caption{Subject 7 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}First quadrant of the video has evoked a mixture of contempt, joy 
+and surprise, resulting in high levels of engagement. Second segment has 
+excited the subject, as his profession has rendered him resistant to disgusting 
+views. The last two segments has raised the arousal and excitement levels.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_emotions}
+	\centering
+	\caption{Subject 7 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+
+
+\section{Subject 7}
+\paragraph{}Subject 7 is the wife of the Subject 6. Apart from that, she is a 
+medical doctor as well, consequently similar notes concerning previous subject 
+apply here too.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_full}
+	\centering
+	\caption{Subject 7 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}This subject has had no difficulties maintaining concentration and 
+focus. She did not look away during the whole experiment.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_gaze}
+	\centering
+	\caption{Subject 7 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Subject's pupil sizes, albeit not identical, follow the same trend, 
+signifying correct position of the headset. 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_pupil}
+	\centering
+	\caption{Subject 7 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Not considering few random peaks in the galvanic skin conductivity, 
+subject's physiological signs were level the whole experiment, with only the 
+heart rate oscillating in the last segment.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_HRGSRpupil}
+	\centering
+	\caption{Subject 7 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Interestingly, this person has experienced peaks of disgust, 
+engagement and joy in each section of the video. Pupil size, nor other 
+physiological markers do not seem to correlate in this example.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_emotions}
+	\centering
+	\caption{Subject 7 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+
+\section{Subject 7}
+\paragraph{}Subject 7 is the wife of the Subject 6. Apart from that, she is a 
+medical doctor as well, consequently similar notes concerning previous subject 
+apply here too.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_full}
+	\centering
+	\caption{Subject 7 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}This subject has had no difficulties maintaining concentration and 
+focus. She did not look away during the whole experiment.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_gaze}
+	\centering
+	\caption{Subject 7 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Subject's pupil sizes, albeit not identical, follow the same trend, 
+signifying correct position of the headset. 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_pupil}
+	\centering
+	\caption{Subject 7 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Not considering few random peaks in the galvanic skin conductivity, 
+subject's physiological signs were level the whole experiment, with only the 
+heart rate oscillating in the last segment.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_HRGSRpupil}
+	\centering
+	\caption{Subject 7 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Interestingly, this person has experienced peaks of disgust, 
+engagement and joy in each section of the video. Pupil size, nor other 
+physiological markers do not seem to correlate in this example.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/7_emotions}
+	\centering
+	\caption{Subject 7 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+
+
+
+
+\section{Subject 8}
+\paragraph{}Subject 8 is the wife of the Subject 6. Apart from that, she is a 
+medical doctor as well, consequently similar notes concerning previous subject 
+apply here too.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/8_full}
+	\centering
+	\caption{Subject 8 - Complete emotion graph.}
+	\label{fig:}
+\end{figure}
+\paragraph{}This subject has had no difficulties maintaining concentration and 
+focus. She did not look away during the whole experiment.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/8_gaze}
+	\centering
+	\caption{Subject 8 - Gaze position.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Subject's pupil sizes, albeit not identical, follow the same trend, 
+signifying correct position of the headset. 
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/8_pupil}
+	\centering
+	\caption{Subject 8 - Pupil diameter.}
+	\label{fig:}
+\end{figure}
+
+
+\paragraph{}Not considering few random peaks in the galvanic skin conductivity, 
+subject's physiological signs were level the whole experiment, with only the 
+heart rate oscillating in the last segment.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/8_HRGSRpupil}
+	\centering
+	\caption{Subject 8 - Biometric information.}
+	\label{fig:}
+\end{figure}
+
+\paragraph{}Interestingly, this person has experienced peaks of disgust, 
+engagement and joy in each section of the video. Pupil size, nor other 
+physiological markers do not seem to correlate in this example.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[scale=0.3]{images/8_emotions}
+	\centering
+	\caption{Subject 8 - Emotions.}
+	\label{fig:}
+\end{figure}
+
+
+
+
 
 \chapter{Discussion}
 

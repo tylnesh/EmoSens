@@ -65,6 +65,9 @@ private:
     QVector<double> diameter0Vector;
     QVector<double> diameter1Vector;
 
+    QVector<double> gazeXVector;
+    QVector<double> gazeYVector;
+
 
     double HRSum = 0;
     double GSRSum = 0;
@@ -96,6 +99,7 @@ private:
 
     QBarSeries *barseries;
     QLineSeries *lineseries;
+    QLineSeries *gazeseries;
 
 
 };
