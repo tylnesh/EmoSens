@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.15)  20 APR 2018 05:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.4.20)  20 APR 2018 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Thesis.tex
 (./Thesis.tex
 LaTeX2e <2016/03/31>
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+Babel <3.9r> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -43,6 +43,8 @@ File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -957,9 +959,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--116
 
  []
 
-[3] [4
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 118--127
 
-] [5
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--127
+
+ []
+
+[4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 129--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--138
+
+ []
+
+[5
 
 ] (./Thesis.toc
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 19.
@@ -1007,7 +1029,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 167.
+(csquotes)                Punctuation tracker may fail on input line 182.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1018,30 +1040,30 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 197.
+(csquotes)                Punctuation tracker may fail on input line 212.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 198.
+(csquotes)                Punctuation tracker may fail on input line 213.
 
 <images/Primary_Emotions.jpg, id=32, 416.55624pt x 249.93375pt>
 File: images/Primary_Emotions.jpg Graphic file (type jpg)
 
 <use images/Primary_Emotions.jpg>
-Package pdftex.def Info: images/Primary_Emotions.jpg used on input line 201.
+Package pdftex.def Info: images/Primary_Emotions.jpg used on input line 216.
 (pdftex.def)             Requested size: 249.93567pt x 149.9614pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 208.
+(csquotes)                Punctuation tracker may fail on input line 227.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 215.
+(csquotes)                Punctuation tracker may fail on input line 234.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 224.
+(csquotes)                Punctuation tracker may fail on input line 243.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1051,35 +1073,35 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 Chapter 1.
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 251.
+(csquotes)                Punctuation tracker may fail on input line 270.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 251.
+(csquotes)                Punctuation tracker may fail on input line 270.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 256.
+(csquotes)                Punctuation tracker may fail on input line 275.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 261.
+(csquotes)                Punctuation tracker may fail on input line 280.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 269.
+(csquotes)                Punctuation tracker may fail on input line 288.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 279.
+(csquotes)                Punctuation tracker may fail on input line 298.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 283.
+(csquotes)                Punctuation tracker may fail on input line 302.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 285.
+(csquotes)                Punctuation tracker may fail on input line 304.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1090,34 +1112,34 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 ]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 290.
+(csquotes)                Punctuation tracker may fail on input line 309.
 
 <images/russel_model.png, id=40, 673.51625pt x 472.76625pt>
 File: images/russel_model.png Graphic file (type png)
 
 <use images/russel_model.png>
-Package pdftex.def Info: images/russel_model.png used on input line 294.
+Package pdftex.def Info: images/russel_model.png used on input line 313.
 (pdftex.def)             Requested size: 269.40172pt x 189.10315pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 305.
+(csquotes)                Punctuation tracker may fail on input line 323.
 
 <images/vector0.jpg, id=41, 903.375pt x 900.36375pt>
 File: images/vector0.jpg Graphic file (type jpg)
  <use images/vector0.jpg>
-Package pdftex.def Info: images/vector0.jpg used on input line 314.
+Package pdftex.def Info: images/vector0.jpg used on input line 332.
 (pdftex.def)             Requested size: 88.2022pt x 87.89845pt.
 
 <images/vector1.jpg, id=42, 1204.5pt x 1158.3275pt>
 File: images/vector1.jpg Graphic file (type jpg)
  <use images/vector1.jpg>
-Package pdftex.def Info: images/vector1.jpg used on input line 317.
+Package pdftex.def Info: images/vector1.jpg used on input line 335.
 (pdftex.def)             Requested size: 88.2022pt x 84.82056pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 329.
+(csquotes)                Punctuation tracker may fail on input line 347.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1128,50 +1150,50 @@ tor1.jpg>] <images/consensual.jpeg, id=47, 523.9575pt x 492.84125pt>
 File: images/consensual.jpeg Graphic file (type jpg)
 
 <use images/consensual.jpeg>
-Package pdftex.def Info: images/consensual.jpeg used on input line 333.
+Package pdftex.def Info: images/consensual.jpeg used on input line 351.
 (pdftex.def)             Requested size: 209.57928pt x 197.133pt.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 347.
-
-<images/Plutchik_wheel.png, id=48, 593.21625pt x 601.24625pt>
-File: images/Plutchik_wheel.png Graphic file (type png)
-
-<use images/Plutchik_wheel.png>
-Package pdftex.def Info: images/Plutchik_wheel.png used on input line 351.
-(pdftex.def)             Requested size: 177.96625pt x 180.37526pt.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 360.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 362.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 364.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
 (csquotes)                Punctuation tracker may fail on input line 365.
 
+<images/Plutchik_wheel.png, id=48, 593.21625pt x 601.24625pt>
+File: images/Plutchik_wheel.png Graphic file (type png)
+
+<use images/Plutchik_wheel.png>
+Package pdftex.def Info: images/Plutchik_wheel.png used on input line 369.
+(pdftex.def)             Requested size: 177.96625pt x 180.37526pt.
+
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 374.
+(csquotes)                Punctuation tracker may fail on input line 378.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 380.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 382.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 383.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 392.
 
 <images/pad_model.png, id=50, 663.47874pt x 477.785pt>
 File: images/pad_model.png Graphic file (type png)
 
 <use images/pad_model.png>
-Package pdftex.def Info: images/pad_model.png used on input line 377.
+Package pdftex.def Info: images/pad_model.png used on input line 395.
 (pdftex.def)             Requested size: 265.3868pt x 191.11061pt.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 385.
+(csquotes)                Punctuation tracker may fail on input line 403.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1182,24 +1204,24 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/lovheimcube.png Graphic file (type png)
 
 <use images/lovheimcube.png>
-Package pdftex.def Info: images/lovheimcube.png used on input line 393.
+Package pdftex.def Info: images/lovheimcube.png used on input line 411.
 (pdftex.def)             Requested size: 321.1943pt x 217.60915pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 401.
+(Font)              <9> on input line 419.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 401.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 403.
-
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 408.
+(Font)              <5> on input line 419.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
 (csquotes)                Punctuation tracker may fail on input line 421.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 426.
+
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 439.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1208,11 +1230,11 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [13 <./images/pad_model.png (PNG copy)>]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 425.
+(csquotes)                Punctuation tracker may fail on input line 443.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 449.
+(csquotes)                Punctuation tracker may fail on input line 467.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1221,23 +1243,23 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [14 <./images/lovheimcube.png>]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 464.
+(csquotes)                Punctuation tracker may fail on input line 482.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 469.
+(csquotes)                Punctuation tracker may fail on input line 487.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 498.
+(csquotes)                Punctuation tracker may fail on input line 516.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 505.
+(csquotes)                Punctuation tracker may fail on input line 523.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 510.
+(csquotes)                Punctuation tracker may fail on input line 528.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1246,23 +1268,23 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [15]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 520.
+(csquotes)                Punctuation tracker may fail on input line 538.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 530.
+(csquotes)                Punctuation tracker may fail on input line 548.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 534.
+(csquotes)                Punctuation tracker may fail on input line 552.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 545.
+(csquotes)                Punctuation tracker may fail on input line 563.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 551.
+(csquotes)                Punctuation tracker may fail on input line 569.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1271,52 +1293,52 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [16]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 558.
+(csquotes)                Punctuation tracker may fail on input line 576.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 561.
+(csquotes)                Punctuation tracker may fail on input line 579.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 564.
+(csquotes)                Punctuation tracker may fail on input line 582.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 577.
+(csquotes)                Punctuation tracker may fail on input line 595.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 592.
+(csquotes)                Punctuation tracker may fail on input line 610.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 597.
+(csquotes)                Punctuation tracker may fail on input line 615.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 597.
+(csquotes)                Punctuation tracker may fail on input line 615.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 601.
+(csquotes)                Punctuation tracker may fail on input line 619.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [17]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 651.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 669.
 
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 651.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 669.
 
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 18 might be wrong on input line 657
+(multicol)                Footnotes on page 18 might be wrong on input line 675
 .
 
 
@@ -1326,7 +1348,7 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [18]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 677.
+(csquotes)                Punctuation tracker may fail on input line 695.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1335,11 +1357,11 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [19]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 731.
+(csquotes)                Punctuation tracker may fail on input line 749.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 737.
+(csquotes)                Punctuation tracker may fail on input line 755.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1358,7 +1380,7 @@ Chapter 2.
 File: images/HRCircuit.png Graphic file (type png)
 
 <use images/HRCircuit.png>
-Package pdftex.def Info: images/HRCircuit.png used on input line 870.
+Package pdftex.def Info: images/HRCircuit.png used on input line 888.
 (pdftex.def)             Requested size: 422.07584pt x 157.08649pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1370,16 +1392,16 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/GSRCircuit.png Graphic file (type png)
 
 <use images/GSRCircuit.png>
-Package pdftex.def Info: images/GSRCircuit.png used on input line 886.
+Package pdftex.def Info: images/GSRCircuit.png used on input line 904.
 (pdftex.def)             Requested size: 406.51776pt x 165.61833pt.
  <images/HRSensor.jpg, id=94, 602.25pt x 602.25pt>
 File: images/HRSensor.jpg Graphic file (type jpg)
 
 <use images/HRSensor.jpg>
-Package pdftex.def Info: images/HRSensor.jpg used on input line 896.
+Package pdftex.def Info: images/HRSensor.jpg used on input line 913.
 (pdftex.def)             Requested size: 88.2022pt x 88.20161pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 896--896
+Underfull \hbox (badness 10000) in paragraph at lines 913--913
 []\IL2/lmr/m/n/9 (a) |Pulse Sen-sor
  []
 
@@ -1387,14 +1409,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 896--896
 File: images/GSRSensor.jpg Graphic file (type jpg)
 
 <use images/GSRSensor.jpg>
-Package pdftex.def Info: images/GSRSensor.jpg used on input line 899.
+Package pdftex.def Info: images/GSRSensor.jpg used on input line 916.
 (pdftex.def)             Requested size: 110.25443pt x 82.68442pt.
 
 <images/arduinoschema.png, id=96, 1220.56pt x 2409.0pt>
 File: images/arduinoschema.png Graphic file (type png)
 
 <use images/arduinoschema.png>
-Package pdftex.def Info: images/arduinoschema.png used on input line 911.
+Package pdftex.def Info: images/arduinoschema.png used on input line 928.
 (pdftex.def)             Requested size: 305.13925pt x 602.24854pt.
 
 
@@ -1413,7 +1435,7 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 <images/pupil.jpg, id=104, 1204.5pt x 1204.5pt>
 File: images/pupil.jpg Graphic file (type jpg)
  <use images/pupil.jpg>
-Package pdftex.def Info: images/pupil.jpg used on input line 936.
+Package pdftex.def Info: images/pupil.jpg used on input line 953.
 (pdftex.def)             Requested size: 361.35278pt x 361.35278pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1424,11 +1446,11 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
  <./images/pupil.jpg>]
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 1004.
+(csquotes)                Punctuation tracker may fail on input line 1021.
 
 
 Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 1004.
+(csquotes)                Punctuation tracker may fail on input line 1021.
 
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1438,14 +1460,14 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/zeromqdia.png Graphic file (type png)
 
 <use images/zeromqdia.png>
-Package pdftex.def Info: images/zeromqdia.png used on input line 1024.
+Package pdftex.def Info: images/zeromqdia.png used on input line 1041.
 (pdftex.def)             Requested size: 324.00475pt x 145.74191pt.
 
 <images/mainwindow.png, id=113, 1285.80376pt x 749.80125pt>
 File: images/mainwindow.png Graphic file (type png)
 
 <use images/mainwindow.png>
-Package pdftex.def Info: images/mainwindow.png used on input line 1051.
+Package pdftex.def Info: images/mainwindow.png used on input line 1068.
 (pdftex.def)             Requested size: 385.74411pt x 224.94211pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1456,22 +1478,22 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/datacollectiondialog.png Graphic file (type png)
 
 <use images/datacollectiondialog.png>
-Package pdftex.def Info: images/datacollectiondialog.png used on input line 107
-5.
+Package pdftex.def Info: images/datacollectiondialog.png used on input line 109
+2.
 (pdftex.def)             Requested size: 373.3884pt x 211.58675pt.
 
 <images/livebargraph.png, id=118, 1288.815pt x 753.81625pt>
 File: images/livebargraph.png Graphic file (type png)
 
 <use images/livebargraph.png>
-Package pdftex.def Info: images/livebargraph.png used on input line 1092.
+Package pdftex.def Info: images/livebargraph.png used on input line 1109.
 (pdftex.def)             Requested size: 257.75844pt x 150.76057pt.
 
 <images/livelinegraph.png, id=119, 1286.8075pt x 750.805pt>
 File: images/livelinegraph.png Graphic file (type png)
 
 <use images/livelinegraph.png>
-Package pdftex.def Info: images/livelinegraph.png used on input line 1104.
+Package pdftex.def Info: images/livelinegraph.png used on input line 1121.
 (pdftex.def)             Requested size: 257.35693pt x 150.15834pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1482,7 +1504,7 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/loaddata.png Graphic file (type png)
 
 <use images/loaddata.png>
-Package pdftex.def Info: images/loaddata.png used on input line 1118.
+Package pdftex.def Info: images/loaddata.png used on input line 1135.
 (pdftex.def)             Requested size: 255.95172pt x 149.1546pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1493,21 +1515,21 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/loadbargraph.png Graphic file (type png)
 
 <use images/loadbargraph.png>
-Package pdftex.def Info: images/loadbargraph.png used on input line 1134.
+Package pdftex.def Info: images/loadbargraph.png used on input line 1151.
 (pdftex.def)             Requested size: 256.7547pt x 149.9576pt.
 
 <images/loadlinegraph.png, id=128, 1287.81125pt x 751.80875pt>
 File: images/loadlinegraph.png Graphic file (type png)
 
 <use images/loadlinegraph.png>
-Package pdftex.def Info: images/loadlinegraph.png used on input line 1142.
+Package pdftex.def Info: images/loadlinegraph.png used on input line 1159.
 (pdftex.def)             Requested size: 257.5577pt x 150.35909pt.
 
 <images/loadgazegraph.png, id=129, 1283.79625pt x 748.7975pt>
 File: images/loadgazegraph.png Graphic file (type png)
 
 <use images/loadgazegraph.png>
-Package pdftex.def Info: images/loadgazegraph.png used on input line 1151.
+Package pdftex.def Info: images/loadgazegraph.png used on input line 1168.
 (pdftex.def)             Requested size: 256.7547pt x 149.75684pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1518,7 +1540,7 @@ graph.png>] <images/experiment.jpg, id=133, 935.495pt x 702.625pt>
 File: images/experiment.jpg Graphic file (type jpg)
 
 <use images/experiment.jpg>
-Package pdftex.def Info: images/experiment.jpg used on input line 1192.
+Package pdftex.def Info: images/experiment.jpg used on input line 1209.
 (pdftex.def)             Requested size: 280.65067pt x 210.78912pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1529,20 +1551,20 @@ Chapter 3.
 <images/1_full.png, id=138, 828.84656pt x 520.19344pt>
 File: images/1_full.png Graphic file (type png)
  <use images/1_full.png>
-Package pdftex.def Info: images/1_full.png used on input line 1212.
+Package pdftex.def Info: images/1_full.png used on input line 1229.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 <images/1_gaze.png, id=139, 828.84656pt x 520.19344pt>
 File: images/1_gaze.png Graphic file (type png)
  <use images/1_gaze.png>
-Package pdftex.def Info: images/1_gaze.png used on input line 1225.
+Package pdftex.def Info: images/1_gaze.png used on input line 1242.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 <images/1_pupil.png, id=140, 828.84656pt x 520.19344pt>
 File: images/1_pupil.png Graphic file (type png)
 
 <use images/1_pupil.png>
-Package pdftex.def Info: images/1_pupil.png used on input line 1237.
+Package pdftex.def Info: images/1_pupil.png used on input line 1254.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1555,14 +1577,14 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 File: images/1_HRGSRpupil.png Graphic file (type png)
 
 <use images/1_HRGSRpupil.png>
-Package pdftex.def Info: images/1_HRGSRpupil.png used on input line 1251.
+Package pdftex.def Info: images/1_HRGSRpupil.png used on input line 1268.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 <images/1_emotions.png, id=145, 828.84656pt x 520.19344pt>
 File: images/1_emotions.png Graphic file (type png)
 
 <use images/1_emotions.png>
-Package pdftex.def Info: images/1_emotions.png used on input line 1268.
+Package pdftex.def Info: images/1_emotions.png used on input line 1285.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1572,271 +1594,214 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 <images/2_full.png, id=149, 828.84656pt x 520.19344pt>
 File: images/2_full.png Graphic file (type png)
  <use images/2_full.png>
-Package pdftex.def Info: images/2_full.png used on input line 1279.
+Package pdftex.def Info: images/2_full.png used on input line 1296.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 <images/2_gaze.png, id=150, 828.84656pt x 520.19344pt>
 File: images/2_gaze.png Graphic file (type png)
  <use images/2_gaze.png>
-Package pdftex.def Info: images/2_gaze.png used on input line 1290.
+Package pdftex.def Info: images/2_gaze.png used on input line 1307.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 <images/2_pupil.png, id=151, 828.84656pt x 520.19344pt>
 File: images/2_pupil.png Graphic file (type png)
 
 <use images/2_pupil.png>
-Package pdftex.def Info: images/2_pupil.png used on input line 1302.
+Package pdftex.def Info: images/2_pupil.png used on input line 1319.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 <images/2_HRGSRpupil.png, id=152, 828.84656pt x 520.19344pt>
 File: images/2_HRGSRpupil.png Graphic file (type png)
 
 <use images/2_HRGSRpupil.png>
-Package pdftex.def Info: images/2_HRGSRpupil.png used on input line 1315.
+Package pdftex.def Info: images/2_HRGSRpupil.png used on input line 1332.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 <images/2_emotions.png, id=153, 828.84656pt x 520.19344pt>
 File: images/2_emotions.png Graphic file (type png)
 
 <use images/2_emotions.png>
-Package pdftex.def Info: images/2_emotions.png used on input line 1328.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/3_full.png, id=154, 828.84656pt x 520.19344pt>
-File: images/3_full.png Graphic file (type png)
- <use images/3_full.png>
-Package pdftex.def Info: images/3_full.png used on input line 1340.
+Package pdftex.def Info: images/2_emotions.png used on input line 1345.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [34 <./images/1_emotions.png (PNG copy)> <./images/2_full.png (PNG copy)>]
-<images/3_gaze.png, id=158, 828.84656pt x 520.19344pt>
-File: images/3_gaze.png Graphic file (type png)
- <use images/3_gaze.png>
-Package pdftex.def Info: images/3_gaze.png used on input line 1351.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/3_pupil.png, id=159, 828.84656pt x 520.19344pt>
-File: images/3_pupil.png Graphic file (type png)
-
-<use images/3_pupil.png>
-Package pdftex.def Info: images/3_pupil.png used on input line 1364.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/3_HRGSRpupil.png, id=160, 828.84656pt x 520.19344pt>
-File: images/3_HRGSRpupil.png Graphic file (type png)
-
-<use images/3_HRGSRpupil.png>
-Package pdftex.def Info: images/3_HRGSRpupil.png used on input line 1376.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/3_emotions.png, id=161, 828.84656pt x 520.19344pt>
-File: images/3_emotions.png Graphic file (type png)
-
-<use images/3_emotions.png>
-Package pdftex.def Info: images/3_emotions.png used on input line 1389.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/4_full.png, id=162, 828.84656pt x 520.19344pt>
-File: images/4_full.png Graphic file (type png)
- <use images/4_full.png>
-Package pdftex.def Info: images/4_full.png used on input line 1402.
+<images/3_full.png, id=157, 828.84656pt x 520.19344pt>
+File: images/3_full.png Graphic file (type png)
+ <use images/3_full.png>
+Package pdftex.def Info: images/3_full.png used on input line 1355.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [35 <./images/2_gaze.png (PNG copy)> <./images/2_pupil.png (PNG copy)>]
-<images/4_gaze.png, id=166, 828.84656pt x 520.19344pt>
-File: images/4_gaze.png Graphic file (type png)
- <use images/4_gaze.png>
-Package pdftex.def Info: images/4_gaze.png used on input line 1413.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/4_pupil.png, id=167, 828.84656pt x 520.19344pt>
-File: images/4_pupil.png Graphic file (type png)
-
-<use images/4_pupil.png>
-Package pdftex.def Info: images/4_pupil.png used on input line 1424.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/4_HRGSRpupil.png, id=168, 828.84656pt x 520.19344pt>
-File: images/4_HRGSRpupil.png Graphic file (type png)
-
-<use images/4_HRGSRpupil.png>
-Package pdftex.def Info: images/4_HRGSRpupil.png used on input line 1437.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/5_emotions.png, id=169, 828.84656pt x 520.19344pt>
-File: images/5_emotions.png Graphic file (type png)
-
-<use images/5_emotions.png>
-Package pdftex.def Info: images/5_emotions.png used on input line 1449.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/5_full.png, id=170, 828.84656pt x 520.19344pt>
-File: images/5_full.png Graphic file (type png)
- <use images/5_full.png>
-Package pdftex.def Info: images/5_full.png used on input line 1461.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [36 <./images/2_HRGSRpupil.png (PNG copy)> <./images/2_emotions.png (PNG copy)>
-] <images/5_gaze.png, id=174, 828.84656pt x 520.19344pt>
-File: images/5_gaze.png Graphic file (type png)
+] <images/3_gaze.png, id=164, 828.84656pt x 520.19344pt>
+File: images/3_gaze.png Graphic file (type png)
 
-<use images/5_gaze.png>
-Package pdftex.def Info: images/5_gaze.png used on input line 1473.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/5_pupil.png, id=175, 828.84656pt x 520.19344pt>
-File: images/5_pupil.png Graphic file (type png)
-
-<use images/5_pupil.png>
-Package pdftex.def Info: images/5_pupil.png used on input line 1484.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/5_HRGSRpupil.png, id=176, 828.84656pt x 520.19344pt>
-File: images/5_HRGSRpupil.png Graphic file (type png)
-
-<use images/5_HRGSRpupil.png>
-Package pdftex.def Info: images/5_HRGSRpupil.png used on input line 1497.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-File: images/5_emotions.png Graphic file (type png)
- <use images/5_emotions.png>
-Package pdftex.def Info: images/5_emotions.png used on input line 1510.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/7_full.png, id=177, 828.84656pt x 520.19344pt>
-File: images/7_full.png Graphic file (type png)
- <use images/7_full.png>
-Package pdftex.def Info: images/7_full.png used on input line 1522.
+<use images/3_gaze.png>
+Package pdftex.def Info: images/3_gaze.png used on input line 1371.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [37 <./images/3_full.png (PNG copy)> <./images/3_gaze.png (PNG copy)>]
-<images/7_gaze.png, id=182, 828.84656pt x 520.19344pt>
-File: images/7_gaze.png Graphic file (type png)
- <use images/7_gaze.png>
-Package pdftex.def Info: images/7_gaze.png used on input line 1533.
+<images/3_pupil.png, id=169, 828.84656pt x 520.19344pt>
+File: images/3_pupil.png Graphic file (type png)
+
+<use images/3_pupil.png>
+Package pdftex.def Info: images/3_pupil.png used on input line 1384.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
-<images/7_pupil.png, id=183, 828.84656pt x 520.19344pt>
-File: images/7_pupil.png Graphic file (type png)
+<images/3_HRGSRpupil.png, id=170, 828.84656pt x 520.19344pt>
+File: images/3_HRGSRpupil.png Graphic file (type png)
 
-<use images/7_pupil.png>
-Package pdftex.def Info: images/7_pupil.png used on input line 1543.
+<use images/3_HRGSRpupil.png>
+Package pdftex.def Info: images/3_HRGSRpupil.png used on input line 1396.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
-<images/7_HRGSRpupil.png, id=184, 828.84656pt x 520.19344pt>
-File: images/7_HRGSRpupil.png Graphic file (type png)
+<images/3_emotions.png, id=171, 828.84656pt x 520.19344pt>
+File: images/3_emotions.png Graphic file (type png)
 
-<use images/7_HRGSRpupil.png>
-Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1555.
+<use images/3_emotions.png>
+Package pdftex.def Info: images/3_emotions.png used on input line 1409.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
-<images/7_emotions.png, id=185, 828.84656pt x 520.19344pt>
-File: images/7_emotions.png Graphic file (type png)
-
-<use images/7_emotions.png>
-Package pdftex.def Info: images/7_emotions.png used on input line 1567.
+<images/4_full.png, id=172, 828.84656pt x 520.19344pt>
+File: images/4_full.png Graphic file (type png)
+ <use images/4_full.png>
+Package pdftex.def Info: images/4_full.png used on input line 1422.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-File: images/7_full.png Graphic file (type png)
- <use images/7_full.png>
-Package pdftex.def Info: images/7_full.png used on input line 1581.
+
+<images/4_gaze.png, id=173, 828.84656pt x 520.19344pt>
+File: images/4_gaze.png Graphic file (type png)
+ <use images/4_gaze.png>
+Package pdftex.def Info: images/4_gaze.png used on input line 1433.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/4_pupil.png, id=174, 828.84656pt x 520.19344pt>
+File: images/4_pupil.png Graphic file (type png)
+
+<use images/4_pupil.png>
+Package pdftex.def Info: images/4_pupil.png used on input line 1444.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [38 <./images/3_pupil.png (PNG copy)> <./images/3_HRGSRpupil.png (PNG copy)>]
-File: images/7_gaze.png Graphic file (type png)
+<images/4_HRGSRpupil.png, id=178, 828.84656pt x 520.19344pt>
+File: images/4_HRGSRpupil.png Graphic file (type png)
 
-<use images/7_gaze.png>
-Package pdftex.def Info: images/7_gaze.png used on input line 1591.
+<use images/4_HRGSRpupil.png>
+Package pdftex.def Info: images/4_HRGSRpupil.png used on input line 1457.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-File: images/7_pupil.png Graphic file (type png)
- <use images/7_pupil.png>
-Package pdftex.def Info: images/7_pupil.png used on input line 1601.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-File: images/7_HRGSRpupil.png Graphic file (type png)
- <use images/7_HRGSRpupil.png>
-Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1613.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-File: images/7_emotions.png Graphic file (type png)
 
-<use images/7_emotions.png>
-Package pdftex.def Info: images/7_emotions.png used on input line 1624.
+<images/5_emotions.png, id=179, 828.84656pt x 520.19344pt>
+File: images/5_emotions.png Graphic file (type png)
+
+<use images/5_emotions.png>
+Package pdftex.def Info: images/5_emotions.png used on input line 1469.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-File: images/7_full.png Graphic file (type png)
- <use images/7_full.png>
-Package pdftex.def Info: images/7_full.png used on input line 1637.
+
+<images/5_full.png, id=180, 828.84656pt x 520.19344pt>
+File: images/5_full.png Graphic file (type png)
+ <use images/5_full.png>
+Package pdftex.def Info: images/5_full.png used on input line 1481.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/5_gaze.png, id=181, 828.84656pt x 520.19344pt>
+File: images/5_gaze.png Graphic file (type png)
+ <use images/5_gaze.png>
+Package pdftex.def Info: images/5_gaze.png used on input line 1493.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/5_pupil.png, id=182, 828.84656pt x 520.19344pt>
+File: images/5_pupil.png Graphic file (type png)
+
+<use images/5_pupil.png>
+Package pdftex.def Info: images/5_pupil.png used on input line 1504.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [39 <./images/3_emotions.png (PNG copy)> <./images/4_full.png (PNG copy)>]
+<images/5_HRGSRpupil.png, id=186, 828.84656pt x 520.19344pt>
+File: images/5_HRGSRpupil.png Graphic file (type png)
+
+<use images/5_HRGSRpupil.png>
+Package pdftex.def Info: images/5_HRGSRpupil.png used on input line 1517.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/5_emotions.png Graphic file (type png)
+ <use images/5_emotions.png>
+Package pdftex.def Info: images/5_emotions.png used on input line 1530.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_full.png, id=187, 828.84656pt x 520.19344pt>
+File: images/7_full.png Graphic file (type png)
+ <use images/7_full.png>
+Package pdftex.def Info: images/7_full.png used on input line 1542.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_gaze.png, id=188, 828.84656pt x 520.19344pt>
 File: images/7_gaze.png Graphic file (type png)
-
-<use images/7_gaze.png>
-Package pdftex.def Info: images/7_gaze.png used on input line 1647.
+ <use images/7_gaze.png>
+Package pdftex.def Info: images/7_gaze.png used on input line 1553.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_pupil.png, id=189, 828.84656pt x 520.19344pt>
 File: images/7_pupil.png Graphic file (type png)
- <use images/7_pupil.png>
-Package pdftex.def Info: images/7_pupil.png used on input line 1657.
+
+<use images/7_pupil.png>
+Package pdftex.def Info: images/7_pupil.png used on input line 1563.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/7_HRGSRpupil.png, id=190, 828.84656pt x 520.19344pt>
 File: images/7_HRGSRpupil.png Graphic file (type png)
- <use images/7_HRGSRpupil.png>
-Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1669.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-File: images/7_emotions.png Graphic file (type png)
 
-<use images/7_emotions.png>
-Package pdftex.def Info: images/7_emotions.png used on input line 1680.
-(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/8_full.png, id=192, 828.84656pt x 520.19344pt>
-File: images/8_full.png Graphic file (type png)
- <use images/8_full.png>
-Package pdftex.def Info: images/8_full.png used on input line 1696.
+<use images/7_HRGSRpupil.png>
+Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1575.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [40 <./images/4_gaze.png (PNG copy)> <./images/4_pupil.png (PNG copy)>]
-<images/8_gaze.png, id=196, 828.84656pt x 520.19344pt>
-File: images/8_gaze.png Graphic file (type png)
- <use images/8_gaze.png>
-Package pdftex.def Info: images/8_gaze.png used on input line 1706.
+<images/7_emotions.png, id=194, 828.84656pt x 520.19344pt>
+File: images/7_emotions.png Graphic file (type png)
+
+<use images/7_emotions.png>
+Package pdftex.def Info: images/7_emotions.png used on input line 1587.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/8_pupil.png, id=197, 828.84656pt x 520.19344pt>
-File: images/8_pupil.png Graphic file (type png)
-
-<use images/8_pupil.png>
-Package pdftex.def Info: images/8_pupil.png used on input line 1716.
+File: images/7_full.png Graphic file (type png)
+ <use images/7_full.png>
+Package pdftex.def Info: images/7_full.png used on input line 1601.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
-
-<images/8_HRGSRpupil.png, id=198, 828.84656pt x 520.19344pt>
-File: images/8_HRGSRpupil.png Graphic file (type png)
-
-<use images/8_HRGSRpupil.png>
-Package pdftex.def Info: images/8_HRGSRpupil.png used on input line 1728.
+File: images/7_gaze.png Graphic file (type png)
+ <use images/7_gaze.png>
+Package pdftex.def Info: images/7_gaze.png used on input line 1611.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_pupil.png Graphic file (type png)
 
-<images/8_emotions.png, id=199, 828.84656pt x 520.19344pt>
-File: images/8_emotions.png Graphic file (type png)
+<use images/7_pupil.png>
+Package pdftex.def Info: images/7_pupil.png used on input line 1621.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_HRGSRpupil.png Graphic file (type png)
+ <use images/7_HRGSRpupil.png>
+Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1633.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_emotions.png Graphic file (type png)
 
-<use images/8_emotions.png>
-Package pdftex.def Info: images/8_emotions.png used on input line 1739.
+<use images/7_emotions.png>
+Package pdftex.def Info: images/7_emotions.png used on input line 1644.
 (pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1844,24 +1809,78 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 [41 <./images/4_HRGSRpupil.png (PNG copy)> <./images/5_emotions.png (PNG copy)>
 ]
+File: images/7_full.png Graphic file (type png)
+ <use images/7_full.png>
+Package pdftex.def Info: images/7_full.png used on input line 1657.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_gaze.png Graphic file (type png)
+ <use images/7_gaze.png>
+Package pdftex.def Info: images/7_gaze.png used on input line 1667.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_pupil.png Graphic file (type png)
+ <use images/7_pupil.png>
+Package pdftex.def Info: images/7_pupil.png used on input line 1677.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_HRGSRpupil.png Graphic file (type png)
+
+<use images/7_HRGSRpupil.png>
+Package pdftex.def Info: images/7_HRGSRpupil.png used on input line 1689.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+File: images/7_emotions.png Graphic file (type png)
+ <use images/7_emotions.png>
+Package pdftex.def Info: images/7_emotions.png used on input line 1700.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[42 <./images/5_full.png (PNG copy)> <./images/5_gaze.png (PNG copy)> <./images
-/5_pupil.png (PNG copy)>]
+[42 <./images/5_full.png (PNG copy)> <./images/5_gaze.png (PNG copy)>]
+<images/8_full.png, id=201, 828.84656pt x 520.19344pt>
+File: images/8_full.png Graphic file (type png)
+ <use images/8_full.png>
+Package pdftex.def Info: images/8_full.png used on input line 1714.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_gaze.png, id=202, 828.84656pt x 520.19344pt>
+File: images/8_gaze.png Graphic file (type png)
+ <use images/8_gaze.png>
+Package pdftex.def Info: images/8_gaze.png used on input line 1724.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_pupil.png, id=203, 828.84656pt x 520.19344pt>
+File: images/8_pupil.png Graphic file (type png)
+
+<use images/8_pupil.png>
+Package pdftex.def Info: images/8_pupil.png used on input line 1734.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_HRGSRpupil.png, id=204, 828.84656pt x 520.19344pt>
+File: images/8_HRGSRpupil.png Graphic file (type png)
+
+<use images/8_HRGSRpupil.png>
+Package pdftex.def Info: images/8_HRGSRpupil.png used on input line 1746.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
+<images/8_emotions.png, id=205, 828.84656pt x 520.19344pt>
+File: images/8_emotions.png Graphic file (type png)
+
+<use images/8_emotions.png>
+Package pdftex.def Info: images/8_emotions.png used on input line 1757.
+(pdftex.def)             Requested size: 248.65588pt x 156.05922pt.
+
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[43 <./images/5_HRGSRpupil.png (PNG copy)> <./images/7_full.png (PNG copy)>]
+[43 <./images/5_pupil.png (PNG copy)> <./images/5_HRGSRpupil.png (PNG copy)>]
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[44 <./images/7_gaze.png (PNG copy)> <./images/7_pupil.png (PNG copy)> <./image
-s/7_HRGSRpupil.png (PNG copy)>]
+[44 <./images/7_full.png (PNG copy)> <./images/7_gaze.png (PNG copy)>]
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[45 <./images/7_emotions.png (PNG copy)>]
+[45 <./images/7_pupil.png (PNG copy)> <./images/7_HRGSRpupil.png (PNG copy)> <.
+/images/7_emotions.png (PNG copy)>]
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
@@ -1873,16 +1892,16 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[48 <./images/8_full.png (PNG copy)>]
+[48]
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[49 <./images/8_gaze.png (PNG copy)> <./images/8_pupil.png (PNG copy)> <./image
-s/8_HRGSRpupil.png (PNG copy)>]
+[49 <./images/8_full.png (PNG copy)> <./images/8_gaze.png (PNG copy)>]
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[50 <./images/8_emotions.png (PNG copy)>]
+[50 <./images/8_pupil.png (PNG copy)> <./images/8_HRGSRpupil.png (PNG copy)> <.
+/images/8_emotions.png (PNG copy)>]
 Chapter 4.
 
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
@@ -1891,22 +1910,52 @@ Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 [51
 
 ]
-
-Package csquotes Warning: No space factor codes for 'IL2' encoding.
-(csquotes)                Punctuation tracker may fail on input line 1751.
-
-LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 175
-1.
-(/usr/share/texmf/tex/latex/lm/il2lmtt.fd
-File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
 [52
 
 ]
-Overfull \hbox (0.69733pt too wide) in paragraph at lines 1752--1752
+Overfull \hbox (2.81146pt too wide) in paragraph at lines 1810--1811
+\IL2/lmr/m/n/10.95 James-Lange tvrdí, ¾e telesné vzruchy pred-chádzaju a spô-so
+bujú emó-cie. Podµa teórie Cannon-
+ []
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[53]
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[54]
+Overfull \hbox (3.66284pt too wide) in paragraph at lines 1835--1836
+[] \IL2/lmr/m/n/10.95 Sub-jekt 8 je tak-tie¾ lekárka, av¹ak vo veku 62 rokov. U
+ nej boli po-zorovateµné krátkodobé
+ []
+
+
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[55]
+
+Package csquotes Warning: No space factor codes for 'IL2' encoding.
+(csquotes)                Punctuation tracker may fail on input line 1842.
+
+LaTeX Font Info:    Try loading font information for IL2+lmtt on input line 184
+2.
+(/usr/share/texmf/tex/latex/lm/il2lmtt.fd
+File: il2lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+
+[56
+
+]
+Overfull \hbox (0.69733pt too wide) in paragraph at lines 1843--1843
 []\IL2/lmr/m/n/10.95 MCDUFF, Daniel; MAH-MOUD, Ab-del-rah-man; MAVA-DATI, Mo-ha
 m-mad; AMR, May; TUR-
  []
@@ -1915,27 +1964,27 @@ m-mad; AMR, May; TUR-
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[53]
-Overfull \hbox (5.90608pt too wide) in paragraph at lines 1752--1752
+[57]
+Overfull \hbox (5.90608pt too wide) in paragraph at lines 1843--1843
 []\IL2/lmr/m/n/10.95 MOSCIANO, Francesco; MEN-CAT-TINI, Ar-i-anna; RINGEVAL, Fa
 -bien; SCHULLER, Bj[]A\OMS/lmsy/m/n/10.95 {\IL2/lmr/m/n/10.95 rn;
  []
 
 
-Overfull \hbox (24.5903pt too wide) in paragraph at lines 1752--1752
+Overfull \hbox (24.5903pt too wide) in paragraph at lines 1843--1843
 \IL2/lmr/m/n/10.95 words. \IL2/lmr/m/it/10.95 Mem-ory\IL2/lmr/m/n/10.95 . Vol. 
 17, no. 8, pp. 802{808. Avail-able from DOI: $\IL2/lmtt/m/n/10.95 10 . 1080 / 0
 9658210903130764$\IL2/lmr/m/n/10.95 .
  []
 
 
-Overfull \hbox (6.53412pt too wide) in paragraph at lines 1752--1752
+Overfull \hbox (6.53412pt too wide) in paragraph at lines 1843--1843
 []\IL2/lmr/m/n/10.95 RUSSELL, J. A.; BAR-RETT, Lisa Feld-man, 1999. Core af-fec
 t, pro-to-typ-i-cal emo-tional episodes,
  []
 
 
-Overfull \hbox (3.21545pt too wide) in paragraph at lines 1752--1752
+Overfull \hbox (3.21545pt too wide) in paragraph at lines 1843--1843
 []\IL2/lmr/m/n/10.95 SALAZAR-LOPEZ, E.; DOM[]A-NGUEZ, E.; RAMOS, V. Ju[]A^^Trez
 ; FUENTE, J. de la; MEINS,
  []
@@ -1944,15 +1993,15 @@ Overfull \hbox (3.21545pt too wide) in paragraph at lines 1752--1752
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[54]
-Overfull \hbox (2.31282pt too wide) in paragraph at lines 1752--1752
+[58]
+Overfull \hbox (2.31282pt too wide) in paragraph at lines 1843--1843
 []\IL2/lmr/m/n/10.95 TOMKINS, S., 1963. \IL2/lmr/m/it/10.95 Af-fect Im-agery Co
 n-scious-ness: Vol-ume II: The Neg-a-tive Af-fects\IL2/lmr/m/n/10.95 . Springer
 
  []
 
 
-Overfull \hbox (38.46854pt too wide) in paragraph at lines 1752--1752
+Overfull \hbox (38.46854pt too wide) in paragraph at lines 1843--1843
 []\IL2/lmr/m/n/10.95 WUNDT, W.M., 2017. \IL2/lmr/m/it/10.95 Out-lines of Psy-ch
 ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
 .
@@ -1962,7 +2011,7 @@ ol-ogy (Clas-sic Reprint)\IL2/lmr/m/n/10.95 . Fb&c Lim-ited. ISBN 9780331795738
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 
-[55] (./Thesis.aux)
+[59] (./Thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1971,13 +2020,13 @@ Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12707 strings out of 493014
- 210804 string characters out of 6135690
- 466557 words of memory out of 5000000
- 15956 multiletter control sequences out of 15000+600000
+ 12710 strings out of 494912
+ 210835 string characters out of 6179743
+ 461747 words of memory out of 5000000
+ 15714 multiletter control sequences out of 15000+600000
  53450 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 44i,10n,49p,816b,2346s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24 hyphenation exceptions out of 8191
+ 44i,10n,49p,1365b,2344s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-cstt.enc}{/usr/sha
 re/texmf/fonts/enc/dvips/lm/lm-cs.enc}</usr/share/texmf/fonts/type1/public/lm/l
@@ -1988,10 +2037,10 @@ e1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Thesis.pdf (55 pages, 6102173 bytes).
+Output written on Thesis.pdf (59 pages, 6118562 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 307 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -115,11 +115,26 @@ cenné nápady a usmernenia, ktoré mi ve¾mi pomohli pri písaní tejto práce.
 \vspace{2cm}\\
 
 \chapter*{Abstrakt}
+KOHÚTEK, Michal: Rozpoznávanie emocionálneho stavu pouívate¾a za pomoci inteligentnıch riadiacich systémov. [Diplomová práca]. Univerzita Konštantína Filozofa v Nitre.
+Fakulta prírodnıch vied. Školite¾: PaedDr. Martin Magdin, PhD. Stupeò odbornej
+kvalifikácie: Magister. Nitra: FPV, 2018. 59 s.
+\\
+\\
+V diplomovej práci sa venujeme metodike rozpoznávania emocionálneho stavu pouívate¾a. Popisujeme a porovnávame viaceré teórie a ich implementácií v komerènıch riešeniach. V praktickej èasti sme vytvorili program s grafickım rozhraním, ktorı kombinuje viacero zdrojov údajov o pouívate¾ovi a vizualizujem jeho emoènı stav na grafe. Ten sme vyskúšali na vzorke 12 ¾udí a vısledky 8 z nich sme detailne popísali.
+\\
+\\
+K¾úèové slová: Emócie, fyziologické prejavy, Affectiva, valencia, Arduino
 
 \chapter*{Abstract}
-
-
-Abstract goes here
+KOHÚTEK, Michal: Recognizing user's emotional states using intelligent control systems. [Diploma thesis]. University of Constantine the Philosopher in Nitra. Faculty of
+natural sciences. Supervisor: PaedDr. Martin Magdin, PhD. Level of professional
+qualifications: Magister. Nitra: FPV, 2018. 59 s.
+\\
+\\
+This diploma thesis is dedicated to the methods of recognizing user's emotional state. We describe and compare various historical thesis and their implementation in commercial solutions. In the practical part we have created a GUI application combining various data sources and visualizes user's emotional state on a chart. This application has been tested on a sample of 12 people, of which we describe 8 in detail.
+\\
+\\
+Keywords: Emotions, Physiological markers, Affectiva, Valence, Arduino
 
 
 \tableofcontents
@@ -194,14 +209,18 @@ techniques. Over the years, many psychologists and computer scientist
 collaborated to create a set of markers and techniques recognizing them. We 
 will discuss several of them and compare their usefulness, reliability and 
 practicality. These methods most often try to detect basic emotions such as the 
-seven basic emotions (\cite{Ekman}) or a 12-point Affect Circumplex model 
+six basic emotions (\cite{Ekman}) or a 12-point Affect Circumplex model 
 (\cite{Russel}).
 \begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.6]{images/Primary_Emotions}
+		
 	\caption{Six primary emotions}
+
 	\label{fig:}
+	
 \end{figure} 
+%\footnote{https://upload.wikimedia.org/wikipedia/commons/3/34/Primary\_Emotions.jpg}
 
 \paragraph{}Affective computing has great many possible applications. It can 
 allow for a better education process, providing a large amount of valid 
@@ -257,7 +276,7 @@ with what Darwin called emotions in animals (\cite{darwin1998expression}). They
 also differ from Freudian drives in lacking an object.
 \paragraph{}Similarly, Carroll Izard delineated 12 discrete emotions: 
 interest, joy, surprise, sadness, anger, disgust, contempt, self-hostility, 
-fear, shame, shyness and guild. He measured these via his Differential Emotion 
+fear, shame, shyness and guilt. He measured these via his Differential Emotion 
 Scale (\cite{Izard}). Among other contributors to this theory, such as John 
 Watson, Edwin Newman and Ross Buck, Paul Ekman performed a series of 
 cross-cultural studies with Carrol Izard and reported that there are at least 
@@ -292,11 +311,10 @@ represents a neutral valence and medium level of arousal.(\cite{circumplex}).
 \begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.4]{images/russel_model}
-	\centering
 	\caption{ A. Russell’s (1980) circumplex model of affect}
 	\label{fig:}
-\end{figure} 
-
+\end{figure}
+%\footnote{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2367156/bin/nihms44490f1.jpg}
 This model was later modified by Russel and Lisa Feldman Barret, which they 
 described as representative of core affect, which are the most elementary 
 feelings that need not be directed toward anything. Different prototypical 
@@ -843,13 +861,13 @@ Affdex sample OpenCV application.
 \paragraph{}The research has been done using two different computers. 
 \begin{itemize}
 	\item Desktop workstation with hexa-core AMD FX-6300 clocked at 4.0GHz, 
-	8GB of RAM and Radeon 7700 GPU,
+	8GB of RAM and Radeon 7750 GPU,
 	\item Laptop with quad-core Intel Core i7-4770HQ, 16 GB of RAM and NVidia 
 	860M GPU.
 \end{itemize}
 \paragraph{}These two computers proved able to fully satisfy hardware needs of 
 the 
-research. We have also tried to run the modifiet Affdex sample application on 
+research. We have also tried to run the modifiedq Affdex sample application on 
 Raspberry Pi 3B with official IR camera, however we found out, that the single 
 board computer was greatly lacking computing power and would freeze, hang and 
 drop frames with even one face detected on video feed. Powerful hardware was 
@@ -892,8 +910,7 @@ GPIO pins.
 
 \begin{figure} [ht]
 	\centering
-	\subfloat[Pulse Sensor Amped 
-	SEN-11574]{\includegraphics[width=0.2\linewidth]{images/HRSensor}}%
+	\subfloat[Pulse Sensor Amped SEN-11574]{\includegraphics[width=0.2\linewidth]{images/HRSensor}}%
 	\qquad
 	\subfloat[Groove GSR 
 	Sensor]{\includegraphics[width=0.25\linewidth]{images/GSRSensor}}%
@@ -1005,7 +1022,7 @@ patterns used in ZeroMQ. Request-Reply, Publish-Subscribe and Pipeline pattern.
  
 
 \paragraph{}MessagePack is a low-overhead binary serialization format. Compared 
-to the better know binary serialization format BSON, it's better in every 
+to the better know binary serialization format BSON, it's superior in every 
 possible technical aspect. It's faster, smaller, and even more compatible to 
 JSON than BSON is. It's got support for dozens of languages, notably for 
 Python, Java, C, C\# and multiple standards of C++. MessagePack by design 
@@ -1330,30 +1347,33 @@ both sensors and face expression recognition agreed on a level of arousal.
 	\caption{Subject 2 - Emotions.}
 	\label{fig:}
 \end{figure}
-
+\newpage
 \section{Subject 3}
-\paragraph{}With 64 year old lady, we can see rather different emotional 
-activity. We have a strong GSR and heart rate signal, with slightly indecisive 
-pupil and gaze data. 
-\begin{figure} [ht]
+
+\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.3]{images/3_full}
 	\centering
 	\caption{Subject 3 - Complete emotion graph.}
 	\label{fig:}
 \end{figure}
+
+\paragraph{}With 64 year old lady, we can see rather different emotional 
+activity. We have a strong GSR and heart rate signal, with slightly indecisive 
+pupil and gaze data. 
+\newpage
 \paragraph{}Having imperfect sights, we can assume she has unconsciously leaned 
 towards her better eye, explaining non-existent vertical and large horizontal 
 bias.
-
-\begin{figure} [ht]
+\newpage
+\begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.3]{images/3_gaze}
 	\centering
 	\caption{Subject 3 - Gaze position.}
 	\label{fig:}
 \end{figure}
-
+\newpage
 \paragraph{}Pupil data corroborates our assumption. One pupil was smaller from 
 the start of the experiment and in the middle, it dropped altogether. This can 
 be explained by leaning head and bigger eyelids covering the field of view of 
@@ -1688,9 +1708,7 @@ physiological markers do not seem to correlate in this example.
 
 
 \section{Subject 8}
-\paragraph{}Subject 8 is the wife of the Subject 6. Apart from that, she is a 
-medical doctor as well, consequently similar notes concerning previous subject 
-apply here too.
+\paragraph{}Subject 8 is also a medical doctor. Her data was different, though, in that it spiked with engagement at every start of a segment, but would taper of afterwards.
 \begin{figure} [ht]
 	\centering
 	\includegraphics[scale=0.3]{images/8_full}
@@ -1747,6 +1765,79 @@ physiological markers do not seem to correlate in this example.
 
 
 \chapter{Discussion}
+\paragraph{}This diploma thesis dealt with methods of extraction and classification of human emotions. We have shown, that there is a possibility of a correlation between the change in pupil size, gaze movement and emotion. We have consolidated data from multiple sources, such as sensors capturing physiological changes, camera stream processed by machine learning algorithms and recognizing facial expressions and last but not least, high-speed gaze-tracking camera system. However, we suggest, that there is a reasonable doubt considering the methodology of assessing success rate in affective computing. During our experiments, we have witnessed many people of various background and age not emote at all, while watching our testing clip and also people, that overcompensate for their lack of emotion with exaggerated facial expressions. It is hard, even for the most emphatic people to guess other peoples emotions. We argue, that many affective computing success stories are little more than an exercise in face recognition and there is still a long way to a true emotion recognition. 
 
+\paragraph{}What needs to change in order for us to reach real affective computing?
+\begin{itemize}
+	\item We need to doubt our current methodologies until we either prove them effective or replace them with new.
+	\item We need to determine, how to evoke real emotions,
+	\item We need to create a way to quantify real emotions.
+\end{itemize}
+
+\paragraph{}We, as computer scientists, should not put blind trust into old models and theories, that came around in ancient times. These models are more often than not built upon unstable assumptions. We need to disregard old philosophies and should rather build on the recent knowledge. We should work together with neuroscientists an psychiatrists to capture the mechanism of human emotion.
+
+\paragraph{}In order to determine how human emotions actually work, we need to be able to evoke them in a laboratory conditions. However, our current methods of evoking emotions are not enough. We suggest utilizing recent developments in VR technologies, to create more captivating experiences. Ones that will enable the subject's forget their current situation and live in the manufactured moment. This could be done by combining 
+%amnesia inducing drugs,
+multiple human senses. Haptic feedback, taste and smell synthesizers, high definition surround video and audio.
+%citation needed.
+
+\chapter*{Zhrnutie}
+\paragraph{}Emócie patria k najosobnejším èastiam ¾udskej existencie, hoci sú ve¾mi ako definovate¾ne, rozpoznate¾né a pomenovate¾né, i v nás samotnıch. U zo svojej podstaty sa líšia od èloveka k èloveku, v rôznych kultúrach a vıchovách. Naše ponímanie sa však neustále vyvıja a zdokonaluje. Rôzni autori sa snaili rozdeli naše citové stavy na základné kategórie, napríklad Paul Ekman na Hnev, Strach, Znechutenie, Šastie, Smútok a Prekvapenie. Naproti tomu súèasní psychológovia i historici ukazujú, e je na mieste komplexnejší poh¾ad na emócie.
+
+\paragraph{}Rozpoznávanie emócii sa v dejinách neustále mení. V 12. storoèí sa bardi nepozerali na zívanie ako na prejav nudy, èi únavy, ale ako na prejav skrytej a hlbokej lásky. Skorí kresania poznávali emóciu, ktorú nazıvali "accidie", formu letargie a zúfalstva prinášanú lietajúcimi démonmi. Znudenie je emócia, ktorú prvıkrát pociovali a pomenovali Viktoriánci, ako prirodzenú reakciu na nové idei vo¾ného èasu a sebazdokonalovania. Medzi psychológmi dodnes nejestvuje konsenzus, èi rôzne kultúry pociujú niektoré emócie silnejšie, keïe sa unúvali ich pomenova vlastnımi slovami. Ruská "toska", túba s nièím, po èom by èlovek mohol túi, ako ju definoval Nabokov. Do 17. storoèia sa datuje príbeh o študentovi, ktorí il v Švajèiarskom univerzitnom meste Basel. Ochorel, mal horúèky, srdeèné palpitácie, vyráky na pokoke a bol blízko smrti. Keï ho lekári poslali domov, aby umrel pri rodine, zaèalo sa mu u¾avova. Keï zastal pred bránami svojho rodného mesta, u bol skoro úplne vylieèenı. V 1688 lekár Johannes Hoffer študoval tento a iné podobné prípady a nazval túto formu vánej clivosti za domovom nostalgiou. Posledná zaznamenaná smr nostalgiou sa stala americkému vojakovi poèas Prvej Svetovej Vojny vo Francúzsku. Zaèiatkom 20. storoèia sa tento pocit zmenil skôr na túbu po minulosti a stratil na vánosti.
+
+\paragraph{}V tejto diplomovej práci pojednávame viacero sád citovıch znakov a techník ako ich rozpozna. Tieto metódy sa najèastejšie snaia detegova základné emócie, ako napríklad šes základnıch emócii Paula Ekmana, alebo 12 bodovı kruhovı model afektov.
+
+\paragraph{}Empatická vıpoèetná technika má ve¾ké monosti vyuitia. Rozpoznávanie emocionálnych stavov môe zlepši vıchovnovzdelávací proces, poskytova cennú spätnú väzby pre uèite¾ov, psychiatrov. Môe pomôc pri zvládaní autizmu. Okrem toho nájde uplatnenie i v mnohıch oblastiach priemyslu. Automobilky, cielenı marketing, robotické zvieratá èi zdravotné sestry.
+
+\paragraph{}Problematika klasifikácie emócii je predmetom ivej debaty. Dva základné postoje emoènıch vedcov sú:
+\begin{enumerate}
+	\item Emócie sú diskrétne a fundamentálne odlišné konštrukty,
+	\item Emócie sa prelínajú a sú charakterizované na dimenzionálnej báze v zoskupeniach.
+\end{enumerate}
+
+\paragraph{}Diskrétne modely emócii stavajú na téze, e existuje malé mnostvo základnıch afektov Toto èíslo sa líši od proponenta k proponentovi, napríklad Silvan Tomkins rozpoznával devä základnıch emócií. To sú záujem-nadšenie, potešenie-rados, prekvapenie-z¾aknutie, nepokoj-úzkos, hnev-zúrivos, strach-des, hanbu-poníenie a znechutenie-znecítenie. Z párov je vdy prvı miernym prejavom emócie a druhı extrémnym   Carroll Izard oproti tomu definoval dvanás diskrétnych emócií: záujem, rados, prekvapenie, smútok, hnev, znechutenie, pohàdanie, sebe-nepriate¾stvo, strach, poníenie, hanblivos a pocit viny. 
+
+\paragraph{} Paul Ekman a Carroll Izard uskutoènili nieko¾ko medzikultúrnıch štúdií a zreferovali objav aspoò šiestich emócii, ktoré ¾udia po celom svete prejavujú a rozpoznávajú. Toto dokázali, keï navštívili Novú Guineu a izolovanım domorodcom dali rozpozna sadu emócii z fotiek aktérov.
+
+\paragraph{}Jestvuje viacero praktickıch a teoretickıch dôvodov preèo niektorí definujú emócie pomocou jednej èi viacerıch dimenzí. Väèšina z modelov zakomponujú valenciu a vzrušenie, respektíve intenzitu ako dimenzie. Wilhelm Max Wundt navrhol, e emócie môu by definované v troch rozmeroch - príjemne-nepríjemne, vzrušujúce-tlmiace, únavne-relaxaène. Harold Schlosberg pomenoval tri dimenzie: prijemne-neprijemne, pozornost-odmietnutie a stupeò aktivácie. Inı model bol vyvinutı Jamesom Russellom. Tento model emócie rozmiestòuje na dvojrozmernom kruhovom priestore, obsahujúcom dimenziu vzrušenia a valencie. Ïa¾ším modelom je vektorovı, ktorı pozostáva z vektorov vdy mieriacich dvoma smermi.
+
+\paragraph{}V 1980 Robert Pluchik skonštruoval koleso emócii. Tento model je hybridom medzi základnımi kategóriami a dimenzionálnymi teóriami. Emócie sú usporiadané v koncentrickıch kruhoch, s základnımi emóciami dnu a komplexnımi emóciami po vonkajšej strane.
+
+\paragraph{}PAD model \footnote{Pleasure, Arousal, Dominance} pouíva tri èíselné rozmery na definovanie všetkıch emócií. Príkladom trojrozmernıch modelo je Lovheimova kocka emócií, kde osy kocky tvoria signálne substancie a vrcholy základné emócie. Napríklad hnev je pod¾a tohto modelu tvorenı nízkym serotonínom, vysokım dopamínom a noradrenalínom.
+
+
+\paragraph{}Keï skúmame fyziologické symptómy emócií, natrafíme na dve základné teórie. Teória James-Lange tvrdí, e telesné vzruchy predchádzaju a spôsobujú emócie. Pod¾a teórie Cannon-Bard emócia je sprevádzaná fyziologickım vzruchom.
+
+\paragraph{}Aby sme mohli detegova a rozpoznáva emócie zo vzoriek, potrebujeme zhodnoti, ktoré fyziologické prejavy emócií chceme zaznamenáva. Hnev je jedna z emócií s vıraznejšími fyziologickımi známkami. Sprevádza ho rıchlejšie dıchanie, srdcovı tep, vyšší krvnı tlak, napínanie svalov. Na u¾ahèenie detekcie si pomáhame dodatoènımi dátami získanımi z vırazov tváre.
+
+\paragraph{}Pre potreby tejto práce sme si vybrali nasledovné zdroje dát: Senzor srdeèného tepu, senzor galvanickej odozvy koe, headset Pupil s dvoma vysokorıchlostnımi infraèervenımi kamerami snímajúcimi oèi a jednou s vysokım rozlíšením snímajúcou okolie. Senzory sú pripojené na Arduino DUE, ktoré impulzy spracováva a posiela po sériovom pripojení do poèítaèa. Na získavanie referenènıch hodnôt emócií pouívame video z webkamery v reálnom èase spracovávané softvérom na rozpoznávanie emócií z vırazov tváre. V tomto prípade sa jedná o program vyuívajúci SDK komerèného riešenia Affekctiva. Vïaka modulárnosti nášho dizajnu programu však môeme po uplynutí šesmesaènej študentskej licenènej doby vymeni túto èas za ¾ubovo¾nı softvér na spracovanie tvárí.
+\paragraph{} Na komunikáciu medzi procesmi pouívame kninicu ZeroMQ, ktorá má implementácie v mnohıch jazykoch a na všetkıch majoritnıch platformách. Správy posielané cez ZeroMQ sú balené do bajtového formátu MessagePack. Tım zamedzíme nekompatibilite medzi rôznymi jazykmi a platformami.
+
+\paragraph{}Naša aplikácia EmoSens je napísaná v jazyku C++ s frameworkom QT vo verzií 5.10. Od tejto verzie obsahuje open source verzia QT nové moduly QtCharts a QtDataVisualization. Okrem toho sme do aplikácie integrovali aj kninicu tretej strany QCustomPlot, ktorá prináša dodatoèné funkcie na vykreslovanie pokroèilıch grafov. Aplikácia pozostáva z troch okien. Hlavné okno slúi na definovanie IP adresy servra, na ktorom je spustená Affectiva a Pupil Capture. Z hlavného okna sa dá spusti okno zbierania údajov. Toto okno najskôr vyšle dotaz na port 50200, na ktorı Pupil odpovie èíslom portu vydavate¾a správ. Následne sa EmoSens pripojú na port vydavate¾a, port affectivy a na sériové pripojenie Arduina. Potom spustí všetky pripojenia a zaène kadıch 50ms uklada aktuálne dáta do súboru s èasovou znaèkou experimentu a vykreslova ich do grafu na obrazovke. Následne má pouívate¾ monos kliknutia na zobrazenie štatistiky. Tam má monos zobrazenia ståpcového grafu priemernıch emócií za dobu experimentu, prípadne èiarového grafu vykreslujúceho emócie a metriky poèas celej doby experimentu. Po ukonèení experimentu môe pouívate¾ z hlavnej obrazovky programu vybra vizualizáciu predchádzajúcich experimentov. Tu má detailnejšie zobrazené emoèné stavy aj s mapou pohybu poh¾adu testovaného subjektu. 
+
+
+\paragraph{}Testovali sme dokopy 12 subjektov vo veku 25-65 rokov s rôznym vzdelaním a zázemím. Nakoniec sme z toho vybrali 8 reprezentatívnych subjektov, ktoré tu blišie popíšeme. Testovali sme ich tak, e sme im pustili video navodzujúce štyri emoèné stavy - rados-pobavenie, znechutenie, strach a zahanbenie-vzrušenie.
+
+\paragraph{}Subjekt 1 bola vysoká ena okolo 30 rokov. Pod¾a grafu je jednoznaène vidite¾né, e nesedela rovno a jej poh¾ad mal sklz do rohu zorného po¾a. Toto potvrdili aj údaje o ve¾kosti šošoviek. Biometrické údaje boli znaène nejednoznaèné, ale napriek tomu môeme podotknú, e jej vodivos pokoky mierne stúpala poèas pokusu. Jej srdeènı rytmus bol stabilnı. Na emoènom grafe môeme pozorova malú koreláciu medzi valenciou a GSR poèas prvého segmentu eperimentu.
+\paragraph{}Subjekt 2 bol manel prvého subjektu. Subjekt 2 mal poèas experimentu skoro totoné priemery oboch šošoviek. Biometria ukazuje, e bol poèas celej doby v neutrálnom stave, avšak ku koncu narástla miera vzruchu.
+
+\paragraph{}Tretí subjekt bola 64 roèná ena. U nej pozorujeme silnı signál GSR a srdeèného tepu s mierne nerozhodnımi dátami oèí. Dáta ukazujú na prudkú aktivitu na zaèiatku testu, neskôr sa hladina vyrovnala a stabilizovala.
+
+\paragraph{} Subjekt 4 je manel subjektu 3. Taktie je tu badate¾nı silnı signál zo senzorov. Sústrednı bod poh¾adu bol na spodu a v strede zorného po¾a. Zaznamenávame vzruchy na zaèiatku i konci experimentu
+
+\paragraph{} Subjekt 5 má dáta narušené prítomnosou jej dieaa. Vidno to z toho, ako jej poh¾ad sa neustálil na iadnej oblasti, zato je rozptılenı. Prvá èas videa vyvolala prekvapenie a pobavenie. Tretia èas, valenciu a zaujatia. Nakoniec posledná èas znovu zaznamenala prekvapenie a zaujatie.
+
+\paragraph{} Subjekt 6 je 32 roènı mu, lekár. Aj toto pravdepodobne ovplyvnilo jeho vısledky, v ktorıch prakticky nefiguruje znechutenie. Jeho ostatné dáta však presne korešpondujú s pohybmi, ktoré poèas testu mimovo¾ne robil.
+
+\paragraph{} Subjekt 7 je manelka Subjektu 6, taktie lekárka. Z toho dôvodu sú jej emoèné hodnoty podobné ako v predchádzajúcom prípade. Líšia sa však mierou sústredenia poh¾adu, ktorı je v tomto prípade omnoho vyšší.
+
+\paragraph{}Subjekt 8 je taktie lekárka, avšak vo veku 62 rokov. U nej boli pozorovate¾né krátkodobé stropy emócií, vdy pri zaèiatku segmentu, avšak potom upadali.
+
+\paragraph{} Táto diplomová práca sa zaoberala metódami extrakcie a klasifikácie ¾udskıch emócií. Preukázali sme, e existuje moná korelácia medzi zmenami ve¾kosti zrenièky, pohybov oèí a emóciami. Konsolidovali sme dáta z viacerıch zdrojov, napríklad zo senzorov merajúcich fyziologické zmeny, kamerového záznamu vırazov tváre èi vysokorıchlostnıch kamier snímajúcich oèi. Napriek tomu chceme zmieni, e existuje rozumná pochybnos oh¾adom metodológie hodnotenia úspešnosti v rozpoznávaní emócií. Pozorovali sme subjekty, ktoré navonok emócie vôbec neprejavovali, hoci ich v rozhovore po závere experimentu popisovali. Taktie sme videli ¾udí, ktorí v prostredí experimentu mimovo¾ne preafektovávali svoje reakcie a tım ovplyvòovali vısledky. Je pravdepodobné, e mnostvo populárnych softvérov nie je skutoènım rozpoznávaním emócií, ale len vzorov pohybov tváre, bez nosnej emócie.
+
+\paragraph{}Èo by sa malo zmeni, aby sme dosiahli skutoèné strojové rozpoznávanie emócií? Mali by sme zruši alebo upravi stávajúce metodológie. Mali by sme skúma, ako evokova reálne emócie a mali by sme nájs spôsob ich kvantifikova.
+
+\paragraph{}Na tieto úèely by sme do budúcna mali vyui rıchly vıvoj v obore virtuálnej reality, ktorá môe èloveku prezentova omnoho realistickejšie záitky, ako video alebo fotky na obrazovke. Obzvláš, ak ju obohatíme o syntetizátori vôní a chutí, haptickou odozvou a vyššou kvalitou zvuku a videa. 
 \printbibliography
 \end{document}
