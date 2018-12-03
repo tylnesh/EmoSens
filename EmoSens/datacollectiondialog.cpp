@@ -1,16 +1,15 @@
 #include "datacollectiondialog.h"
 #include "ui_datacollectiondialog.h"
 #include <QDateTime>
-#include "nzmqtsubscriber.h"
-#include "3rdparty/cppzmq/zmq.hpp"
-#include <qmsgpack/msgpack.h>
+//#include "nzmqtsubscriber.h"
+//#include "3rdparty/cppzmq/zmq.hpp"
+//#include <qmsgpack/msgpack.h>
 #include <iostream>
 #include <QDebug>
 #include <QLabel>
 #include <QVariant>
 #include <QLabel>
 #include <QtSerialPort/QtSerialPort>
-#include <QtCharts>
 #include <QDialog>
 #include <QtWidgets/QMainWindow>
 

@@ -8,17 +8,40 @@
 #include "QTimer"
 #include "QThread"
 #include "QtBluetooth"
+#include "keypresseventfilter.h"
+#include <QtSerialPort/QtSerialPort>
+#include <QDateTime>
 
+
+QString arduino = "";
+QString filename="";
+double arduinoGSR = 0.0;double arduinoHR = 0.0;
+bool record = false;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
 
+
+
+  //  KeyPressEventFilter *filter = new KeyPressEventFilter(this);
+      // this->-installEventFilter(filter);
+
+    connect(&dataTimer, SIGNAL(timeout()), this, SLOT(realTimeDataSlot()));
+
+    QDateTime UTC(QDateTime::currentDateTimeUtc());
+        QDateTime local(UTC);
+
+
+
+         measurement.setFileName("emotion_" + local.toString() +".dat");
+         measurement.open(QIODevice::ReadWrite);
+
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
     //timer->start(5000);
 
-    QBluetoothAddress remoteAddress("98:D3:32:70:8B:76");
+   // QBluetoothAddress remoteAddress("98:D3:32:70:8B:76");
 
 
 
@@ -33,8 +56,27 @@ MainWindow::MainWindow(QWidget *parent) :
         filter << QLatin1String("*.jpg");
         dir.setNameFilters(filter);
         filelistinfo = dir.entryInfoList();
+
+        // Initialize sequence
+        qsrand(QDateTime::currentMSecsSinceEpoch() / 1000);
+        // ... Generate numbers from that sequence
+       // qrand();
+
+
+
+
+
+      //  for (int i=0; i<20; i++)
+       // {
+        //    qsrand(QDateTime::currentMSecsSinceEpoch() / 1000);
+         //   files[i]  =   (qrand() % ((filelistinfo.length() + 1) - 0) + 0);
+          //  qDebug() << files[i];
+       // }
+
         QStringList fileList;
-        bool s;
+        ui->setupUi(this);
+
+       // bool s;
         /*foreach (const QFileInfo &fileinfo, filelistinfo) {
             QString imageFile = fileinfo.absoluteFilePath();
             //imageFile is the image path, just put your load image code here
@@ -59,9 +101,27 @@ MainWindow::MainWindow(QWidget *parent) :
 
         }
 
+    serial= new QSerialPort();
+    serial->setPortName("/dev/ttyUSB0");
+           if (serial->open(QIODevice::ReadWrite))
+          {
+           serial->setBaudRate(QSerialPort::Baud9600);
+           serial->setDataBits(QSerialPort::Data8);
+           serial->setParity(QSerialPort::NoParity);
+           serial->setStopBits(QSerialPort::OneStop);
+           serial->setFlowControl(QSerialPort::NoFlowControl);
+          qDebug("Connection established");
 
 
-    ui->setupUi(this);
+           connect(serial, &QSerialPort::readyRead, this, &MainWindow::handleReadyRead);
+           connect(serial, static_cast<void (QSerialPort::*)(QSerialPort::SerialPortError)>(&QSerialPort::error),
+                           this, &MainWindow::handleError);
+           connect(&m_timer, &QTimer::timeout, this, &MainWindow::handleTimeout);
+           m_timer.start(100);
+           } else qDebug("Connection Error");
+
+
+
 
 
 
@@ -79,6 +139,7 @@ void MainWindow::on_startButton_clicked()
 
     ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
     timer->start(1000);
+    record = true;
 }
 
 
@@ -96,14 +157,22 @@ void MainWindow::on_startButton_clicked()
 void MainWindow::update()
 {
 if (currentimage < filelistinfo.size())
-ui->label->setPixmap( filelistinfo[ currentimage++].absoluteFilePath() );
-
+{
+    r = (qrand() % ((filelistinfo.length() + 1) - 0) + 0);
+ui->label->setPixmap(
+            filelistinfo[r
+            //files[currentimage]
+                ].absoluteFilePath() );
+filename = filelistinfo[r].fileName();
+qDebug() << filename;
+}
 }
 
 void MainWindow::on_pauseButton_clicked()
 {
-    if (timer->isActive()) timer->stop();
-    else timer->start(1000);
+    if (timer->isActive()) { timer->stop();record = false; }
+    else {timer->start(1000); record = true;}
+
 }
 
 void MainWindow::startDeviceDiscovery()
@@ -122,10 +191,94 @@ void MainWindow::startDeviceDiscovery()
 
 void MainWindow::on_connectButton_clicked()
 {
-    MainWindow::startDeviceDiscovery();
+    //MainWindow::startDeviceDiscovery();
 }
 
 void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &device)
 {
     qDebug() << "Found new device:" << device.name() << '(' << device.address().toString() << ')';
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->label->setScaledContents( true );
+
+    ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
+    timer->start(1000);
+}
+
+
+void MainWindow::handleReadyRead()
+{
+ m_readData.append(serial->readAll());
+    if (!m_timer.isActive())
+        m_timer.start(100);
+}
+
+
+void MainWindow::handleTimeout()
+{
+    if (m_readData.isEmpty()) {
+        //qDebug() << QObject::tr("No data was currently available for reading from port %1").arg(serial->portName()) << endl;
+    } else {
+        //qDebug() << QObject::tr("Data successfully received from port %1").arg(serial->portName()) << endl;
+        qDebug(m_readData);
+
+        if (QString(m_readData).length() != 0 &&  QString(m_readData).length() < 15)
+        {
+
+        arduino = QString(m_readData);
+        if (arduino.split(":").length()==2){
+            arduinoGSR = arduino.split(":").at(0).toDouble();
+            arduinoHR = arduino.split(":").at(1).toDouble();
+        }
+      //  qDebug() << arduinoGSR << " - " << arduinoHR << endl;
+
+
+        }
+        m_readData = "";
+
+           }
+}
+
+
+void MainWindow::handleError(QSerialPort::SerialPortError serialPortError)
+{
+    if (serialPortError == QSerialPort::ReadError) {
+        //qDebug(QObject::tr("An I/O error occurred while reading the data from port %1, error: %2").arg(serial->portName()).arg(serial->errorString()));
+        //QCoreApplication::exit(1);
+    }
+}
+
+
+
+void MainWindow::realTimeDataSlot()
+{
+
+    static QTime time(QTime::currentTime());
+    double key = time.elapsed()/1000.0; // time elapsed since start of demo, in seconds
+    static double lastPointKey = 0;
+    static double lastSecond = 0;
+    if (key-lastPointKey > 0.05 && record) // at most add point every 50 ms
+    {
+      // add data to lines:
+
+
+        QTextStream measurementStream( &measurement );
+
+
+        measurementStream               << arduinoGSR << " " << filename << " " << time.elapsed() << endl;
+
+
+      //  GSRSum += arduinoGSR;
+
+       // arduinoCount++;
+
+      lastPointKey = key;
+    }
+
+
+
+
+
 }

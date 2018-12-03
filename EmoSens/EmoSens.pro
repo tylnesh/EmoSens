@@ -36,21 +36,21 @@ SOURCES += \
     visualizedialog.cpp
 
 HEADERS += \
-        ./include/nzmqt/nzmqt.hpp \
+   #     ./include/nzmqt/nzmqt.hpp \
         mainwindow.h \
-    nzmqtsubscriber.h \
-    datacollectiondialog.h \
+  #  nzmqtsubscriber.h \
+ #   datacollectiondialog.h \
     qcustomplot.h \
     statsdialog.h \
     visualizedialog.h
 
-LIBS  += -lzmq -lqmsgpack
+#LIBS  += -lzmq -lqmsgpack
 
 CONFIG += c++11
 
 INCLUDEPATH += \
     ./include \
-    ./3rdparty/cppzmq \
+    #./3rdparty/cppzmq \
     $(QTDIR)/include \
     /opt/local/include
 

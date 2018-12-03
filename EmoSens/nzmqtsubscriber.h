@@ -4,8 +4,8 @@
 //#define MSGPACK_USE_BOOST
 
 #include <QObject>
-#include <nzmqt/nzmqt.hpp>
-#include <msgpack.hpp>
+//#include <nzmqt/nzmqt.hpp>
+//#include <msgpack.hpp>
 #include <iostream>
 #include <QByteArray>
 #include <QList>
@@ -13,8 +13,8 @@
 #include <string>
 #include <map>
 #include <QVariant>
-#include <qmsgpack/msgpack.h>
-#include <qmsgpack/msgpackstream.h>
+//#include <qmsgpack/msgpack.h>
+//#include <qmsgpack/msgpackstream.h>
 #include <QJsonArray>
 /*namespace msgpack {
     std::string& operator>>(msgpack::object o, std::string& v) {

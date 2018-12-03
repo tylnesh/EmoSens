@@ -20,8 +20,14 @@ This program is free software: you can redistribute it and/or modify
   #include <RF24_config.h>
   #include <SPI.h>
 
-   #define RF_CE    37
-  #define RF_CSN   35 //piny na ktorych je antena
+  // #define RF_CE    37
+  //#define RF_CSN   35 //piny na ktorych je antena
+
+  #define RF_CE    9
+  #define RF_CSN   10 //piny na ktorych je antena
+
+  #define RED 2 
+  #define GREEN 6
 
 
 #define WIRE 1
@@ -93,7 +99,12 @@ This program is free software: you can redistribute it and/or modify
   
     radio.stopListening();                 // Start listening
     radio.printDetails();                   // Dump the configuration of the rf unit for debugging
+
+  pinMode(RED, INPUT);
+  pinMode(GREEN, INPUT);
   
+  digitalWrite(RED, HIGH); // Necessary so stop noise from other pins
+  digitalWrite(GREEN, HIGH); 
   
    out= 33;
   
@@ -116,8 +127,24 @@ This program is free software: you can redistribute it and/or modify
  //}
    //sndMsg();
    //radio.write("Testujeme veselo")
-   radio.write(&out, 1);
-   delay(5000);
+   if (digitalRead(RED) == LOW) {out = 44; radio.write(&out, 1);
+   Serial.println("-");}
+   if (digitalRead(GREEN) == LOW) {out = 54; radio.write(&out, 1);
+   Serial.println("+");}
+   //Serial.println(digitalRead(RED));
+   
+   //radio.write(&out, 1);
+   int gsr = 0;
+
+  /* if(radio.available())
+  {
+    
+   radio.read(&gsr,1);
+   //if (gsr != 0)
+   Serial.println(gsr);
+    }*/
+    
+   delay(100);
   
 
   

@@ -12,10 +12,10 @@ MAKEFILE      = Makefile
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_BLUETOOTH_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_BLUETOOTH_LIB -DQT_SERIALPORT_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../../../Qt/5.11.2/gcc_64/include -I../../../Qt/5.11.2/gcc_64/include/QtWidgets -I../../../Qt/5.11.2/gcc_64/include/QtGui -I../../../Qt/5.11.2/gcc_64/include/QtBluetooth -I../../../Qt/5.11.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -I../../../Qt/5.11.2/gcc_64/include -I../../../Qt/5.11.2/gcc_64/include/QtWidgets -I../../../Qt/5.11.2/gcc_64/include/QtGui -I../../../Qt/5.11.2/gcc_64/include/QtBluetooth -I../../../Qt/5.11.2/gcc_64/include/QtSerialPort -I../../../Qt/5.11.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/tylnesh/Qt/5.11.2/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -38,7 +38,7 @@ DISTNAME      = EmoSens_21.0.0
 DISTDIR = /home/tylnesh/devel/EmoSens/EmoSens_2/.tmp/EmoSens_21.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/tylnesh/Qt/5.11.2/gcc_64/lib -Wl,-rpath-link,/home/tylnesh/Qt/5.11.2/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/tylnesh/Qt/5.11.2/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Bluetooth -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/tylnesh/Qt/5.11.2/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Bluetooth -lQt5SerialPort -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -228,6 +228,7 @@ DIST          = ../../../Qt/5.11.2/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/default_pre.prf \
@@ -248,7 +249,8 @@ DIST          = ../../../Qt/5.11.2/gcc_64/mkspecs/features/spec_pre.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/yacc.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/lex.prf \
 		EmoSens_2.pro mainwindow.h \
-		keypresseventfilter.h main.cpp \
+		keypresseventfilter.h \
+		global.h main.cpp \
 		mainwindow.cpp \
 		keypresseventfilter.cpp
 QMAKE_TARGET  = EmoSens_2
@@ -431,6 +433,7 @@ Makefile: EmoSens_2.pro ../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++/qmake.conf .
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/qt_config.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++/qmake.conf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/exclusive_builds.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/toolchain.prf \
 		../../../Qt/5.11.2/gcc_64/mkspecs/features/default_pre.prf \
@@ -454,6 +457,7 @@ Makefile: EmoSens_2.pro ../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++/qmake.conf .
 		../../../Qt/5.11.2/gcc_64/lib/libQt5Widgets.prl \
 		../../../Qt/5.11.2/gcc_64/lib/libQt5Gui.prl \
 		../../../Qt/5.11.2/gcc_64/lib/libQt5Bluetooth.prl \
+		../../../Qt/5.11.2/gcc_64/lib/libQt5SerialPort.prl \
 		../../../Qt/5.11.2/gcc_64/lib/libQt5Core.prl
 	$(QMAKE) -o Makefile EmoSens_2.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
 ../../../Qt/5.11.2/gcc_64/mkspecs/features/spec_pre.prf:
@@ -625,6 +629,7 @@ Makefile: EmoSens_2.pro ../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++/qmake.conf .
 ../../../Qt/5.11.2/gcc_64/mkspecs/features/qt_config.prf:
 ../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++/qmake.conf:
 ../../../Qt/5.11.2/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../Qt/5.11.2/gcc_64/mkspecs/features/exclusive_builds.prf:
 ../../../Qt/5.11.2/gcc_64/mkspecs/features/toolchain.prf:
 ../../../Qt/5.11.2/gcc_64/mkspecs/features/default_pre.prf:
@@ -648,6 +653,7 @@ EmoSens_2.pro:
 ../../../Qt/5.11.2/gcc_64/lib/libQt5Widgets.prl:
 ../../../Qt/5.11.2/gcc_64/lib/libQt5Gui.prl:
 ../../../Qt/5.11.2/gcc_64/lib/libQt5Bluetooth.prl:
+../../../Qt/5.11.2/gcc_64/lib/libQt5SerialPort.prl:
 ../../../Qt/5.11.2/gcc_64/lib/libQt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile EmoSens_2.pro -spec linux-g++ CONFIG+=debug CONFIG+=qml_debug
@@ -664,7 +670,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../Qt/5.11.2/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h keypresseventfilter.h $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.h keypresseventfilter.h global.h $(DISTDIR)/
 	$(COPY_FILE) --parents main.cpp mainwindow.cpp keypresseventfilter.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
@@ -810,10 +816,180 @@ moc_mainwindow.cpp: ../../../Qt/5.11.2/gcc_64/include/QtWidgets/QMainWindow \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/QKeyEvent \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QFileInfoList \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QtBluetooth \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QtBluetoothDepends \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QtCore \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qeventloop.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractproxymodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractstate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstracttransition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qanimationgroup.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qarraydataops.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qarraydatapointer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbasictimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbitarray.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbuffer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbytearraymatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcache.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcollator.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcommandlineoption.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcommandlineparser.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcryptographichash.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdatetime.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdeadlinetimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdir.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdiriterator.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qendian.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qeventtransition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qexception.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfactoryinterface.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfileselector.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QObject \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QStringList \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfinalstate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfuture.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfutureinterface.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qrunnable.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qresultstore.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfuturewatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qhistorystate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qidentityproxymodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qisenum.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsonarray.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsonvalue.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsondocument.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsonobject.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlibrary.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlibraryinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qversionnumber.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlinkedlist.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlockfile.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qloggingcategory.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmath.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmimedata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmimedatabase.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmimetype.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpauseanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qplugin.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpointer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpluginloader.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qprocess.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qqueue.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qrandom.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qreadwritelock.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qresource.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsavefile.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsemaphore.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsettings.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsharedmemory.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsignalmapper.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsignaltransition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsocketnotifier.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstack.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstandardpaths.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstatemachine.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstorageinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstringlistmodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsystemsemaphore.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtemporarydir.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtemporaryfile.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtextcodec.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qthread.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qthreadpool.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qthreadstorage.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtimeline.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtranslator.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtypetraits.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/quuid.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qwineventnotifier.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qxmlstream.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtcoreversion.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothglobal.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetooth-config.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetooth.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothaddress.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QByteArray \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QString \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QMetaType \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothdevicediscoveryagent.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothDeviceInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothdeviceinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothAddress \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothhostinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothlocaldevice.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QList \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothHostInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothserver.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothSocket \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothsocket.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothuuid.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QtGlobal \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QUuid \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QDebug \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothserviceinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothUuid \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QSharedPointer \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QVariant \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qabstractsocket.h \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothServiceInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothservicediscoveryagent.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransfermanager.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransferreply.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QIODevice \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothTransferRequest \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransferrequest.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothTransferManager \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyadvertisingdata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyadvertisingparameters.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycontroller.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyAdvertisingData \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyService \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservice.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyCharacteristic \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycharacteristic.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyDescriptor \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergydescriptor.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QVariantMap \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycharacteristicdata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyconnectionparameters.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergydescriptordata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservicedata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothversion.h \
+		global.h \
 		mainwindow.h \
 		moc_predefs.h \
 		../../../Qt/5.11.2/gcc_64/bin/moc
-	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtSerialPort -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_keypresseventfilter.cpp: ../../../Qt/5.11.2/gcc_64/include/QtCore/QObject \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qobject.h \
@@ -865,10 +1041,11 @@ moc_keypresseventfilter.cpp: ../../../Qt/5.11.2/gcc_64/include/QtCore/QObject \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qvarlengtharray.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qcontainerfwd.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qobject_impl.h \
+		global.h \
 		keypresseventfilter.h \
 		moc_predefs.h \
 		../../../Qt/5.11.2/gcc_64/bin/moc
-	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include keypresseventfilter.h -o moc_keypresseventfilter.cpp
+	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtSerialPort -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include keypresseventfilter.h -o moc_keypresseventfilter.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1001,15 +1178,182 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/QKeyEvent \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QFileInfoList \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qfileinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QtBluetooth \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QtBluetoothDepends \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QtCore \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qeventloop.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractproxymodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractstate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstracttransition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qanimationgroup.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qarraydataops.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qarraydatapointer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbasictimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbitarray.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbuffer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qbytearraymatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcache.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcollator.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcommandlineoption.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcommandlineparser.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qcryptographichash.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdatetime.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdeadlinetimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdir.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdiriterator.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qeasingcurve.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qendian.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qeventtransition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qexception.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfactoryinterface.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfileselector.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QObject \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QStringList \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfinalstate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfuture.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfutureinterface.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qrunnable.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qresultstore.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qfuturewatcher.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qhistorystate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qidentityproxymodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qisenum.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qitemselectionmodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsonarray.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsonvalue.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsondocument.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qjsonobject.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlibrary.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlibraryinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qversionnumber.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlinkedlist.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qlockfile.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qloggingcategory.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmath.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmetaobject.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmimedata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmimedatabase.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qmimetype.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qoperatingsystemversion.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpauseanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qplugin.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpointer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpluginloader.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qprocess.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qpropertyanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qvariantanimation.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qqueue.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qrandom.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qreadwritelock.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qregularexpression.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qresource.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsavefile.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsemaphore.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsettings.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsharedmemory.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsignalmapper.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsignaltransition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsocketnotifier.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstack.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstandardpaths.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstate.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstatemachine.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstorageinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qstringlistmodel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qsystemsemaphore.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtemporarydir.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtemporaryfile.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtextcodec.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qthread.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qthreadpool.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qthreadstorage.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtimeline.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtimezone.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtranslator.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtypetraits.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/quuid.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qwaitcondition.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qwineventnotifier.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qxmlstream.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qtcoreversion.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothglobal.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetooth-config.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetooth.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothaddress.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QByteArray \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QString \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QMetaType \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothdevicediscoveryagent.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothDeviceInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothdeviceinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothAddress \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothhostinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothlocaldevice.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QList \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothHostInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothserver.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothSocket \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothsocket.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothuuid.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QtGlobal \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QUuid \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QDebug \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothserviceinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothUuid \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QSharedPointer \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QVariant \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qabstractsocket.h \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothServiceInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothservicediscoveryagent.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransfermanager.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransferreply.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QIODevice \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothTransferRequest \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransferrequest.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothTransferManager \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyadvertisingdata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyadvertisingparameters.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycontroller.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyAdvertisingData \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyService \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservice.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyCharacteristic \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycharacteristic.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyDescriptor \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergydescriptor.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QVariantMap \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycharacteristicdata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyconnectionparameters.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergydescriptordata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservicedata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothversion.h \
+		global.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/qeventloop.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qguiapplication.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qinputmethod.h \
-		keypresseventfilter.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/QObject
+		keypresseventfilter.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -1122,15 +1466,8 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/QKeyEvent \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QFileInfoList \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qfileinfo.h \
-		ui_mainwindow.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/QFile \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QFileDialog \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qfiledialog.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/qdir.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qdialog.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/QDir \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QtWidgets \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QtWidgetsDepends \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QtBluetooth \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QtBluetoothDepends \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QtCore \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QtCoreDepends \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qabstractanimation.h \
@@ -1157,6 +1494,7 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qdatetime.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qdeadlinetimer.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qelapsedtimer.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/qdir.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qdiriterator.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qeasingcurve.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qendian.h \
@@ -1243,6 +1581,90 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qwineventnotifier.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qxmlstream.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qtcoreversion.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothglobal.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetooth-config.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetooth.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothaddress.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QByteArray \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QString \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QMetaType \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothdevicediscoveryagent.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothDeviceInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothdeviceinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothAddress \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothhostinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothlocaldevice.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QList \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothHostInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothserver.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothSocket \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothsocket.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothuuid.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QtGlobal \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QUuid \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QDebug \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothserviceinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothUuid \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QSharedPointer \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QVariant \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qabstractsocket.h \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qtnetworkglobal.h \
+		../../../Qt/5.11.2/gcc_64/include/QtNetwork/qtnetwork-config.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothServiceInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothservicediscoveryagent.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothDeviceDiscoveryAgent \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransfermanager.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransferreply.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QIODevice \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothTransferRequest \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qbluetoothtransferrequest.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QBluetoothTransferManager \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyadvertisingdata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyadvertisingparameters.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycontroller.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyAdvertisingData \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyService \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservice.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyCharacteristic \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycharacteristic.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/QLowEnergyDescriptor \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergydescriptor.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QVariantMap \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergycharacteristicdata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyconnectionparameters.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergydescriptordata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservicedata.h \
+		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothversion.h \
+		global.h \
+		ui_mainwindow.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QApplication \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qapplication.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../Qt/5.11.2/gcc_64/include/QtGui/qguiapplication.h \
+		../../../Qt/5.11.2/gcc_64/include/QtGui/qinputmethod.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QLabel \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qlabel.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qframe.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QMenuBar \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmenubar.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmenu.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qaction.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qactiongroup.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QPushButton \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qpushbutton.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QStatusBar \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstatusbar.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QToolBar \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtoolbar.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QWidget \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QFile \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QFileDialog \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qdialog.h \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QDir \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QtWidgets \
+		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QtWidgetsDepends \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/QtGui \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/QtGuiDepends \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qabstracttextdocumentlayout.h \
@@ -1273,8 +1695,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qgenericmatrix.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qgenericplugin.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qgenericpluginfactory.h \
-		../../../Qt/5.11.2/gcc_64/include/QtGui/qguiapplication.h \
-		../../../Qt/5.11.2/gcc_64/include/QtGui/qinputmethod.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qiconengine.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qiconengineplugin.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qimageiohandler.h \
@@ -1327,7 +1747,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qpixmapcache.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qrasterwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qscreen.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/QList \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QSize \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QSizeF \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/QTransform \
@@ -1343,7 +1762,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qtexttable.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qvalidator.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qtguiversion.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qabstractbutton.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstyleoption.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qabstractspinbox.h \
@@ -1352,14 +1770,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstyle.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtabbar.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qrubberband.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qframe.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qabstractitemview.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qaccessiblewidget.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qaction.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qactiongroup.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qapplication.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qboxlayout.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qlayout.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -1372,7 +1785,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qcolumnview.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qcombobox.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qcommandlinkbutton.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qcommonstyle.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qcompleter.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qdatawidgetmapper.h \
@@ -1416,18 +1828,14 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qitemeditorfactory.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qkeyeventtransition.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qkeysequenceedit.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qlabel.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qlcdnumber.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qlistview.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qlistwidget.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmdiarea.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmdisubwindow.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmenu.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmenubar.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmessagebox.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qmouseeventtransition.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qopenglwidget.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QWidget \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qplaintextedit.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtextedit.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qprogressbar.h \
@@ -1440,8 +1848,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QPointF \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QScrollerProperties \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qscrollerproperties.h \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/QMetaType \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/QVariant \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qshortcut.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qsizegrip.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qspinbox.h \
@@ -1449,7 +1855,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qsplitter.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstackedlayout.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstackedwidget.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstyleditemdelegate.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstylefactory.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qstylepainter.h \
@@ -1458,7 +1863,6 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtableview.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtablewidget.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtextbrowser.h \
-		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtoolbox.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtoolbutton.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtooltip.h \
@@ -1473,7 +1877,14 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qwizard.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qtwidgetsversion.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/QTimer \
-		../../../Qt/5.11.2/gcc_64/include/QtCore/QThread
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QThread \
+		keypresseventfilter.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QtSerialPort \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QtSerialPortDepends \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialportglobal.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialport.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialportinfo.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qtserialportversion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 keypresseventfilter.o: keypresseventfilter.cpp keypresseventfilter.h \
@@ -1527,6 +1938,7 @@ keypresseventfilter.o: keypresseventfilter.cpp keypresseventfilter.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qvarlengtharray.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qcontainerfwd.h \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qobject_impl.h \
+		global.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/QKeyEvent \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qevent.h \
 		../../../Qt/5.11.2/gcc_64/include/QtGui/qtguiglobal.h \

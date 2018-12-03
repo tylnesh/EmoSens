@@ -24,6 +24,12 @@ This program is free software: you can redistribute it and/or modify
   #define RF_CSN   10 //piny na ktorych je antena
 
 
+  #define gsrPin 6
+
+int gsrValue=0;
+int gsrAverage=0;
+//long sum=0;
+
 #define WIRE 1
 
 
@@ -97,21 +103,59 @@ This program is free software: you can redistribute it and/or modify
   
   
   
-  radio.startListening();
+  //radio.startListening();
   in=22;
+
+
+
+//interruptSetup();                 // sets up to read Pulse Sensor signal every 2mS 
+                                    // IF YOU ARE POWERING The Pulse Sensor AT VOLTAGE LESS THAN THE BOARD VOLTAGE, 
+                                    // UN-COMMENT THE NEXT LINE AND APPLY THAT VOLTAGE TO THE A-REF PIN
+                                    //   analogReference(EXTERNAL);   
+
+pinMode(gsrPin,INPUT);
+  
   }
  
   void loop() {
 //rcvMsg();
 //Serial.println(incoming.str);
 //delay(500);
-  if(radio.available())
+long sum=0;
+  /*if(radio.available())
   {
     radio.read(&in, 1);
     Serial.println(in);
-    }
+    }*/
+
+    
+
+
+      for(int i=0;i<4;i++)           //Average the 4 measurements to remove the glitch
+      {
+      gsrValue=analogRead(gsrPin);
+      sum += gsrValue;
+      delay(5);
+      }
+   gsrAverage = sum/4;
+
+Serial.print("GSR: ");
+Serial.println(gsrAverage);
+   radio.write(50, 1);
+   delay(20);
+      
   }
-  
+
+
+  void interruptSetup()
+{     
+  // Initializes Timer2 to throw an interrupt every 2mS.
+  TCCR2A = 0x02;     // DISABLE PWM ON DIGITAL PINS 3 AND 11, AND GO INTO CTC MODE
+  TCCR2B = 0x06;     // DON'T FORCE COMPARE, 256 PRESCALER 
+  OCR2A = 0X7C;      // SET THE TOP OF THE COUNT TO 124 FOR 500Hz SAMPLE RATE
+  TIMSK2 = 0x02;     // ENABLE INTERRUPT ON MATCH BETWEEN TIMER2 AND OCR2A
+  sei();             // MAKE SURE GLOBAL INTERRUPTS ARE ENABLED      
+} 
   
   
   
