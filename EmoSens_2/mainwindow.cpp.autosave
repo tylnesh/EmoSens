@@ -316,7 +316,7 @@ void MainWindow::realTimeDataSlot()
 
         cap >> frame; // outputs the webcam image to a Mat
         cv::imshow("Webcam", frame); // displays the Mat
-        if (cv::waitKey(30) >= 0) break;
+        //if (cv::waitKey(30) >= 0) break;
       }
 
 

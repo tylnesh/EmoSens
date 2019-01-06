@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_BLUETOOTH_LIB -DQT_SERIALPORT_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../../../Qt/5.11.2/gcc_64/include -I../../../Qt/5.11.2/gcc_64/include/QtWidgets -I../../../Qt/5.11.2/gcc_64/include/QtGui -I../../../Qt/5.11.2/gcc_64/include/QtBluetooth -I../../../Qt/5.11.2/gcc_64/include/QtSerialPort -I../../../Qt/5.11.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -isystem /usr/local/include/opencv4 -isystem /usr/local/include/opencv4/opencv2 -I../../../Qt/5.11.2/gcc_64/include -I../../../Qt/5.11.2/gcc_64/include/QtWidgets -I../../../Qt/5.11.2/gcc_64/include/QtGui -I../../../Qt/5.11.2/gcc_64/include/QtBluetooth -I../../../Qt/5.11.2/gcc_64/include/QtSerialPort -I../../../Qt/5.11.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../Qt/5.11.2/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/tylnesh/Qt/5.11.2/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -38,7 +38,7 @@ DISTNAME      = EmoSens_21.0.0
 DISTDIR = /home/tylnesh/devel/EmoSens/EmoSens_2/.tmp/EmoSens_21.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/tylnesh/Qt/5.11.2/gcc_64/lib -Wl,-rpath-link,/home/tylnesh/Qt/5.11.2/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/tylnesh/Qt/5.11.2/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Bluetooth -lQt5SerialPort -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio -L/home/tylnesh/Qt/5.11.2/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Bluetooth -lQt5SerialPort -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -986,10 +986,13 @@ moc_mainwindow.cpp: ../../../Qt/5.11.2/gcc_64/include/QtWidgets/QMainWindow \
 		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservicedata.h \
 		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothversion.h \
 		global.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QSerialPort \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialport.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialportglobal.h \
 		mainwindow.h \
 		moc_predefs.h \
 		../../../Qt/5.11.2/gcc_64/bin/moc
-	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtSerialPort -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/usr/local/include/opencv4 -I/usr/local/include/opencv4/opencv2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtSerialPort -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_keypresseventfilter.cpp: ../../../Qt/5.11.2/gcc_64/include/QtCore/QObject \
 		../../../Qt/5.11.2/gcc_64/include/QtCore/qobject.h \
@@ -1045,7 +1048,7 @@ moc_keypresseventfilter.cpp: ../../../Qt/5.11.2/gcc_64/include/QtCore/QObject \
 		keypresseventfilter.h \
 		moc_predefs.h \
 		../../../Qt/5.11.2/gcc_64/bin/moc
-	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtSerialPort -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include keypresseventfilter.h -o moc_keypresseventfilter.cpp
+	/home/tylnesh/Qt/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/home/tylnesh/Qt/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/usr/local/include/opencv4 -I/usr/local/include/opencv4/opencv2 -I/home/tylnesh/Qt/5.11.2/gcc_64/include -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtWidgets -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtGui -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtBluetooth -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtSerialPort -I/home/tylnesh/Qt/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include keypresseventfilter.h -o moc_keypresseventfilter.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1348,6 +1351,9 @@ main.o: main.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservicedata.h \
 		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothversion.h \
 		global.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QSerialPort \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialport.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialportglobal.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qapplication.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qdesktopwidget.h \
@@ -1636,6 +1642,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qlowenergyservicedata.h \
 		../../../Qt/5.11.2/gcc_64/include/QtBluetooth/qtbluetoothversion.h \
 		global.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QSerialPort \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialport.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialportglobal.h \
 		ui_mainwindow.h \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/QApplication \
 		../../../Qt/5.11.2/gcc_64/include/QtWidgets/qapplication.h \
@@ -1881,10 +1890,11 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		keypresseventfilter.h \
 		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QtSerialPort \
 		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QtSerialPortDepends \
-		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialportglobal.h \
-		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialport.h \
 		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qserialportinfo.h \
-		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qtserialportversion.h
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/qtserialportversion.h \
+		../../../Qt/5.11.2/gcc_64/include/QtSerialPort/QSerialPortInfo \
+		../../../Qt/5.11.2/gcc_64/include/QtCore/QDateTime \
+		../../../Qt/5.11.2/gcc_64/include/QtGui/QList
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 keypresseventfilter.o: keypresseventfilter.cpp keypresseventfilter.h \

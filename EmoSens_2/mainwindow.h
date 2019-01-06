@@ -54,6 +54,7 @@ private:
     Ui::MainWindow *ui;
     void startDeviceDiscovery();
     QSerialPort *serial;
+    QStringList availablePorts();
 
 
 
