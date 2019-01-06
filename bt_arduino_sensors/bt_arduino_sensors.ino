@@ -3,8 +3,8 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-#define pulsePin 7
-#define gsrPin 6
+#define pulsePin 6
+#define gsrPin 7
 
 int gsrValue=0;
 int gsrAverage=0;
