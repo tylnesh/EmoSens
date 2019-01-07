@@ -24,7 +24,7 @@ This program is free software: you can redistribute it and/or modify
   #define RF_CSN   10 //piny na ktorych je antena
 
 
-  #define gsrPin 6
+  #define gsrPin A5
 
 int gsrValue=0;
 int gsrAverage=0;

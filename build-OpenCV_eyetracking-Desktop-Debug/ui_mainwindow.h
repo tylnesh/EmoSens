@@ -11,10 +11,8 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -24,42 +22,25 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QWidget *centralWidget;
-    QLabel *label;
-    QPushButton *connectButton;
-    QPushButton *startButton;
-    QPushButton *pauseButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
+    QWidget *centralWidget;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1080, 1080);
-        centralWidget = new QWidget(MainWindow);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(30, 50, 1471, 811));
-        connectButton = new QPushButton(centralWidget);
-        connectButton->setObjectName(QStringLiteral("connectButton"));
-        connectButton->setGeometry(QRect(1380, 970, 146, 48));
-        startButton = new QPushButton(centralWidget);
-        startButton->setObjectName(QStringLiteral("startButton"));
-        startButton->setGeometry(QRect(20, 890, 148, 50));
-        pauseButton = new QPushButton(centralWidget);
-        pauseButton->setObjectName(QStringLiteral("pauseButton"));
-        pauseButton->setGeometry(QRect(180, 890, 148, 50));
-        MainWindow->setCentralWidget(centralWidget);
+        MainWindow->resize(400, 300);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1080, 30));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
-        MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        MainWindow->addToolBar(mainToolBar);
+        centralWidget = new QWidget(MainWindow);
+        centralWidget->setObjectName(QStringLiteral("centralWidget"));
+        MainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
@@ -72,10 +53,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QString());
-        connectButton->setText(QApplication::translate("MainWindow", "Connect", nullptr));
-        startButton->setText(QApplication::translate("MainWindow", "Start", nullptr));
-        pauseButton->setText(QApplication::translate("MainWindow", "Pause", nullptr));
     } // retranslateUi
 
 };

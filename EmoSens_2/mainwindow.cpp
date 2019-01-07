@@ -90,7 +90,7 @@ MainWindow::MainWindow(QWidget *parent) :
        // }
 
         QStringList fileList;
-        ui->setupUi(this);
+//        ui->setupUi(this);
 
        // bool s;
         /*foreach (const QFileInfo &fileinfo, filelistinfo) {
@@ -154,7 +154,7 @@ if (this->availablePorts().length()!=0)
 
 
 
-
+ui->setupUi(this);
 
 
 
@@ -270,7 +270,7 @@ void MainWindow::handleTimeout()
             {
                 if (arduino.split(":").at(1).at(0) == "+" || arduino.split(":").at(1).at(0) == "-")
                 {    arduinoVal = arduino.split(":").at(1).at(0);
-                //qDebug()<< "Val: " << arduinoVal;
+                qDebug()<< "Val: " << arduinoVal;
             }
             }
              //if (arduinoVal == "+") qDebug()<< "positive";
@@ -316,7 +316,7 @@ void MainWindow::realTimeDataSlot()
 
         cap >> frame; // outputs the webcam image to a Mat
         cv::imshow("Webcam", frame); // displays the Mat
-        if (cv::waitKey(30) >= 0) break;
+        //if (cv::waitKey(30) >= 0) break;
       }
 
 

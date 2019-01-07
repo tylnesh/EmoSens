@@ -18,12 +18,12 @@ MainWindow::MainWindow(QWidget *parent) :
     cv::CascadeClassifier eyesCascade;
 
 
-    if (!faceCascade.load("/home/tylnesh/devel/diploma/OpenCV_eyetracking/haarcascade_frontalface_alt.xml"))
+    if (!faceCascade.load("/home/tylnesh/devel/EmoSens/OpenCV_eyetracking/haarcascade_frontalface_alt.xml"))
       {
           qDebug()  << "Could not load face detector." << endl;
 
       }
-      if (!eyesCascade.load("/home/tylnesh/devel/diploma/OpenCV_eyetracking/haarcascade_eye_tree_eyeglasses.xml"))
+      if (!eyesCascade.load("/home/tylnesh/devel/EmoSens/OpenCV_eyetracking/haarcascade_eye_tree_eyeglasses.xml"))
       {
           qDebug() << "Could not load eye detector." << endl;
 
@@ -69,7 +69,7 @@ void MainWindow::detectEyes(cv::Mat &frame, cv::CascadeClassifier &faceCascade, 
    eyesCascade.detectMultiScale(face, eyes, 1.1, 2, 0 |  cv::CASCADE_SCALE_IMAGE, cv::Size(150, 150)); // same thing as above
 
    rectangle(frame, faces[0].tl(), faces[0].br(), cv::Scalar(255, 0, 0), 2);
-   if (eyes.size() != 2) return; // both eyes were not detected
+   if (eyes.size() != 1) return; // both eyes were not detected
    for (cv::Rect &eye : eyes)
    {
        rectangle(frame, faces[0].tl() + eye.tl(), faces[0].tl() + eye.br(), cv::Scalar(0, 255, 0), 2);
