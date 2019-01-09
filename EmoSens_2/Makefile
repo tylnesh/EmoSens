@@ -14,8 +14,8 @@ CC            = gcc
 CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_BLUETOOTH_LIB -DQT_SERIALPORT_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-CXXFLAGS      = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -isystem /usr/local/include/opencv4 -isystem /usr/local/include/opencv4/opencv2 -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtBluetooth -isystem /usr/include/x86_64-linux-gnu/qt5/QtSerialPort -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
+INCPATH       = -I. -isystem /usr/local/include/opencv4 -isystem /usr/local/include/opencv4/opencv2 -I3rdparty/cppzmq -Iinclude -I3rdparty/cppzmq -I$(QTDIR)/include -I/opt/local/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtBluetooth -isystem /usr/include/x86_64-linux-gnu/qt5/QtSerialPort -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
 QMAKE         = /usr/lib/qt5/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -38,7 +38,7 @@ DISTNAME      = EmoSens_21.0.0
 DISTDIR = /home/tylnesh/devel/EmoSens/EmoSens_2/.tmp/EmoSens_21.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath-link,/usr/lib/x86_64-linux-gnu
-LIBS          = $(SUBLIBS) -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio -lQt5Widgets -lQt5Gui -lQt5Bluetooth -lQt5SerialPort -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio -lzmq -lqmsgpack -lQt5Widgets -lQt5Gui -lQt5Bluetooth -lQt5SerialPort -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -52,13 +52,17 @@ OBJECTS_DIR   = ./
 
 SOURCES       = main.cpp \
 		mainwindow.cpp \
-		keypresseventfilter.cpp moc_mainwindow.cpp \
-		moc_keypresseventfilter.cpp
+		keypresseventfilter.cpp \
+		nzmqtsubscriber.cpp moc_mainwindow.cpp \
+		moc_keypresseventfilter.cpp \
+		moc_nzmqtsubscriber.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		keypresseventfilter.o \
+		nzmqtsubscriber.o \
 		moc_mainwindow.o \
-		moc_keypresseventfilter.o
+		moc_keypresseventfilter.o \
+		moc_nzmqtsubscriber.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -146,9 +150,11 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		EmoSens_2.pro mainwindow.h \
 		keypresseventfilter.h \
-		global.h main.cpp \
+		global.h \
+		nzmqtsubscriber.h main.cpp \
 		mainwindow.cpp \
-		keypresseventfilter.cpp
+		keypresseventfilter.cpp \
+		nzmqtsubscriber.cpp
 QMAKE_TARGET  = EmoSens_2
 DESTDIR       = 
 TARGET        = EmoSens_2
@@ -358,8 +364,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents mainwindow.h keypresseventfilter.h global.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp mainwindow.cpp keypresseventfilter.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents mainwindow.h keypresseventfilter.h global.h nzmqtsubscriber.h $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp keypresseventfilter.cpp nzmqtsubscriber.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -390,22 +396,32 @@ compiler_moc_predefs_make_all: moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) moc_predefs.h
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
-	g++ -pipe -g -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
+	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_mainwindow.cpp moc_keypresseventfilter.cpp
+compiler_moc_header_make_all: moc_mainwindow.cpp moc_keypresseventfilter.cpp moc_nzmqtsubscriber.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_mainwindow.cpp moc_keypresseventfilter.cpp
+	-$(DEL_FILE) moc_mainwindow.cpp moc_keypresseventfilter.cpp moc_nzmqtsubscriber.cpp
 moc_mainwindow.cpp: global.h \
+		3rdparty/cppzmq/zmq.hpp \
 		mainwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/usr/local/include/opencv4 -I/usr/local/include/opencv4/opencv2 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtBluetooth -I/usr/include/x86_64-linux-gnu/qt5/QtSerialPort -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/usr/local/include/opencv4 -I/usr/local/include/opencv4/opencv2 -I/home/tylnesh/devel/EmoSens/EmoSens_2/3rdparty/cppzmq -I/home/tylnesh/devel/EmoSens/EmoSens_2/include -I/home/tylnesh/devel/EmoSens/EmoSens_2/3rdparty/cppzmq -I'/home/tylnesh/devel/EmoSens/EmoSens_2/$(QTDIR)/include' -I/opt/local/include -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtBluetooth -I/usr/include/x86_64-linux-gnu/qt5/QtSerialPort -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 moc_keypresseventfilter.cpp: global.h \
 		keypresseventfilter.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/usr/local/include/opencv4 -I/usr/local/include/opencv4/opencv2 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtBluetooth -I/usr/include/x86_64-linux-gnu/qt5/QtSerialPort -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include keypresseventfilter.h -o moc_keypresseventfilter.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/usr/local/include/opencv4 -I/usr/local/include/opencv4/opencv2 -I/home/tylnesh/devel/EmoSens/EmoSens_2/3rdparty/cppzmq -I/home/tylnesh/devel/EmoSens/EmoSens_2/include -I/home/tylnesh/devel/EmoSens/EmoSens_2/3rdparty/cppzmq -I'/home/tylnesh/devel/EmoSens/EmoSens_2/$(QTDIR)/include' -I/opt/local/include -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtBluetooth -I/usr/include/x86_64-linux-gnu/qt5/QtSerialPort -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include keypresseventfilter.h -o moc_keypresseventfilter.cpp
+
+moc_nzmqtsubscriber.cpp: include/nzmqt/nzmqt.hpp \
+		include/nzmqt/global.hpp \
+		3rdparty/cppzmq/zmq.hpp \
+		include/nzmqt/impl.hpp \
+		nzmqtsubscriber.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/tylnesh/devel/EmoSens/EmoSens_2/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/tylnesh/devel/EmoSens/EmoSens_2 -I/usr/local/include/opencv4 -I/usr/local/include/opencv4/opencv2 -I/home/tylnesh/devel/EmoSens/EmoSens_2/3rdparty/cppzmq -I/home/tylnesh/devel/EmoSens/EmoSens_2/include -I/home/tylnesh/devel/EmoSens/EmoSens_2/3rdparty/cppzmq -I'/home/tylnesh/devel/EmoSens/EmoSens_2/$(QTDIR)/include' -I/opt/local/include -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtBluetooth -I/usr/include/x86_64-linux-gnu/qt5/QtSerialPort -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include nzmqtsubscriber.h -o moc_nzmqtsubscriber.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -430,11 +446,13 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 main.o: main.cpp mainwindow.h \
 		global.h \
+		3rdparty/cppzmq/zmq.hpp \
 		keypresseventfilter.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
 		global.h \
+		3rdparty/cppzmq/zmq.hpp \
 		ui_mainwindow.h \
 		keypresseventfilter.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
@@ -443,11 +461,21 @@ keypresseventfilter.o: keypresseventfilter.cpp keypresseventfilter.h \
 		global.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o keypresseventfilter.o keypresseventfilter.cpp
 
+nzmqtsubscriber.o: nzmqtsubscriber.cpp nzmqtsubscriber.h \
+		include/nzmqt/nzmqt.hpp \
+		include/nzmqt/global.hpp \
+		3rdparty/cppzmq/zmq.hpp \
+		include/nzmqt/impl.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o nzmqtsubscriber.o nzmqtsubscriber.cpp
+
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
 
 moc_keypresseventfilter.o: moc_keypresseventfilter.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_keypresseventfilter.o moc_keypresseventfilter.cpp
+
+moc_nzmqtsubscriber.o: moc_nzmqtsubscriber.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_nzmqtsubscriber.o moc_nzmqtsubscriber.cpp
 
 ####### Install
 

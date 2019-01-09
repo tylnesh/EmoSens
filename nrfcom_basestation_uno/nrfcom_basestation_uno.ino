@@ -71,13 +71,13 @@ This program is free software: you can redistribute it and/or modify
   { 
     radio.startListening();
     while (radio.available()) {
-      Serial.println(F("Receiving message..."));
+      //Serial.println(F("Receiving message..."));
       radio.read(&incoming, sizeof(message));
-      if(incoming.wire == WIRE)
-      {
-      Serial.println(incoming.gsr);
+      //if(incoming.wire == WIRE)
+     // {
+      //Serial.println(incoming.gsr);
       //Serial.print(incoming.str);
-      }
+      //}
     }
   }
   
@@ -129,6 +129,7 @@ This program is free software: you can redistribute it and/or modify
    Serial.print(incoming.gsr);
    Serial.print(":");
    Serial.print(val);
+   Serial.println();
    
 
 

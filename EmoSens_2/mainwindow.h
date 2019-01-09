@@ -8,6 +8,9 @@
 #include <global.h>
 #include <QSerialPort>
 
+#include <zmq.hpp>
+#include <nzmqtsubscriber.h>
+
 //extern int key;
 
 
@@ -55,6 +58,11 @@ private:
     void startDeviceDiscovery();
     QSerialPort *serial;
     QStringList availablePorts();
+
+    double emotions[9] = {0,0,0,0,0,0,0,0,0};
+    zmq::message_t msg;
+    zmq::context_t context = zmq::context_t(1) ;
+    zmq::socket_t socket = zmq::socket_t(context, ZMQ_SUB);
 
 
 

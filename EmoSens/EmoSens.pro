@@ -42,7 +42,8 @@ HEADERS += \
  #   datacollectiondialog.h \
     qcustomplot.h \
     statsdialog.h \
-    visualizedialog.h
+    visualizedialog.h \
+    datacollectiondialog.h
 
 #LIBS  += -lzmq -lqmsgpack
 

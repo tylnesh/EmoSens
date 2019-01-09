@@ -48,10 +48,10 @@ public:
         connectButton->setGeometry(QRect(1380, 970, 146, 48));
         startButton = new QPushButton(centralWidget);
         startButton->setObjectName(QStringLiteral("startButton"));
-        startButton->setGeometry(QRect(20, 890, 148, 50));
+        startButton->setGeometry(QRect(30, 790, 148, 50));
         pauseButton = new QPushButton(centralWidget);
         pauseButton->setObjectName(QStringLiteral("pauseButton"));
-        pauseButton->setGeometry(QRect(180, 890, 148, 50));
+        pauseButton->setGeometry(QRect(200, 790, 148, 50));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));

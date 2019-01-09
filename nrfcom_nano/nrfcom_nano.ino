@@ -41,8 +41,8 @@ int gsrAverage=0;
   
   struct message {
     int wire = 1; //na rozlisovanie medzi jednotlivymi zariadeniami
-    int i = 0; //ak chces poslat int
-    String str = ""; // string, atd..
+    int gsr = 0; //ak chces poslat int
+   // String str = ""; // string, atd..
   
   };
   
@@ -56,7 +56,8 @@ int gsrAverage=0;
   { radio.stopListening();
     Serial.println(F("Sending message..."));
     outgoing.wire = WIRE;
-    for (int i =0; i<3; i++) { radio.write(&outgoing,sizeof(message)); delay(100);} //poslanie troch rovnakych sprav, pre jednu staci len to radio.write(&outgoing,sizeof(message));
+    radio.write(&outgoing,sizeof(message)); delay(100);
+    
     
     
     //NEZABUDNI DELAY!!!!
@@ -72,8 +73,8 @@ int gsrAverage=0;
       radio.read(&incoming, sizeof(message));
       if(incoming.wire == WIRE)
       {
-      Serial.println(incoming.i);
-      Serial.print(incoming.str);
+     // Serial.println(incoming.i);
+     // Serial.print(incoming.str);
       }
     }
   }
@@ -139,11 +140,12 @@ long sum=0;
       }
    gsrAverage = sum/4;
 
-Serial.print("GSR: ");
-Serial.println(gsrAverage);
-   radio.write(50, 1);
+   outgoing.gsr = gsrAverage;
+      sndMsg();
+   outgoing.gsr = 0;
+
    delay(20);
-      
+       
   }
 
 

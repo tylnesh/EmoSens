@@ -47,9 +47,36 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     std::cout << "Connecting to  server…" << std::endl;
-    socket.connect ("tcp://localhost:5555");
-    if (socket.connected()) qDebug() << "Connected";
+    //socket.connect ("tcp://localhost:5555");
+    //if (socket.connected()) qDebug() << "Connected";
 
+    
+    
+    try{
+
+     nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
+     zmq::context_t contextPort (1);
+     zmq::socket_t req (contextPort, ZMQ_REQ);
+     QString ipString = "tcp://" + m_ip + ":50020";
+     req.connect(ipString.toStdString());
+
+//          // Ask for the subport
+     zmq::message_t subPortRequest (8);
+     memcpy (subPortRequest.data(), "SUB_PORT", 8);
+     req.send(subPortRequest);
+     zmq::message_t reply;
+     req.recv(&reply);
+
+     QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
+qDebug() << sub_port;
+     context->start();
+     QString address = "tcp://"+m_ip+":"+sub_port;
+
+     nzmqtSubscriber* sub0 = new nzmqtSubscriber(*context, address, "pupil.0", this );
+     nzmqtSubscriber* sub1 = new nzmqtSubscriber(*context, address, "pupil.1", this );
+    
+    
+    
   //  KeyPressEventFilter *filter = new KeyPressEventFilter(this);
       // this->-installEventFilter(filter);
 

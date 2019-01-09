@@ -26,16 +26,37 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    keypresseventfilter.cpp
+    keypresseventfilter.cpp \
+    nzmqtsubscriber.cpp
 
 HEADERS += \
-        mainwindow.h \
+    mainwindow.h \
     keypresseventfilter.h \
-    global.h
+    global.h \
+    nzmqtsubscriber.h
 
 FORMS += \
         mainwindow.ui
 
 INCLUDEPATH += /usr/local/include/opencv4 \
-               /usr/local/include/opencv4/opencv2
-LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio
+               /usr/local/include/opencv4/opencv2 \
+               3rdparty/cppzmq \
+              ./include \
+              ./3rdparty/cppzmq \
+              $(QTDIR)/include \
+              /opt/local/include
+
+LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio -lzmq -lqmsgpack
+
+#HEADERS += \
+   #     ./include/nzmqt/nzmqt.hpp \
+ #       mainwindow.h \
+  #  nzmqtsubscriber.h \
+ #   datacollectiondialog.h \
+  #  qcustomplot.h \
+    #statsdialog.h \
+   # visualizedialog.h
+
+
+CONFIG += c++11
+
