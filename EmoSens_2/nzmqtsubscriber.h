@@ -41,6 +41,10 @@ public:
         //qDebug()<< "Starting affectiva zmq...";
         socket_->subscribeTo(topic_);
         socket_->connectTo(address_);
+
+        if (socket_->isConnected())
+
+        qDebug() << "connected";
     }
 
     float getNumberFromQString(const QString &xString)
@@ -65,6 +69,7 @@ protected:
 protected slots:
     void messageReceived(const QList<QByteArray>& message)
     {
+        qDebug() << "received msg";
        QVariant v = MsgPack::unpack(message.last());
           //qDebug() << "Message received";
           emit extractData(v,topic_);

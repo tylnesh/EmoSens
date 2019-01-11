@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui bluetooth serialport
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,11 +29,13 @@ SOURCES += \
     keypresseventfilter.cpp \
     nzmqtsubscriber.cpp
 
+
 HEADERS += \
+    ./include/nzmqt/nzmqt.hpp \
     mainwindow.h \
     keypresseventfilter.h \
     global.h \
-    nzmqtsubscriber.h
+    nzmqtsubscriber.h\
 
 FORMS += \
         mainwindow.ui

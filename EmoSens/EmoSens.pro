@@ -43,7 +43,8 @@ HEADERS += \
     qcustomplot.h \
     statsdialog.h \
     visualizedialog.h \
-    datacollectiondialog.h
+    datacollectiondialog.h \
+    nzmqtsubscriber.h
 
 #LIBS  += -lzmq -lqmsgpack
 

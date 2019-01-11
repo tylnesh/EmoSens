@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'nzmqt.hpp'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.11.2)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.5)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -13,7 +13,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'nzmqt.hpp' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.11.2. It"
+#error "This file was generated using the moc from 5.9.5. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -255,7 +255,7 @@ void nzmqt::ZMQSocket::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (ZMQSocket::*)(const QList<QByteArray> & );
+            typedef void (ZMQSocket::*_t)(const QList<QByteArray> & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ZMQSocket::messageReceived)) {
                 *result = 0;
                 return;
@@ -264,7 +264,7 @@ void nzmqt::ZMQSocket::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject nzmqt::ZMQSocket::staticMetaObject = {
+const QMetaObject nzmqt::ZMQSocket::staticMetaObject = {
     { &QObject::staticMetaObject, qt_meta_stringdata_nzmqt__ZMQSocket.data,
       qt_meta_data_nzmqt__ZMQSocket,  qt_static_metacall, nullptr, nullptr}
 };
@@ -348,7 +348,7 @@ void nzmqt::ZMQContext::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject nzmqt::ZMQContext::staticMetaObject = {
+const QMetaObject nzmqt::ZMQContext::staticMetaObject = {
     { &QObject::staticMetaObject, qt_meta_stringdata_nzmqt__ZMQContext.data,
       qt_meta_data_nzmqt__ZMQContext,  qt_static_metacall, nullptr, nullptr}
 };
@@ -414,7 +414,7 @@ void nzmqt::PollingZMQSocket::qt_static_metacall(QObject *_o, QMetaObject::Call 
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject nzmqt::PollingZMQSocket::staticMetaObject = {
+const QMetaObject nzmqt::PollingZMQSocket::staticMetaObject = {
     { &ZMQSocket::staticMetaObject, qt_meta_stringdata_nzmqt__PollingZMQSocket.data,
       qt_meta_data_nzmqt__PollingZMQSocket,  qt_static_metacall, nullptr, nullptr}
 };
@@ -511,7 +511,7 @@ void nzmqt::PollingZMQContext::qt_static_metacall(QObject *_o, QMetaObject::Call
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (PollingZMQContext::*)(int , const QString & );
+            typedef void (PollingZMQContext::*_t)(int , const QString & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&PollingZMQContext::pollError)) {
                 *result = 0;
                 return;
@@ -520,7 +520,7 @@ void nzmqt::PollingZMQContext::qt_static_metacall(QObject *_o, QMetaObject::Call
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject nzmqt::PollingZMQContext::staticMetaObject = {
+const QMetaObject nzmqt::PollingZMQContext::staticMetaObject = {
     { &ZMQContext::staticMetaObject, qt_meta_stringdata_nzmqt__PollingZMQContext.data,
       qt_meta_data_nzmqt__PollingZMQContext,  qt_static_metacall, nullptr, nullptr}
 };
@@ -634,7 +634,7 @@ void nzmqt::SocketNotifierZMQSocket::qt_static_metacall(QObject *_o, QMetaObject
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (SocketNotifierZMQSocket::*)(int , const QString & );
+            typedef void (SocketNotifierZMQSocket::*_t)(int , const QString & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&SocketNotifierZMQSocket::notifierError)) {
                 *result = 0;
                 return;
@@ -643,7 +643,7 @@ void nzmqt::SocketNotifierZMQSocket::qt_static_metacall(QObject *_o, QMetaObject
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject nzmqt::SocketNotifierZMQSocket::staticMetaObject = {
+const QMetaObject nzmqt::SocketNotifierZMQSocket::staticMetaObject = {
     { &ZMQSocket::staticMetaObject, qt_meta_stringdata_nzmqt__SocketNotifierZMQSocket.data,
       qt_meta_data_nzmqt__SocketNotifierZMQSocket,  qt_static_metacall, nullptr, nullptr}
 };
@@ -742,7 +742,7 @@ void nzmqt::SocketNotifierZMQContext::qt_static_metacall(QObject *_o, QMetaObjec
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (SocketNotifierZMQContext::*)(int , const QString & );
+            typedef void (SocketNotifierZMQContext::*_t)(int , const QString & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&SocketNotifierZMQContext::notifierError)) {
                 *result = 0;
                 return;
@@ -751,7 +751,7 @@ void nzmqt::SocketNotifierZMQContext::qt_static_metacall(QObject *_o, QMetaObjec
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject nzmqt::SocketNotifierZMQContext::staticMetaObject = {
+const QMetaObject nzmqt::SocketNotifierZMQContext::staticMetaObject = {
     { &ZMQContext::staticMetaObject, qt_meta_stringdata_nzmqt__SocketNotifierZMQContext.data,
       qt_meta_data_nzmqt__SocketNotifierZMQContext,  qt_static_metacall, nullptr, nullptr}
 };

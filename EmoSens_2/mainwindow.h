@@ -4,12 +4,14 @@
 #include <QMainWindow>
 #include <QKeyEvent>
 #include <QFileInfoList>
-#include <QtBluetooth>
+//#include <QtBluetooth>
 #include <global.h>
 #include <QSerialPort>
 
 #include <zmq.hpp>
 #include <nzmqtsubscriber.h>
+
+#include <QVariant>
 
 //extern int key;
 
@@ -35,12 +37,30 @@ public:
     int r;
     QFile measurement   ;
 
+
+
+    double diameter_3d_1 =0;
+    double diameter_3d_0 =0;
+
+    double gazeX = 0;
+    double gazeY = 0;
+
+    double pupilCenterX0 = 0;
+    double pupilCenterY0 = 0;
+    double pupilCenterZ0 = 0;
+
+    double pupilCenterX1 = 0;
+    double pupilCenterY1 = 0;
+    double pupilCenterZ1 = 0;
+
+
     ~MainWindow();
 
 public slots:
     void handleReadyRead();
        void handleTimeout();
        void handleError(QSerialPort::SerialPortError error);
+       void dataReceived(QVariant v, QString t);
 
 private slots:
     void on_startButton_clicked();
@@ -49,9 +69,16 @@ private slots:
     void on_pauseButton_clicked();
 
     void on_connectButton_clicked();
-    void deviceDiscovered(const QBluetoothDeviceInfo &device);
+    //void deviceDiscovered(const QBluetoothDeviceInfo &device);
     void realTimeDataSlot();
     void on_pushButton_clicked();
+
+    void on_isArduino_stateChanged(int arg1);
+
+    void on_selectButton_clicked();
+
+protected slots:
+
 
 private:
     Ui::MainWindow *ui;

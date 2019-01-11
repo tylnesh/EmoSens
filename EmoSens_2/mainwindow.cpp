@@ -7,7 +7,7 @@
 #include "QtWidgets"
 #include "QTimer"
 #include "QThread"
-#include "QtBluetooth"
+//#include "QtBluetooth"
 #include "keypresseventfilter.h"
 #include <QtSerialPort>
 #include <QSerialPortInfo>
@@ -15,6 +15,9 @@
 #include <QDateTime>
 #include <QList>
 #include <QDebug>
+
+#include <QVariant>
+
 #include <opencv2/opencv.hpp>
 
 #include <opencv2/core/core.hpp>
@@ -46,9 +49,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
 
-    std::cout << "Connecting to  server…" << std::endl;
-    socket.connect ("tcp://localhost:5555");
-    if (socket.connected()) qDebug() << "Connected";
+    //std::cout << "Connecting to  server…" << std::endl;
+    //socket.connect ("tcp://localhost:5555");
+    //if (socket.connected()) qDebug() << "Connected";
 
   //  KeyPressEventFilter *filter = new KeyPressEventFilter(this);
       // this->-installEventFilter(filter);
@@ -69,102 +72,65 @@ MainWindow::MainWindow(QWidget *parent) :
 
    // QBluetoothAddress remoteAddress("98:D3:32:70:8B:76");
 
-
-
-    const QString folderPath = QFileDialog::getExistingDirectory(this, tr("/home/tylnesh/devel/EmoSens/EmoSens_2/"));
-    if(!folderPath.isEmpty())
-    {
-
-        QDir dir(folderPath);
-        QStringList filter;
-        filter << QLatin1String("*.png");
-        filter << QLatin1String("*.jpeg");
-        filter << QLatin1String("*.jpg");
-        dir.setNameFilters(filter);
-        filelistinfo = dir.entryInfoList();
-
-        // Initialize sequence
-        qsrand(QDateTime::currentMSecsSinceEpoch() / 1000);
-        // ... Generate numbers from that sequence
-       // qrand();
-
-
-
-
-
-      //  for (int i=0; i<20; i++)
-       // {
-        //    qsrand(QDateTime::currentMSecsSinceEpoch() / 1000);
-         //   files[i]  =   (qrand() % ((filelistinfo.length() + 1) - 0) + 0);
-          //  qDebug() << files[i];
-       // }
-
-        QStringList fileList;
-//        ui->setupUi(this);
-
-       // bool s;
-        /*foreach (const QFileInfo &fileinfo, filelistinfo) {
-            QString imageFile = fileinfo.absoluteFilePath();
-            //imageFile is the image path, just put your load image code here
-
-            QPixmap pixmap(imageFile);
-            ui->label->setPixmap(pixmap);
-            ui->label->setMask(pixmap.mask());
-
-            ui->label->show();
-
-            //QTimer::singleShot(5000);
-           // QThread::msleep(1);
-*/
-
-
-
-
-
-//qDebug()<< key;
-
-
-
-        }
-    //list = QSerialPortInfo::availablePorts();
-    //QString str;
-    //QDebug dStream(&str);
-    //qDebug() << str;
-
-
-    //
-if (this->availablePorts().length()!=0)
-{
-    qDebug() << this->availablePorts().first();
-        QStringList ports = this->availablePorts();
-
-    serial= new QSerialPort();
-    //serial->setPortNastd::memcpy (message.data(), data, size);me("/dev/ttyUSB0");
-    serial->setPortName(ports.first());
-        if (serial->open(QIODevice::ReadWrite))
-          {
-           serial->setBaudRate(QSerialPort::Baud9600);
-           serial->setDataBits(QSerialPort::Data8);
-           serial->setParity(QSerialPort::NoParity);
-           serial->setStopBits(QSerialPort::OneStop);
-           serial->setFlowControl(QSerialPort::NoFlowControl);
-          qDebug("Connection established");
-
-
-           connect(serial, &QSerialPort::readyRead, this, &MainWindow::handleReadyRead);
-           connect(serial, static_cast<void (QSerialPort::*)(QSerialPort::SerialPortError)>(&QSerialPort::error),
-                           this, &MainWindow::handleError);
-           connect(&m_timer, &QTimer::timeout, this, &MainWindow::handleTimeout);
-           m_timer.start(100);
-           } else qDebug("Connection Error");
-
-
-}
-
-
-
-
 ui->setupUi(this);
+
+
+
+
+
+
+
+
+try{
+
+ nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
+// zmq::context_t contextPort (1);
+// zmq::socket_t req (contextPort, ZMQ_REQ);
+// QString ipString = "tcp://127.0.0.1:50020";
+// req.connect(ipString.toStdString());
+
+////          // Ask for the subport
+// zmq::message_t subPortRequest (8);
+// memcpy (subPortRequest.data(), "SUB_PORT", 8);
+// req.send(subPortRequest);
+// zmq::message_t reply;
+// req.recv(&reply);
+
+// QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
+//qDebug() << sub_port;
+ context->start();
+ QString address = "tcp://127.0.0.1:";//+sub_port;
+
+// nzmqtSubscriber* sub0 = new nzmqtSubscriber(*context, address, "pupil.0", this );
+// nzmqtSubscriber* sub1 = new nzmqtSubscriber(*context, address, "pupil.1", this );
+// nzmqtSubscriber* sub2 = new nzmqtSubscriber(*context, address, "gaze", this );
+
+          context->start();
+ address = "tcp://127.0.0.1:5555";
+ nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "", this);
+
+// connect(sub0, SIGNAL(extractData(QVariant, QString)),this,SLOT(dataReceived(QVariant,QString)));
+// connect(sub1, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+// connect(sub2, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+ connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+
+         //sub0->startImpl();
+         //sub1->startImpl();
+         //sub2->startImpl();
+         affect->startImpl();
+     }catch (std::exception& ex)
+     {
+         qWarning() << ex.what();
+         exit(-1);}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -180,10 +146,45 @@ void MainWindow::on_startButton_clicked()
 {
     ui->label->setScaledContents( true );
 
+
+
     ui->label->setSizePolicy( QSizePolicy::Ignored, QSizePolicy::Ignored );
+
+           if(ui->isArduino->isChecked())
+
+           {
+               serial= new QSerialPort();
+            //serial->setPortNastd::memcpy (message.data(), data, size);me("/dev/ttyUSB0");
+            serial->setPortName(ui->arduinoBox->currentText());
+                if (serial->open(QIODevice::ReadWrite))
+                  {
+                   serial->setBaudRate(QSerialPort::Baud9600);
+                   serial->setDataBits(QSerialPort::Data8);
+                   serial->setParity(QSerialPort::NoParity);
+                   serial->setStopBits(QSerialPort::OneStop);
+                   serial->setFlowControl(QSerialPort::NoFlowControl);
+                  qDebug("Connection established");
+
+
+                   connect(serial, &QSerialPort::readyRead, this, &MainWindow::handleReadyRead);
+                   connect(serial, static_cast<void (QSerialPort::*)(QSerialPort::SerialPortError)>(&QSerialPort::error),
+                                   this, &MainWindow::handleError);
+                   connect(&m_timer, &QTimer::timeout, this, &MainWindow::handleTimeout);
+                   m_timer.start(100);
+                   } else qDebug("Connection Error");
+    }
+
+
+
     timer->start(5000);
     record = true;
     dataTimer.start(0);
+
+    ui->startButton->setVisible(false);
+     ui->pauseButton->setEnabled(true);
+
+
+
 }
 
 
@@ -224,12 +225,12 @@ void MainWindow::startDeviceDiscovery()
 {
 
     // Create a discovery agent and connect to its signals
-    QBluetoothDeviceDiscoveryAgent *discoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
-    connect(discoveryAgent, SIGNAL(deviceDiscovered(QBluetoothDeviceInfo)),
-            this, SLOT(deviceDiscovered(QBluetoothDeviceInfo)));
+    //QBluetoothDeviceDiscoveryAgent *discoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
+   // connect(discoveryAgent, SIGNAL(deviceDiscovered(QBluetoothDeviceInfo)),
+    //        this, SLOT(deviceDiscovered(QBluetoothDeviceInfo)));
 
     // Start a discovery
-    discoveryAgent->start();
+   // discoveryAgent->start();
 
     //...
 }
@@ -239,10 +240,10 @@ void MainWindow::on_connectButton_clicked()
     //MainWindow::startDeviceDiscovery();
 }
 
-void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &device)
-{
-    qDebug() << "Found new device:" << device.name() << '(' << device.address().toString() << ')';
-}
+//void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &device)
+//{
+//    qDebug() << "Found new device:" << device.name() << '(' << device.address().toString() << ')';
+//}
 
 void MainWindow::on_pushButton_clicked()
 {
@@ -334,7 +335,7 @@ void MainWindow::realTimeDataSlot()
 
 
         //socket.recv(&update);
-        socket.recv(&emotions, sizeof(emotions),0);
+        //socket.recv(&emotions, sizeof(emotions),0);
 
 
         measurementStream  << arduinoGSR << " " << arduinoVal << " " << filename << " " << time.elapsed() << endl;
@@ -367,4 +368,114 @@ QStringList MainWindow::availablePorts()
         ports += port.portName();
     }
     return ports;
+}
+
+void MainWindow::on_isArduino_stateChanged(int arg1)
+{
+    //qDebug() << arg1;
+
+    if (this->availablePorts().length()!=0 && arg1)
+    {
+        qDebug() << this->availablePorts();
+            QStringList ports = this->availablePorts();
+
+            ui->arduinoBox->addItems(ports);
+
+
+
+
+    }
+    else ui->arduinoBox->clear();
+
+}
+
+void MainWindow::on_selectButton_clicked()
+{
+    const QString folderPath = QFileDialog::getExistingDirectory(this, tr("/home/tylnesh/devel/EmoSens/EmoSens_2/"));
+    if(!folderPath.isEmpty())
+    {
+
+        QDir dir(folderPath);
+        QStringList filter;
+        filter << QLatin1String("*.png");
+        filter << QLatin1String("*.jpeg");
+        filter << QLatin1String("*.jpg");
+        dir.setNameFilters(filter);
+        filelistinfo = dir.entryInfoList();
+
+        // Initialize sequence
+        qsrand(QDateTime::currentMSecsSinceEpoch() / 1000);
+        // ... Generate numbers from that sequence
+       // qrand();
+
+
+
+
+
+
+
+        }
+
+    if (filelistinfo.length()) {
+        ui->startButton->setEnabled(true);
+
+}
+
+    qDebug() << filelistinfo.length();
+}
+
+
+
+
+
+
+void MainWindow::dataReceived(QVariant v, QString t)
+{
+qDebug() << "received msg";
+    if (t=="pupil.1")
+    {
+     diameter_3d_1 = v.toMap().take("diameter_3d").toDouble();
+     pupilCenterX1 = v.toMap().take("circle_3d").toMap().take("center").toList().at(0).toDouble();
+     pupilCenterY1 = v.toMap().take("circle_3d").toMap().take("center").toList().at(1).toDouble();
+     pupilCenterZ1 = v.toMap().take("circle_3d").toMap().take("center").toList().at(2).toDouble();
+    }
+
+    if (t=="pupil.0")
+    {
+    diameter_3d_0 = v.toMap().take("diameter_3d").toDouble();
+    pupilCenterX0 = v.toMap().take("circle_3d").toMap().take("center").toList().at(0).toDouble();
+    pupilCenterY0 = v.toMap().take("circle_3d").toMap().take("center").toList().at(1).toDouble();
+    pupilCenterZ0 = v.toMap().take("circle_3d").toMap().take("center").toList().at(2).toDouble();
+
+    }
+
+    if (t=="gaze")
+    {
+
+        gazeX = v.toMap().take("norm_pos").toList().at(0).toDouble();
+        gazeY = v.toMap().take("norm_pos").toList().at(1).toDouble();
+
+    }
+
+    if (t=="")
+    {
+
+
+        qDebug() << "decoding msg";
+//        if(v.toString().length() != 0)
+//        affectiva = v.toString();
+//        affect[0] = affectiva.split(" ").at(0).toDouble(); // anger
+//        affect[1] = affectiva.split(" ").at(1).toDouble(); // contempt
+//        affect[2] = affectiva.split(" ").at(2).toDouble(); // disgust
+//        affect[3] = affectiva.split(" ").at(3).toDouble(); // engagement
+//        affect[4] = affectiva.split(" ").at(4).toDouble(); // fear
+//        affect[5] = affectiva.split(" ").at(5).toDouble(); // joy
+//        affect[6] = affectiva.split(" ").at(6).toDouble(); // sadness
+//        affect[7] = affectiva.split(" ").at(7).toDouble(); // surprise
+//        affect[8] = affectiva.split(" ").at(8).toDouble(); // valence
+
+    }
+
+
+
 }

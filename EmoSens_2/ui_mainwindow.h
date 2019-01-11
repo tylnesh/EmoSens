@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.11.2
+** Created by: Qt User Interface Compiler version 5.9.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,8 +10,14 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -26,9 +32,13 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QLabel *label;
-    QPushButton *connectButton;
     QPushButton *startButton;
     QPushButton *pauseButton;
+    QComboBox *arduinoBox;
+    QCheckBox *isArduino;
+    QLineEdit *lineEdit;
+    QCheckBox *isAffectiva;
+    QPushButton *selectButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -37,25 +47,39 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1080, 1080);
+        MainWindow->resize(1548, 1032);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(30, 50, 1471, 811));
-        connectButton = new QPushButton(centralWidget);
-        connectButton->setObjectName(QStringLiteral("connectButton"));
-        connectButton->setGeometry(QRect(1380, 970, 146, 48));
         startButton = new QPushButton(centralWidget);
         startButton->setObjectName(QStringLiteral("startButton"));
-        startButton->setGeometry(QRect(30, 790, 148, 50));
+        startButton->setEnabled(false);
+        startButton->setGeometry(QRect(770, 900, 148, 50));
         pauseButton = new QPushButton(centralWidget);
         pauseButton->setObjectName(QStringLiteral("pauseButton"));
-        pauseButton->setGeometry(QRect(200, 790, 148, 50));
+        pauseButton->setEnabled(false);
+        pauseButton->setGeometry(QRect(940, 900, 148, 50));
+        arduinoBox = new QComboBox(centralWidget);
+        arduinoBox->setObjectName(QStringLiteral("arduinoBox"));
+        arduinoBox->setGeometry(QRect(10, 920, 201, 51));
+        isArduino = new QCheckBox(centralWidget);
+        isArduino->setObjectName(QStringLiteral("isArduino"));
+        isArduino->setGeometry(QRect(10, 890, 201, 23));
+        lineEdit = new QLineEdit(centralWidget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(1360, 920, 171, 41));
+        isAffectiva = new QCheckBox(centralWidget);
+        isAffectiva->setObjectName(QStringLiteral("isAffectiva"));
+        isAffectiva->setGeometry(QRect(1350, 890, 181, 23));
+        selectButton = new QPushButton(centralWidget);
+        selectButton->setObjectName(QStringLiteral("selectButton"));
+        selectButton->setGeometry(QRect(420, 900, 148, 50));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1080, 30));
+        menuBar->setGeometry(QRect(0, 0, 1548, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -71,11 +95,13 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         label->setText(QString());
-        connectButton->setText(QApplication::translate("MainWindow", "Connect", nullptr));
-        startButton->setText(QApplication::translate("MainWindow", "Start", nullptr));
-        pauseButton->setText(QApplication::translate("MainWindow", "Pause", nullptr));
+        startButton->setText(QApplication::translate("MainWindow", "Start", Q_NULLPTR));
+        pauseButton->setText(QApplication::translate("MainWindow", "Pause", Q_NULLPTR));
+        isArduino->setText(QApplication::translate("MainWindow", "Is base station connected?", Q_NULLPTR));
+        isAffectiva->setText(QApplication::translate("MainWindow", "Is Affectiva installed?", Q_NULLPTR));
+        selectButton->setText(QApplication::translate("MainWindow", "Select image folder", Q_NULLPTR));
     } // retranslateUi
 
 };
