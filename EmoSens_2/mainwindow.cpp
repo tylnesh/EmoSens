@@ -66,6 +66,13 @@ MainWindow::MainWindow(QWidget *parent) :
          measurement.setFileName("emotion_" + local.toString() +".dat");
          measurement.open(QIODevice::ReadWrite);
 
+
+         QTextStream measurementHeader( &measurement );
+        measurementHeader << "diameter_3d_0" << ";"  << "diameter_3d_1"   << ";"  << "arduinoGSR" << ";" << "arduinoVal" << ";" << "filename" << ";" << "time.elapsed()" << endl;
+
+
+
+
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
     //timer->start(5000);
@@ -84,39 +91,39 @@ ui->setupUi(this);
 try{
 
  nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
-// zmq::context_t contextPort (1);
-// zmq::socket_t req (contextPort, ZMQ_REQ);
-// QString ipString = "tcp://127.0.0.1:50020";
-// req.connect(ipString.toStdString());
+ zmq::context_t contextPort (1);
+ zmq::socket_t req (contextPort, ZMQ_REQ);
+ QString ipString = "tcp://127.0.0.1:50020";
+ req.connect(ipString.toStdString());
 
 ////          // Ask for the subport
-// zmq::message_t subPortRequest (8);
-// memcpy (subPortRequest.data(), "SUB_PORT", 8);
-// req.send(subPortRequest);
-// zmq::message_t reply;
-// req.recv(&reply);
+ zmq::message_t subPortRequest (8);
+ memcpy (subPortRequest.data(), "SUB_PORT", 8);
+ req.send(subPortRequest);
+ zmq::message_t reply;
+ req.recv(&reply);
 
-// QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
+QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
 //qDebug() << sub_port;
  context->start();
- QString address = "tcp://127.0.0.1:";//+sub_port;
+ QString address = "tcp://127.0.0.1:"+sub_port;
 
-// nzmqtSubscriber* sub0 = new nzmqtSubscriber(*context, address, "pupil.0", this );
-// nzmqtSubscriber* sub1 = new nzmqtSubscriber(*context, address, "pupil.1", this );
-// nzmqtSubscriber* sub2 = new nzmqtSubscriber(*context, address, "gaze", this );
+ nzmqtSubscriber* sub0 = new nzmqtSubscriber(*context, address, "pupil.0", this );
+ nzmqtSubscriber* sub1 = new nzmqtSubscriber(*context, address, "pupil.1", this );
+ nzmqtSubscriber* sub2 = new nzmqtSubscriber(*context, address, "gaze", this );
 
           context->start();
  address = "tcp://127.0.0.1:5555";
  nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "", this);
 
-// connect(sub0, SIGNAL(extractData(QVariant, QString)),this,SLOT(dataReceived(QVariant,QString)));
-// connect(sub1, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
-// connect(sub2, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+ connect(sub0, SIGNAL(extractData(QVariant, QString)),this,SLOT(dataReceived(QVariant,QString)));
+ connect(sub1, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+ connect(sub2, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
  connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
 
-         //sub0->startImpl();
-         //sub1->startImpl();
-         //sub2->startImpl();
+         sub0->startImpl();
+         sub1->startImpl();
+         sub2->startImpl();
          affect->startImpl();
      }catch (std::exception& ex)
      {
@@ -334,12 +341,13 @@ void MainWindow::realTimeDataSlot()
         QTextStream measurementStream( &measurement );
 
 
+
         //socket.recv(&update);
         //socket.recv(&emotions, sizeof(emotions),0);
 
 
-        measurementStream  << arduinoGSR << " " << arduinoVal << " " << filename << " " << time.elapsed() << endl;
-        qDebug() << arduinoGSR << " " << arduinoVal << " " << filename << " " << time.elapsed() << endl;
+        measurementStream  << diameter_3d_0 << ";"  << diameter_3d_1   << ";"  << arduinoGSR << ";" << arduinoVal << ";" << filename << ";" << time.elapsed() << endl;
+        //qDebug() << arduinoGSR << " " << arduinoVal << " " << filename << " " << time.elapsed() << endl;
 
         //qDebug() << msg.data();
       //  GSRSum += arduinoGSR;
@@ -431,7 +439,7 @@ void MainWindow::on_selectButton_clicked()
 
 void MainWindow::dataReceived(QVariant v, QString t)
 {
-qDebug() << "received msg";
+//qDebug() << "received msg";
     if (t=="pupil.1")
     {
      diameter_3d_1 = v.toMap().take("diameter_3d").toDouble();
