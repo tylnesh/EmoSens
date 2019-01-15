@@ -36,9 +36,11 @@ public:
     QPushButton *pauseButton;
     QComboBox *arduinoBox;
     QCheckBox *isArduino;
-    QLineEdit *lineEdit;
+    QLineEdit *affectivaAddress;
     QCheckBox *isAffectiva;
     QPushButton *selectButton;
+    QPushButton *connectButton;
+    QCheckBox *isPupil;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -67,15 +69,21 @@ public:
         isArduino = new QCheckBox(centralWidget);
         isArduino->setObjectName(QStringLiteral("isArduino"));
         isArduino->setGeometry(QRect(10, 890, 201, 23));
-        lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(1360, 920, 171, 41));
+        affectivaAddress = new QLineEdit(centralWidget);
+        affectivaAddress->setObjectName(QStringLiteral("affectivaAddress"));
+        affectivaAddress->setGeometry(QRect(1360, 920, 171, 41));
         isAffectiva = new QCheckBox(centralWidget);
         isAffectiva->setObjectName(QStringLiteral("isAffectiva"));
         isAffectiva->setGeometry(QRect(1350, 890, 181, 23));
         selectButton = new QPushButton(centralWidget);
         selectButton->setObjectName(QStringLiteral("selectButton"));
         selectButton->setGeometry(QRect(420, 900, 148, 50));
+        connectButton = new QPushButton(centralWidget);
+        connectButton->setObjectName(QStringLiteral("connectButton"));
+        connectButton->setGeometry(QRect(1190, 900, 141, 51));
+        isPupil = new QCheckBox(centralWidget);
+        isPupil->setObjectName(QStringLiteral("isPupil"));
+        isPupil->setGeometry(QRect(1350, 860, 171, 23));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -102,6 +110,8 @@ public:
         isArduino->setText(QApplication::translate("MainWindow", "Is base station connected?", Q_NULLPTR));
         isAffectiva->setText(QApplication::translate("MainWindow", "Is Affectiva installed?", Q_NULLPTR));
         selectButton->setText(QApplication::translate("MainWindow", "Select image folder", Q_NULLPTR));
+        connectButton->setText(QApplication::translate("MainWindow", "Connect", Q_NULLPTR));
+        isPupil->setText(QApplication::translate("MainWindow", "Is Pupil Running?", Q_NULLPTR));
     } // retranslateUi
 
 };

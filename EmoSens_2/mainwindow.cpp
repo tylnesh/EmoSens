@@ -88,47 +88,7 @@ ui->setupUi(this);
 
 
 
-try{
 
- nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
- zmq::context_t contextPort (1);
- zmq::socket_t req (contextPort, ZMQ_REQ);
- QString ipString = "tcp://127.0.0.1:50020";
- req.connect(ipString.toStdString());
-
-////          // Ask for the subport
- zmq::message_t subPortRequest (8);
- memcpy (subPortRequest.data(), "SUB_PORT", 8);
- req.send(subPortRequest);
- zmq::message_t reply;
- req.recv(&reply);
-
-QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
-//qDebug() << sub_port;
- context->start();
- QString address = "tcp://127.0.0.1:"+sub_port;
-
- nzmqtSubscriber* sub0 = new nzmqtSubscriber(*context, address, "pupil.0", this );
- nzmqtSubscriber* sub1 = new nzmqtSubscriber(*context, address, "pupil.1", this );
- nzmqtSubscriber* sub2 = new nzmqtSubscriber(*context, address, "gaze", this );
-
-          context->start();
- address = "tcp://127.0.0.1:5555";
- nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "", this);
-
- connect(sub0, SIGNAL(extractData(QVariant, QString)),this,SLOT(dataReceived(QVariant,QString)));
- connect(sub1, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
- connect(sub2, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
- connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
-
-         sub0->startImpl();
-         sub1->startImpl();
-         sub2->startImpl();
-         affect->startImpl();
-     }catch (std::exception& ex)
-     {
-         qWarning() << ex.what();
-         exit(-1);}
 
 
 
@@ -244,7 +204,60 @@ void MainWindow::startDeviceDiscovery()
 
 void MainWindow::on_connectButton_clicked()
 {
-    //MainWindow::startDeviceDiscovery();
+     try{
+     QString address= "tcp://192.168.1.21:5556";
+     nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
+     //context.
+     zmq::context_t contextPort (1);
+
+     if(ui->isPupil->isChecked()) {
+             zmq::socket_t req (contextPort, ZMQ_REQ);
+     QString ipString = "tcp://127.0.0.1:50020";
+     req.connect(ipString.toStdString());
+
+    ////          // Ask for the subport
+     zmq::message_t subPortRequest (8);
+     memcpy (subPortRequest.data(), "SUB_PORT", 8);
+     req.send(subPortRequest);
+     zmq::message_t reply;
+     req.recv(&reply);
+
+    QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
+    //qDebug() << sub_port;
+     context->start();
+     address = "tcp://127.0.0.1:"+sub_port;
+
+     nzmqtSubscriber* sub0 = new nzmqtSubscriber(*context, address, "pupil.0", this );
+     nzmqtSubscriber* sub1 = new nzmqtSubscriber(*context, address, "pupil.1", this );
+     nzmqtSubscriber* sub2 = new nzmqtSubscriber(*context, address, "gaze", this );
+
+              context->start();
+
+
+     connect(sub0, SIGNAL(extractData(QVariant, QString)),this,SLOT(dataReceived(QVariant,QString)));
+     connect(sub1, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+     connect(sub2, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+
+     sub0->startImpl();
+     sub1->startImpl();
+     sub2->startImpl();
+
+     }
+
+
+     if (ui->isAffectiva->isChecked()) {
+
+         address = "tcp://127.0.0.1:5556";
+         nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "", this);
+         connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+         affect->startImpl();
+     }
+
+
+         }catch (std::exception& ex)
+         {
+             qWarning() << ex.what();
+             exit(-1);}
 }
 
 //void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &device)
@@ -439,7 +452,7 @@ void MainWindow::on_selectButton_clicked()
 
 void MainWindow::dataReceived(QVariant v, QString t)
 {
-//qDebug() << "received msg";
+qDebug() << " rubbish received";
     if (t=="pupil.1")
     {
      diameter_3d_1 = v.toMap().take("diameter_3d").toDouble();
@@ -465,7 +478,7 @@ void MainWindow::dataReceived(QVariant v, QString t)
 
     }
 
-    if (t=="")
+    if (t=="affectiva")
     {
 
 

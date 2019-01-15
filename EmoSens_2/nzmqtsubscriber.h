@@ -43,7 +43,7 @@ public:
         socket_->connectTo(address_);
 
         if (socket_->isConnected())
-
+        //qDebug() << socket_->;
         qDebug() << "connected";
     }
 

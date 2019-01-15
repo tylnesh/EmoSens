@@ -82,7 +82,7 @@
      <string>Is base station connected?</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="affectivaAddress">
     <property name="geometry">
      <rect>
       <x>1360</x>
@@ -116,6 +116,32 @@
     </property>
     <property name="text">
      <string>Select image folder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="connectButton">
+    <property name="geometry">
+     <rect>
+      <x>1190</x>
+      <y>900</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Connect</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="isPupil">
+    <property name="geometry">
+     <rect>
+      <x>1350</x>
+      <y>860</y>
+      <width>171</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Is Pupil Running?</string>
     </property>
    </widget>
   </widget>
