@@ -90,7 +90,7 @@ private:
     zmq::message_t msg;
     zmq::context_t context = zmq::context_t(1) ;
     zmq::socket_t socket = zmq::socket_t(context, ZMQ_SUB);
-
+    //QString affectiva_data;
 
 
     // Create the transfer request and file to be sent

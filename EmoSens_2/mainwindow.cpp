@@ -26,7 +26,45 @@
 #include <opencv2/objdetect/objdetect.hpp>
 
 #include <zmq.hpp>
+#include <include/zhelpers.hpp>
 
+#include "affectzmq.h"
+
+#include <QCoreApplication>
+#include <qtconcurrentrun.h>
+#include <QThread>
+
+//#ifndef QT_NO_CONCURRENT
+
+
+
+//void affectiva(QString address)
+//{
+//   // for(int i = 0; i <= 5; i++)
+//  //  {
+//       // qDebug() << address << " " << i <<
+//         //           "from" << QThread::currentThread();
+//   // }
+
+//    zmq::context_t contextAffectiva(1);
+//                zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
+//                subscriber.connect("tcp://localhost:5555");
+//                subscriber.setsockopt( ZMQ_SUBSCRIBE, "aff", 3);
+
+//                //for(int i =0; i++; i<100)
+
+//                while(true){
+
+//                    //  Read envelope with address
+//                    QString add =  QString::fromStdString(s_recv (subscriber));
+//                    //  Read message contents
+//                    QString contents =  QString::fromStdString(s_recv (subscriber));
+
+//                    qDebug() << "[" << add << "] " << contents << endl;
+//              }
+
+
+//}
 
 QList<QSerialPortInfo> list;
 
@@ -43,6 +81,10 @@ QString filename="";
 double arduinoGSR = 0.0;
 QChar arduinoVal;
 bool record = false;
+QString affectiva_data = "0;0;0;0;0;0;0;0;0;";
+zmq::context_t contextAffectiva(1);
+zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -79,29 +121,22 @@ MainWindow::MainWindow(QWidget *parent) :
 
    // QBluetoothAddress remoteAddress("98:D3:32:70:8B:76");
 
+
+//    try{
+
+//        nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
+
+//        QString address = "tcp://127.0.0.1:5555";
+//        nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "aff", this);
+//        connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+//        affect->startImpl();
+//    }catch (std::exception& ex)
+//    {
+//        qWarning() << ex.what();
+//        exit(-1);}
+
+
 ui->setupUi(this);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -204,8 +239,9 @@ void MainWindow::startDeviceDiscovery()
 
 void MainWindow::on_connectButton_clicked()
 {
+    QString address;
      try{
-     QString address= "tcp://192.168.1.21:5556";
+     address= "tcp://192.168.1.21:5555";
      nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
      //context.
      zmq::context_t contextPort (1);
@@ -243,23 +279,54 @@ void MainWindow::on_connectButton_clicked()
      sub2->startImpl();
 
      }
-
+    }catch (std::exception& ex)
+        {
+            qWarning() << ex.what();
+            exit(-1);}
 
      if (ui->isAffectiva->isChecked()) {
 
-         address = "tcp://127.0.0.1:5556";
-         nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "", this);
-         connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
-         affect->startImpl();
-     }
+           //QFuture<void> t1 = QtConcurrent::run(affectiva, QString("127.0.0.1:5555"));
+           //t1.waitForFinished();
 
 
-         }catch (std::exception& ex)
-         {
-             qWarning() << ex.what();
-             exit(-1);}
+                     subscriber.connect("tcp://localhost:5555");
+                     subscriber.setsockopt( ZMQ_SUBSCRIBE, "aff", 3);
+
+
+         //t1.begin();
+
+  //       address = "tcp://127.0.0.1:5555";
+//         nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "aff", this);
+//         connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
+//         affect->startImpl();
+//     }
+
+//AffectZMQ affect(address);
+
+//affect.run();
+
+          //  qDebug() << "Connecting affectiva";
+//             zmq::context_t contextAffectiva(1);
+//             zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
+//             subscriber.connect("tcp://localhost:5555");
+//             subscriber.setsockopt( ZMQ_SUBSCRIBE, "aff", 3);
+
+//             //for(int i =0; i++; i<100)
+
+//             while(true){
+
+//                 //  Read envelope with address
+//                 QString add =  QString::fromStdString(s_recv (subscriber));
+//                 //  Read message contents
+//                 QString contents =  QString::fromStdString(s_recv (subscriber));
+
+//                 qDebug() << "[" << add << "] " << contents << endl;
+//           }
 }
 
+
+}
 //void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &device)
 //{
 //    qDebug() << "Found new device:" << device.name() << '(' << device.address().toString() << ')';
@@ -353,13 +420,16 @@ void MainWindow::realTimeDataSlot()
 
         QTextStream measurementStream( &measurement );
 
+        affectiva_data = QString::fromStdString(s_recv (subscriber));
 
+        qDebug() << affectiva_data;
 
         //socket.recv(&update);
         //socket.recv(&emotions, sizeof(emotions),0);
 
 
-        measurementStream  << diameter_3d_0 << ";"  << diameter_3d_1   << ";"  << arduinoGSR << ";" << arduinoVal << ";" << filename << ";" << time.elapsed() << endl;
+
+        measurementStream << affectiva_data << ";" << diameter_3d_0 << ";"  << diameter_3d_1   << ";"  << arduinoGSR << ";" << arduinoVal << ";" << filename << ";" << time.elapsed() << endl;
         //qDebug() << arduinoGSR << " " << arduinoVal << " " << filename << " " << time.elapsed() << endl;
 
         //qDebug() << msg.data();
@@ -482,7 +552,7 @@ qDebug() << " rubbish received";
     {
 
 
-        qDebug() << "decoding msg";
+       // qDebug() << "decoding msg";
 //        if(v.toString().length() != 0)
 //        affectiva = v.toString();
 //        affect[0] = affectiva.split(" ").at(0).toDouble(); // anger

@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui serialport
+QT       += core gui serialport concurrent
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,7 +27,8 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     keypresseventfilter.cpp \
-    nzmqtsubscriber.cpp
+    nzmqtsubscriber.cpp \
+    affectzmq.cpp
 
 
 HEADERS += \
@@ -36,6 +37,8 @@ HEADERS += \
     keypresseventfilter.h \
     global.h \
     nzmqtsubscriber.h\
+    include/zhelpers.hpp \
+    affectzmq.h
 
 FORMS += \
         mainwindow.ui

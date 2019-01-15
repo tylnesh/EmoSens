@@ -69,7 +69,7 @@ protected:
 protected slots:
     void messageReceived(const QList<QByteArray>& message)
     {
-        qDebug() << "received msg";
+        //qDebug() << "received msg";
        QVariant v = MsgPack::unpack(message.last());
           //qDebug() << "Message received";
           emit extractData(v,topic_);
