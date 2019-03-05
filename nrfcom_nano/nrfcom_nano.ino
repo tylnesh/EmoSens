@@ -82,7 +82,7 @@ int gsrAverage=0;
   void setup()
   {
     Serial.begin(9600);
- 
+    //while(!Serial);
     outgoing.wire = WIRE;
     
     printf_begin();
@@ -95,12 +95,13 @@ int gsrAverage=0;
     radio.setRetries(5, 30);                 // Optionally, increase the delay between retries & # of retries
   
     radio.setCRCLength(RF24_CRC_8);          // Use 8-bit CRC for performance
-  
+     //delay(100);
+    radio.printDetails(); 
     radio.openWritingPipe(pipes[0]);
     radio.openReadingPipe(1, pipes[1]);
   
     radio.stopListening();                 // Start listening
-    radio.printDetails();                   // Dump the configuration of the rf unit for debugging
+                      // Dump the configuration of the rf unit for debugging
   
   
   
@@ -109,7 +110,7 @@ int gsrAverage=0;
 
 
 
-//interruptSetup();                 // sets up to read Pulse Sensor signal every 2mS 
+//  Setup();                 // sets up to read Pulse Sensor signal every 2mS 
                                     // IF YOU ARE POWERING The Pulse Sensor AT VOLTAGE LESS THAN THE BOARD VOLTAGE, 
                                     // UN-COMMENT THE NEXT LINE AND APPLY THAT VOLTAGE TO THE A-REF PIN
                                     //   analogReference(EXTERNAL);   
@@ -121,7 +122,8 @@ pinMode(gsrPin,INPUT);
   void loop() {
 //rcvMsg();
 //Serial.println(incoming.str);
-//delay(500);
+//radio.printDetails();
+//delay(5000);
 long sum=0;
   /*if(radio.available())
   {
@@ -135,21 +137,22 @@ long sum=0;
       for(int i=0;i<4;i++)           //Average the 4 measurements to remove the glitch
       {
       gsrValue=analogRead(gsrPin);
-      sum += gsrValue;
+     sum += gsrValue;
       delay(5);
       }
    gsrAverage = sum/4;
 
    outgoing.gsr = gsrAverage;
       sndMsg();
+      Serial.println(outgoing.gsr);
    outgoing.gsr = 0;
-
+//
    delay(20);
        
   }
 
 
-  void interruptSetup()
+  /*void interruptSetup()
 {     
   // Initializes Timer2 to throw an interrupt every 2mS.
   TCCR2A = 0x02;     // DISABLE PWM ON DIGITAL PINS 3 AND 11, AND GO INTO CTC MODE
@@ -157,7 +160,7 @@ long sum=0;
   OCR2A = 0X7C;      // SET THE TOP OF THE COUNT TO 124 FOR 500Hz SAMPLE RATE
   TIMSK2 = 0x02;     // ENABLE INTERRUPT ON MATCH BETWEEN TIMER2 AND OCR2A
   sei();             // MAKE SURE GLOBAL INTERRUPTS ARE ENABLED      
-} 
+} */
   
   
   

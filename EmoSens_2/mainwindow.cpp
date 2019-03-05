@@ -38,45 +38,7 @@
 
 
 
-//void affectiva(QString address)
-//{
-//   // for(int i = 0; i <= 5; i++)
-//  //  {
-//       // qDebug() << address << " " << i <<
-//         //           "from" << QThread::currentThread();
-//   // }
-
-//    zmq::context_t contextAffectiva(1);
-//                zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
-//                subscriber.connect("tcp://localhost:5555");
-//                subscriber.setsockopt( ZMQ_SUBSCRIBE, "aff", 3);
-
-//                //for(int i =0; i++; i<100)
-
-//                while(true){
-
-//                    //  Read envelope with address
-//                    QString add =  QString::fromStdString(s_recv (subscriber));
-//                    //  Read message contents
-//                    QString contents =  QString::fromStdString(s_recv (subscriber));
-
-//                    qDebug() << "[" << add << "] " << contents << endl;
-//              }
-
-
-//}
-
 QList<QSerialPortInfo> list;
-
-//cv::VideoCapture cap(0); // the fist webcam connected to your PC
-//cv::Mat frame;
-
-
- //update;
- //context(1);
- //socket (context, ZMQ_SUB);
-
-
 
 
 QString arduino = "";
@@ -86,7 +48,7 @@ QChar arduinoVal;
 bool record = false;
 QString affectiva_data = "0;0;0;0;0;0;0;0;0;";
 zmq::context_t contextAffectiva(1);
-zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
+//zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
 
 
 QVector<int> v;
@@ -101,7 +63,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
 
-    //qDebug() << "Rating file lines: " << f. << endl;
 
     v.reserve(1000);
     if(f.open(QIODevice::ReadOnly))
@@ -111,7 +72,6 @@ MainWindow::MainWindow(QWidget *parent) :
         while(!ts.atEnd())
         {
             ts >> d;
-            //qDebug() << ts.status();
             if(ts.status() == QTextStream::Ok)
                 v.append(d);
             else
@@ -126,13 +86,6 @@ MainWindow::MainWindow(QWidget *parent) :
         qDebug() << "Could not open Rating file";
     }
 
-    //std::cout << "Connecting to  server…" << std::endl;
-    //socket.connect ("tcp://localhost:5555");
-    //if (socket.connected()) qDebug() << "Connected";
-
-  //  KeyPressEventFilter *filter = new KeyPressEventFilter(this);
-      // this->-installEventFilter(filter);
-
     connect(&dataTimer, SIGNAL(timeout()), this, SLOT(realTimeDataSlot()));
 
     QDateTime UTC(QDateTime::currentDateTimeUtc());
@@ -145,31 +98,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
          QTextStream measurementHeader( &measurement );
-        measurementHeader << "joy;fear;disgust;sadness;anger;surprise;contempt;valence;engagement;Right eye;Left eye;GSR;Valence;Picture;Picture Valence;Time Elapsed" << endl;
+        measurementHeader << "joy;fear;disgust;sadness;anger;surprise;contempt;valence;engagement;Right eye Pupil Size;Left eye Pupil Size;GazeX;GazeY;GSR;Valence;Picture;Picture Valence;Time Elapsed" << endl;
 
 
 
 
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(update()));
-    //timer->start(5000);
-
-   // QBluetoothAddress remoteAddress("98:D3:32:70:8B:76");
-
-
-//    try{
-
-//        nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
-
-//        QString address = "tcp://127.0.0.1:5555";
-//        nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "aff", this);
-//        connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
-//        affect->startImpl();
-//    }catch (std::exception& ex)
-//    {
-//        qWarning() << ex.what();
-//        exit(-1);}
-
 
 ui->setupUi(this);
 }
@@ -191,8 +126,7 @@ void MainWindow::on_startButton_clicked()
 
            {
                serial= new QSerialPort();
-            //serial->setPortNastd::memcpy (message.data(), data, size);me("/dev/ttyUSB0");
-            serial->setPortName(ui->arduinoBox->currentText());
+               serial->setPortName(ui->arduinoBox->currentText());
                 if (serial->open(QIODevice::ReadWrite))
                   {
                    serial->setBaudRate(QSerialPort::Baud9600);
@@ -206,35 +140,24 @@ void MainWindow::on_startButton_clicked()
                    connect(serial, &QSerialPort::readyRead, this, &MainWindow::handleReadyRead);
                    connect(serial, static_cast<void (QSerialPort::*)(QSerialPort::SerialPortError)>(&QSerialPort::error),
                                    this, &MainWindow::handleError);
-                   connect(&m_timer, &QTimer::timeout, this, &MainWindow::handleTimeout);
-                   m_timer.start(100);
+
                    } else qDebug("Connection Error");
     }
 
 
-
+    connect(&m_timer, &QTimer::timeout, this, &MainWindow::handleTimeout);
+    m_timer.start(100);
     timer->start(5000);
     record = true;
     dataTimer.start(0);
 
     ui->startButton->setVisible(false);
-     ui->pauseButton->setEnabled(true);
+    ui->pauseButton->setEnabled(true);
 
 
 
 }
 
-
-
-//int MainWindow::keyPressFilter(QKeyEvent *event){
-
-//    switch (event->key()) {
-//    case Qt::Key_Plus:  { return 1; break;}
-//    case Qt::Key_Minus: { return -1; break;}
-//    default: {return 0;}
-//    }
-
-//}
 
 void MainWindow::update()
 {
@@ -243,7 +166,6 @@ if (currentimage < filelistinfo.size())
     r = (qrand() % ((filelistinfo.length() + 1) - 0) + 0);
 ui->label->setPixmap(
             filelistinfo[r
-            //files[currentimage]
                 ].absoluteFilePath() );
 filename = filelistinfo[r].fileName();
 qDebug() << filename;
@@ -276,15 +198,15 @@ void MainWindow::on_connectButton_clicked()
 {
     QString address;
      try{
-     address= "tcp://192.168.1.21:5555";
+     //address= "tcp://192.168.1.21:5555";
      nzmqt::ZMQContext* context = nzmqt::createDefaultContext(this);
      //context.
      zmq::context_t contextPort (1);
 
      if(ui->isPupil->isChecked()) {
              zmq::socket_t req (contextPort, ZMQ_REQ);
-     QString ipString = "tcp://127.0.0.1:50020";
-     req.connect(ipString.toStdString());
+             QString ipString = "tcp://127.0.0.1:50020";
+             req.connect(ipString.toStdString());
 
     ////          // Ask for the subport
      zmq::message_t subPortRequest (8);
@@ -294,7 +216,6 @@ void MainWindow::on_connectButton_clicked()
      req.recv(&reply);
 
     QString sub_port = QString::fromStdString(std::string(static_cast<char*>(reply.data()), reply.size()));
-    //qDebug() << sub_port;
      context->start();
      address = "tcp://127.0.0.1:"+sub_port;
 
@@ -321,51 +242,15 @@ void MainWindow::on_connectButton_clicked()
 
      if (ui->isAffectiva->isChecked()) {
 
-           //QFuture<void> t1 = QtConcurrent::run(affectiva, QString("127.0.0.1:5555"));
-           //t1.waitForFinished();
+          //           subscriber.connect("tcp://localhost:5555");
+            //         subscriber.setsockopt( ZMQ_SUBSCRIBE, "aff", 3);
 
 
-                     subscriber.connect("tcp://localhost:5555");
-                     subscriber.setsockopt( ZMQ_SUBSCRIBE, "aff", 3);
-
-
-         //t1.begin();
-
-  //       address = "tcp://127.0.0.1:5555";
-//         nzmqtSubscriber* affect = new nzmqtSubscriber(*context, address, "aff", this);
-//         connect(affect, SIGNAL(extractData(QVariant,QString)),this,SLOT(dataReceived(QVariant,QString)));
-//         affect->startImpl();
-//     }
-
-//AffectZMQ affect(address);
-
-//affect.run();
-
-          //  qDebug() << "Connecting affectiva";
-//             zmq::context_t contextAffectiva(1);
-//             zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
-//             subscriber.connect("tcp://localhost:5555");
-//             subscriber.setsockopt( ZMQ_SUBSCRIBE, "aff", 3);
-
-//             //for(int i =0; i++; i<100)
-
-//             while(true){
-
-//                 //  Read envelope with address
-//                 QString add =  QString::fromStdString(s_recv (subscriber));
-//                 //  Read message contents
-//                 QString contents =  QString::fromStdString(s_recv (subscriber));
-
-//                 qDebug() << "[" << add << "] " << contents << endl;
-//           }
+        
 }
 
 
 }
-//void MainWindow::deviceDiscovered(const QBluetoothDeviceInfo &device)
-//{
-//    qDebug() << "Found new device:" << device.name() << '(' << device.address().toString() << ')';
-//}
 
 void MainWindow::on_pushButton_clicked()
 {
@@ -406,11 +291,7 @@ void MainWindow::handleTimeout()
                 qDebug()<< "Val: " << arduinoVal;
             }
             }
-             //if (arduinoVal == "+") qDebug()<< "positive";
          }
-      //  qDebug() << arduinoGSR << " - " << arduinoHR << endl;
-
-
         }
         m_readData = "";
 
@@ -431,48 +312,23 @@ void MainWindow::handleError(QSerialPort::SerialPortError serialPortError)
 void MainWindow::realTimeDataSlot()
 {
 
-
-
     static QTime time(QTime::currentTime());
     double key = time.elapsed()/1000.0; // time elapsed since start of demo, in seconds
     static double lastPointKey = 0;
     static double lastSecond = 0;
     if (key-lastPointKey > 0.5 && record) // at most add point every 50 ms
     {
-//      // add data to lines:
-//        if (!cap.isOpened())
-//        {
-//            qDebug()<< "Webcam not detected!!!";
-
-//        }
-//        else{
-
-//        cap >> frame; // outputs the webcam image to a Mat
-//        cv::imshow("Webcam", frame); // displays the Mat
-//        //if (cv::waitKey(30) >= 0) break;
- //     }
-
 
         QTextStream measurementStream( &measurement );
-        if(ui->isAffectiva) affectiva_data = QString::fromStdString(s_recv (subscriber));
-        else affectiva_data = "0;0;0;0;0;0;0;0;0";
-
-//        qDebug() << affectiva_data;
-
-        //socket.recv(&update);
-        //socket.recv(&emotions, sizeof(emotions),0);
+      //  if(ui->isAffectiva) affectiva_data = QString::fromStdString(s_recv (subscriber));
+      //  else affectiva_data = "0;0;0;0;0;0;0;0;0";
 
 
         int v_val = v.at(r);
-        measurementStream << affectiva_data << ";" << diameter_3d_0 << ";"  << diameter_3d_1   << ";"  << arduinoGSR << ";" << arduinoVal << ";" << filename << ";" << v_val << ";" << time.elapsed() << endl;
+        measurementStream << affectiva_data << ";" << diameter_3d_0 << ";"  << diameter_3d_1 << ";"  << gazeX << ";" << gazeY << ";" << arduinoGSR << ";" << arduinoVal << ";" << filename << ";" << v_val << ";" << time.elapsed() << endl;
         qDebug() << arduinoGSR << " " << arduinoVal << " " << filename << " "<< v.at(r) <<" " << time.elapsed() << endl;
 
-        //qDebug() << msg.data();
-      //  GSRSum += arduinoGSR;
-
-       // arduinoCount++;
-
-      lastPointKey = key;
+        lastPointKey = key;
     }
 
 
@@ -585,8 +441,6 @@ void MainWindow::dataReceived(QVariant v, QString t)
 
     if (t=="affectiva")
     {
-
-
        // qDebug() << "decoding msg";
 //        if(v.toString().length() != 0)
 //        affectiva = v.toString();
