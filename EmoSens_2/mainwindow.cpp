@@ -76,6 +76,9 @@ QList<QSerialPortInfo> list;
  //context(1);
  //socket (context, ZMQ_SUB);
 
+
+
+
 QString arduino = "";
 QString filename="";
 double arduinoGSR = 0.0;
@@ -85,11 +88,43 @@ QString affectiva_data = "0;0;0;0;0;0;0;0;0;";
 zmq::context_t contextAffectiva(1);
 zmq::socket_t subscriber (contextAffectiva, ZMQ_SUB);
 
+
+QVector<int> v;
+QFile f("rating_images.txt");
+
+
+
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
 
+
+    //qDebug() << "Rating file lines: " << f. << endl;
+
+    v.reserve(1000);
+    if(f.open(QIODevice::ReadOnly))
+    {
+        int d;
+        QTextStream ts(&f);
+        while(!ts.atEnd())
+        {
+            ts >> d;
+            //qDebug() << ts.status();
+            if(ts.status() == QTextStream::Ok)
+                v.append(d);
+            else
+                break;
+        }
+    qDebug() << "Rating file length: " << v.length() << endl;
+
+    qDebug() << "Rating file content: " << v << endl;
+    }
+    else //could not open file
+    {
+        qDebug() << "Could not open Rating file";
+    }
 
     //std::cout << "Connecting to  server…" << std::endl;
     //socket.connect ("tcp://localhost:5555");
@@ -105,12 +140,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
 
-         measurement.setFileName("emotion_" + local.toString() +".dat");
+         measurement.setFileName("emotion_" + local.toString() +".csv");
          measurement.open(QIODevice::ReadWrite);
 
 
          QTextStream measurementHeader( &measurement );
-        measurementHeader << "diameter_3d_0" << ";"  << "diameter_3d_1"   << ";"  << "arduinoGSR" << ";" << "arduinoVal" << ";" << "filename" << ";" << "time.elapsed()" << endl;
+        measurementHeader << "joy;fear;disgust;sadness;anger;surprise;contempt;valence;engagement;Right eye;Left eye;GSR;Valence;Picture;Picture Valence;Time Elapsed" << endl;
 
 
 
@@ -372,7 +407,7 @@ void MainWindow::handleTimeout()
             }
             }
              //if (arduinoVal == "+") qDebug()<< "positive";
-        }
+         }
       //  qDebug() << arduinoGSR << " - " << arduinoHR << endl;
 
 
@@ -419,18 +454,18 @@ void MainWindow::realTimeDataSlot()
 
 
         QTextStream measurementStream( &measurement );
+        if(ui->isAffectiva) affectiva_data = QString::fromStdString(s_recv (subscriber));
+        else affectiva_data = "0;0;0;0;0;0;0;0;0";
 
-        affectiva_data = QString::fromStdString(s_recv (subscriber));
-
-        qDebug() << affectiva_data;
+//        qDebug() << affectiva_data;
 
         //socket.recv(&update);
         //socket.recv(&emotions, sizeof(emotions),0);
 
 
-
-        measurementStream << affectiva_data << ";" << diameter_3d_0 << ";"  << diameter_3d_1   << ";"  << arduinoGSR << ";" << arduinoVal << ";" << filename << ";" << time.elapsed() << endl;
-        //qDebug() << arduinoGSR << " " << arduinoVal << " " << filename << " " << time.elapsed() << endl;
+        int v_val = v.at(r);
+        measurementStream << affectiva_data << ";" << diameter_3d_0 << ";"  << diameter_3d_1   << ";"  << arduinoGSR << ";" << arduinoVal << ";" << filename << ";" << v_val << ";" << time.elapsed() << endl;
+        qDebug() << arduinoGSR << " " << arduinoVal << " " << filename << " "<< v.at(r) <<" " << time.elapsed() << endl;
 
         //qDebug() << msg.data();
       //  GSRSum += arduinoGSR;
@@ -522,7 +557,7 @@ void MainWindow::on_selectButton_clicked()
 
 void MainWindow::dataReceived(QVariant v, QString t)
 {
-qDebug() << " rubbish received";
+//qDebug() << " rubbish received";
     if (t=="pupil.1")
     {
      diameter_3d_1 = v.toMap().take("diameter_3d").toDouble();

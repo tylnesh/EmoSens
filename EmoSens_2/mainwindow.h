@@ -34,7 +34,7 @@ public:
     QFileInfoList filelistinfo;
     QFileInfoList randomfilelistinfo;
     int files[20];
-    int r;
+    int r = 0;
     QFile measurement   ;
 
 

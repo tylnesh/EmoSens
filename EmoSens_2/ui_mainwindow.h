@@ -66,12 +66,14 @@ public:
         isArduino = new QCheckBox(centralWidget);
         isArduino->setObjectName(QStringLiteral("isArduino"));
         isArduino->setGeometry(QRect(20, 830, 201, 23));
+        isArduino->setChecked(true);
         affectivaAddress = new QLineEdit(centralWidget);
         affectivaAddress->setObjectName(QStringLiteral("affectivaAddress"));
         affectivaAddress->setGeometry(QRect(1260, 790, 171, 41));
         isAffectiva = new QCheckBox(centralWidget);
         isAffectiva->setObjectName(QStringLiteral("isAffectiva"));
         isAffectiva->setGeometry(QRect(1250, 760, 181, 23));
+        isAffectiva->setChecked(true);
         selectButton = new QPushButton(centralWidget);
         selectButton->setObjectName(QStringLiteral("selectButton"));
         selectButton->setGeometry(QRect(430, 770, 148, 50));
@@ -81,6 +83,7 @@ public:
         isPupil = new QCheckBox(centralWidget);
         isPupil->setObjectName(QStringLiteral("isPupil"));
         isPupil->setGeometry(QRect(1250, 730, 171, 23));
+        isPupil->setChecked(true);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));

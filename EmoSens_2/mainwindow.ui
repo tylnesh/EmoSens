@@ -81,6 +81,9 @@
     <property name="text">
      <string>Is base station connected?</string>
     </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLineEdit" name="affectivaAddress">
     <property name="geometry">
@@ -103,6 +106,9 @@
     </property>
     <property name="text">
      <string>Is Affectiva installed?</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="selectButton">
@@ -142,6 +148,9 @@
     </property>
     <property name="text">
      <string>Is Pupil Running?</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
     </property>
    </widget>
   </widget>
